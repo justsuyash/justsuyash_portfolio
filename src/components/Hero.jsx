@@ -19,7 +19,7 @@ const Hero = () => {
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300 mb-8 backdrop-blur-sm">
                         <span>FOUNDER @ BHEED STUDIO</span>
                         <span className="w-1 h-1 rounded-full bg-cyan-400 glow-cyan" />
-                        <span>DATA SCIENTIST @ ALBERTSONS</span>
+                        <span>PRODUCT DATA SCIENTIST @ ALBERTSONS</span>
                     </div>
 
                     <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
