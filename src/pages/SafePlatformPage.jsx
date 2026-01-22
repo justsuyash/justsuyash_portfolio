@@ -43,7 +43,7 @@ const SafePlatformPage = () => {
                                 background: 'linear-gradient(135deg, #22c55e 0%, #00f3ff 100%)',
                                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'
                             }}>
-                                $150M+ Autonomous Impact
+                                $100M+ Autonomous Impact
                             </span>
                         </h1>
 
@@ -61,7 +61,7 @@ const SafePlatformPage = () => {
                     }}>
                         {[
                             { value: '3 → 8+', label: 'Experiments / Week', icon: <Zap size={24} />, color: '#00f3ff' },
-                            { value: '$150M+', label: 'Attributed Revenue', icon: <TrendingUp size={24} />, color: '#22c55e' },
+                            { value: '$100M+', label: 'Attributed Revenue', icon: <TrendingUp size={24} />, color: '#22c55e' },
                             { value: '100%', label: 'Self-Serve Adoption', icon: <Cpu size={24} />, color: '#bd00ff' }
                         ].map((stat, idx) => (
                             <motion.div

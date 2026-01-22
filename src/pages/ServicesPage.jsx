@@ -33,18 +33,7 @@ const services = [
         link: `${CALENDLY_URL}/career-advisory`,
         extraLink: { label: "or book on Topmate", url: "https://topmate.io/justsuyash/" }
     },
-    {
-        icon: <BrainCircuit size={28} />,
-        title: "GenAI & Data Strategy",
-        subtitle: "For Businesses",
-        description: "Help your organization leverage data effectively and integrate GenAI into workflows. From audits to implementation roadmaps.",
-        duration: "90 min",
-        gradient: "linear-gradient(135deg, #00f3ff 0%, #00a8ff 100%)",
-        color: "#00f3ff",
-        badge: "Enterprise",
-        link: `${CALENDLY_URL}/genai-data-strategy`,
-        extraLink: null
-    },
+
     {
         icon: <Coffee size={28} />,
         title: "Coffee Chat",
