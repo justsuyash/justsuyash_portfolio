@@ -195,10 +195,10 @@ const HomePage = () => {
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent'
                                 }}>
-                                    Zero-Bloat
+                                    Intelligence
                                 </span>
                                 <br />
-                                Product Intelligence.
+                                That Scales.
                             </h1>
 
                             <p style={{
@@ -210,7 +210,7 @@ const HomePage = () => {
                             }}>
                                 Product Data Scientist at <strong style={{ color: '#fff' }}>Albertsons</strong>.
                                 Founder at <strong style={{ color: '#fff' }}>Bheed Studio</strong>.
-                                A private venture lab analyzing <strong>market signals</strong> to build autonomous systems.
+                                Transforming noise into structural advantage through AI and data.
                             </p>
 
                             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
