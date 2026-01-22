@@ -256,11 +256,12 @@ const Navbar = () => {
                                     width: '100%',
                                     padding: '16px',
                                     borderRadius: '12px',
-                                    background: 'linear-gradient(135deg, #00f3ff 0%, #00c8ff 100%)',
-                                    color: '#000',
+                                    background: 'linear-gradient(135deg, #bd00ff 0%, #8b00ff 100%)',
+                                    color: '#fff',
                                     fontWeight: 700,
                                     fontSize: '1rem',
-                                    textDecoration: 'none'
+                                    textDecoration: 'none',
+                                    boxShadow: '0 0 30px rgba(189, 0, 255, 0.3)'
                                 }}
                             >
                                 Download Resume <ArrowUpRight size={18} />
