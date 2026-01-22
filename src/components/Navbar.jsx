@@ -147,10 +147,10 @@ const Navbar = () => {
                         style={{
                             position: 'fixed',
                             inset: 0,
-                            top: 70,
+                            top: 0,
                             background: '#08080c',
-                            padding: '2rem',
-                            zIndex: 40
+                            padding: '100px 2rem 2rem 2rem',
+                            zIndex: 999
                         }}
                     >
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
