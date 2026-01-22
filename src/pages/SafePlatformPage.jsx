@@ -51,7 +51,7 @@ const SafePlatformPage = () => {
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7,
                             maxWidth: '750px', marginBottom: '48px'
                         }}>
-                            At a <strong>Fortune 100 US grocery retailer</strong> serving tens of millions of households, I led the design and rollout of <strong>SAFE</strong>: a self-optimizing experimentation platform that replaced manual workflows with an automated, CUPED-enhanced causal inference engine.
+                            How I architected an <strong>Experimentation Platform</strong>: A self-optimizing system that replaced manual SQL/Excel workflows with an automated, CUPED-enhanced causal inference engine.
                         </p>
                     </motion.div>
 
@@ -97,7 +97,7 @@ const SafePlatformPage = () => {
                             <span style={{ color: '#f59e0b', fontSize: '0.875rem', fontWeight: 700, letterSpacing: '0.1em', display: 'block', marginBottom: '16px' }}>THE BOTTLENECK</span>
                             <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '24px' }}>Analyze, Copy, Paste, Repeat.</h2>
                             <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: '24px' }}>
-                                Before SAFE, highly paid engineers were stuck in a loop of manual toil. They ran SQL queries, downloaded CSVs, aggregated tables locally, and performed T-tests in Excel.
+                                Before the platform, highly paid engineers were stuck in a loop of manual toil. They ran SQL queries, downloaded CSVs, aggregated tables locally, and performed T-tests in Excel.
                             </p>
                             <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
                                 All of this was extremely time-consuming, error-prone, and visually inconsistent. Experiment velocity was capped at ~3 per week because the analysis layer was manual.
@@ -129,7 +129,7 @@ const SafePlatformPage = () => {
                 <div className="container">
                     <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 64px auto' }}>
                         <span style={{ color: '#22c55e', fontSize: '0.875rem', fontWeight: 700, letterSpacing: '0.1em', display: 'block', marginBottom: '16px' }}>THE ARCHITECTURE</span>
-                        <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px' }}>Enter SAFE Platform</h2>
+                        <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px' }}>Enter The Platform</h2>
                         <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7 }}>
                             I architected a completely automated pipeline that treats context as code.
                         </p>

@@ -208,7 +208,7 @@ const HomePage = () => {
                                 marginBottom: '32px',
                                 maxWidth: '650px'
                             }}>
-                                I help teams learn faster. Built up SAFE (3→8+ experiments/week), <strong style={{ color: '#00f3ff' }}>architect AI systems</strong> at Fortune 500 scale, and apply this across various domains like education, health, social and finance.{' '}
+                                I help teams learn faster. Built up an Experimentation Platform (3→8+ experiments/week), <strong style={{ color: '#00f3ff' }}>architect AI systems</strong> at Fortune 500 scale, and apply this across various domains like education, health, social and finance.{' '}
                                 <Link to="/ventures" style={{ color: '#bd00ff', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Explore my Applied Labs →</Link>
                             </p>
 
