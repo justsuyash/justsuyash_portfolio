@@ -27,6 +27,15 @@ export const articles = [
         readTime: "5 min"
     },
     {
+        title: "Why do they keep asking about Decision Trees?",
+        description: "It's not just a textbook question. How we decreased 2FA friction by 13% using the most interpretible model in the arsenal.",
+        publication: "Algorithms",
+        date: "Dec 2021",
+        link: "/articles/decision-trees",
+        tag: "Concept",
+        readTime: "7 min"
+    },
+    {
         title: "Statistical Methods That Actually Matter for A/B Tests",
         description: "Forget p-values. Here's the Bayesian approach we use at Albertsons for experiments that ship faster.",
         publication: "LinkedIn",
