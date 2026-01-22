@@ -178,8 +178,8 @@ const HomePage = () => {
                                 marginBottom: '24px'
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
-                                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    SENIOR DATA SCIENTIST · AI ARCHITECT & EXPERIMENTATION
+                                <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                                    SENIOR DATA SCIENTIST · PRODUCT EXPERIMENTATION & AI SYSTEMS ARCHITECT
                                 </span>
                             </div>
 
