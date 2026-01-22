@@ -64,14 +64,16 @@ const EmploymentVerificationPage = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Context</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            At a major financial product company, the loan origination flow is a balance between <strong>risk mitigation</strong> and <strong>conversion</strong>. Every extra step added to verify a borrower reduces fraud risk but also increases drop-off.
+                            At a major financial product company, the loan origination flow is a balance between <strong>risk mitigation</strong> and <strong>conversion</strong>. Crucially, <strong>Employment Verification (EV) happened at the very end of the funnel</strong>—after the user had already invested time and effort.
                         </p>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Problem</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            The bank assumed that <strong>Employment Verification (EV)</strong>—requiring users to upload paystubs or connect payroll providers—was a necessary evil to reduce default risk.
+                            We were seeing massive drop-offs at this comprehensive final step.
                             <br /><br />
-                            <strong>Reality:</strong> The EV step was causing massive drop-offs in the funnel. We suspected that for many high-quality applicants (High FICO), this friction was unnecessary and costing us millions in lost loans.
+                            <strong>The Hypothesis:</strong> These weren't just "lazy" users. They were high-intent applicants who, faced with a friction-heavy verification step, were likely <strong>taking offers from competitors</strong> who approved them faster.
+                            <br /><br />
+                            The bank assumed EV was a necessary shield. But if the shield isn't stopping bad actors—only slowing down good ones—it's not a shield; it's a leak.
                         </p>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Solution</h3>
