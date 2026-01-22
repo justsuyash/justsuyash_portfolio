@@ -18,7 +18,7 @@ const services = [
         gradient: "linear-gradient(135deg, #22c55e 0%, #10b981 100%)",
         color: "#22c55e",
         badge: "By Application",
-        link: "https://topmate.io/justsuyash",
+        link: "https://topmate.io/justsuyash/1915212",
         extraLink: null
     },
     {
