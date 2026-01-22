@@ -130,3 +130,44 @@ body {
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 15px var(--accent-glow);
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 2rem !important;
+    text-align: center;
+  }
+
+  .hero-grid .hero-photo {
+    max-width: 280px !important;
+    margin: 0 auto;
+  }
+
+  .hero-grid .hero-text {
+    align-items: center;
+  }
+
+  .hero-grid .hero-text h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-grid .hero-text p {
+    font-size: 1rem !important;
+  }
+
+  .hero-grid .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-grid .hero-cta a {
+    width: 100%;
+    justify-content: center;
+  }
+}

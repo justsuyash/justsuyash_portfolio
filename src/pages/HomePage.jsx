@@ -81,7 +81,7 @@ const HomePage = () => {
                 }} />
 
                 <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-                    <div style={{
+                    <div className="hero-grid" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '4rem',
@@ -93,7 +93,7 @@ const HomePage = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                         >
-                            <div style={{
+                            <div className="hero-photo" style={{
                                 position: 'relative',
                                 maxWidth: '420px'
                             }}>
@@ -162,6 +162,7 @@ const HomePage = () => {
 
                         {/* Text Side */}
                         <motion.div
+                            className="hero-text"
                             initial={{ opacity: 0, x: 30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
@@ -213,7 +214,7 @@ const HomePage = () => {
                                 Transforming noise into structural advantage through AI and data.
                             </p>
 
-                            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                            <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                                 <Link
                                     to="/ventures"
                                     style={{
