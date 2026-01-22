@@ -10,9 +10,9 @@ const ExperimentationArchitecturePage = () => {
                 <Link to="/" style={{
                     display: 'inline-flex', alignItems: 'center', gap: '8px',
                     color: 'rgba(255,255,255,0.4)', textDecoration: 'none', marginBottom: '48px',
-                    fontSize: '0.9rem', fontFamily: 'monospace'
+                    fontSize: '0.9rem', fontWeight: 500
                 }}>
-                    <ArrowLeft size={16} /> /index
+                    <ArrowLeft size={16} /> Back to Home
                 </Link>
 
                 <motion.div
