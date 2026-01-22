@@ -27,13 +27,13 @@ export const articles = [
         readTime: "5 min"
     },
     {
-        title: "Why do they keep asking about Decision Trees?",
-        description: "It's not just a textbook question. How we decreased 2FA friction by 13% using the most interpretible model in the arsenal.",
-        publication: "Algorithms",
+        title: "Interpretability IS Functionality: Reducing Authentication Friction by 13%",
+        description: "Why we chose Decision Trees over Deep Learning to stop account takeovers. A case study in surgical segmentation vs. black box models.",
+        publication: "Product Data Science",
         date: "Dec 2021",
         link: "/articles/decision-trees",
-        tag: "Concept",
-        readTime: "7 min"
+        tag: "Case Study",
+        readTime: "5 min"
     },
     {
         title: "Statistical Methods That Actually Matter for A/B Tests",

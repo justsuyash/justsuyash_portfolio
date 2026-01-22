@@ -28,7 +28,7 @@ const DecisionTreesPage = () => {
                                 borderRadius: '4px', fontSize: '0.75rem', color: '#bd00ff',
                                 fontFamily: 'monospace', border: '1px solid rgba(189, 0, 255, 0.2)'
                             }}>
-                                <Tag size={12} /> ALGORITHMS
+                                <Tag size={12} /> PRODUCT DATA SCIENCE
                             </span>
                             <span style={{
                                 display: 'inline-flex', alignItems: 'center', gap: '6px',
@@ -40,7 +40,7 @@ const DecisionTreesPage = () => {
                                 display: 'inline-flex', alignItems: 'center', gap: '6px',
                                 color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontFamily: 'monospace'
                             }}>
-                                <Clock size={12} /> 7 MIN READ
+                                <Clock size={12} /> 5 MIN READ
                             </span>
                         </div>
 
@@ -49,124 +49,107 @@ const DecisionTreesPage = () => {
                             lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: '24px',
                             fontFamily: 'system-ui, -apple-system, sans-serif'
                         }}>
-                            Why do they keep asking about Decision Trees?
+                            Interpretability IS Functionality: Reducing Authentication Friction by 13%
                         </h1>
 
                         <p style={{
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)',
                             lineHeight: 1.7, fontFamily: 'Georgia, serif'
                         }}>
-                            It's not just a textbook question. How we decreased 2FA friction by 13% using the most interpretible model in the arsenal.
+                            At Kaizen, we faced the classic identity dilemma: How do you stop account takeovers without treating every loyal customer like a criminal?
                         </p>
                     </header>
 
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
 
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Business Problem: The "Friction vs. Fraud" Trade-off</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            If you've interviewed for a Data Science role, you've answered the Decision Tree question. <em>"How do they handle non-linearity? How do they differ from regression?"</em>
+                            Our legacy authentication system was a blunt instrument. It operated on static, binary rules (e.g., <code>If IP != Last IP → Force 2FA</code>). This resulted in a high False Positive Rate (FPR), where legitimate users—especially travelers or those with dynamic IPs—were constantly nagged by 2FA challenges. This friction was a direct driver of user churn.
                         </p>
                         <p style={{ marginBottom: '40px' }}>
-                            It's easy to dismiss them as "old school" compared to Deep Learning, but in my time at <strong>Kaizen</strong>, I learned why they are the bread and butter of Product Data Science: <strong>Interpretability IS functionality.</strong>
+                            We needed a model that could surgically distinguish between "Latent Risk" and "New Context," allowing us to only spend our "friction budget" where it was actually needed.
                         </p>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Real-World Problem: Friction vs. Fraud</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Architecture: Moving to Surgical Segmentation</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            We were building a fraud detection system for authentication. The stakes were high:
-                            <ul style={{ marginTop: '16px' }}>
-                                <li><strong>Miss a threat?</strong> Account takeover (False Negative).</li>
-                                <li><strong>Flag a safe user?</strong> You force them through 2FA/MFA, annoying them and potentially causing churn (False Positive).</li>
-                            </ul>
-                            This is exactly like choosing a threshold in a logistic regression. If you lower the threshold to catch more bad actors, you inevitably block more good ones. <strong>2FA is the cost of that threshold.</strong>
+                            We replaced the static rule engine with a dynamic risk scoring system. While deep learning was considered for its predictive power, we ultimately chose <strong>Decision Trees</strong> for three strategic reasons critical to Product Data Science:
                         </p>
-                        <p style={{ marginBottom: '40px' }}>
-                            We needed a way to segment users so surgically that we only "paid" that cost for high-risk segments, leaving the rest with a frictionless experience.
-                        </p>
-
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Architecture Change</h3>
+                        <ol style={{ paddingLeft: '20px', marginBottom: '40px', color: '#fff' }}>
+                            <li style={{ marginBottom: '12px' }}><strong>Auditability:</strong> In security, "Black Box" decisions are liabilities. We needed to explain to Customer Support exactly <em>why</em> a VIP user was blocked.</li>
+                            <li style={{ marginBottom: '12px' }}><strong>Inference Speed:</strong> We needed sub-millisecond scoring during the login handshake without the overhead of heavy model serving infrastructure.</li>
+                            <li><strong>Policy Generation:</strong> We didn't just need a probability; we needed clear cut-offs to define business logic.</li>
+                        </ol>
 
                         <div style={{
                             background: '#0a0a0a', padding: '32px', borderRadius: '8px',
                             border: '1px solid rgba(255,255,255,0.1)', marginBottom: '40px',
                             overflowX: 'auto'
                         }}>
-                            <h4 style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', fontFamily: 'monospace', marginBottom: '16px' }}>OLD ARCHITECTURE (Rules / Black Box)</h4>
+                            <h4 style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', fontFamily: 'monospace', marginBottom: '16px' }}>LEGACY STATE (Static Logic)</h4>
                             <pre style={{ margin: 0, fontFamily: 'monospace', fontSize: '0.85rem', color: '#ef4444', lineHeight: 1.4 }}>
-                                {`[ User Login ] 
-      ⬇
-[ Static Rule Check ] ---> (If IP != Last IP)
-      ⬇
-[ FORCE 2FA ALL ] 
-      ⬇
-🔴 High Friction for travelers
-🔴 Generic "False Positives"`}
+                                {`User Login 
+    ⬇
+Static Rule Check 
+    ⬇
+GENERIC 2FA CHALLENGE
+(Result: High friction for safe users, predictable patterns for fraudsters)`}
                             </pre>
 
                             <div style={{ height: '32px' }}></div>
 
-                            <h4 style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', fontFamily: 'monospace', marginBottom: '16px' }}>NEW ARCHITECTURE (Decision Tree Logic)</h4>
+                            <h4 style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', fontFamily: 'monospace', marginBottom: '16px' }}>NEW STATE (Tree-Derived Logic)</h4>
                             <pre style={{ margin: 0, fontFamily: 'monospace', fontSize: '0.85rem', color: '#22c55e', lineHeight: 1.4 }}>
-                                {`[ User Login ] 
-      ⬇
-[ Feature Engineering ] (Time of day, Device Trust, etc.)
-      ⬇
-[ Decision Tree Classifier ]
-      │
-      ├── [ Leaf A: Safe ] -----> [ ALLOW (No 2FA) ] 🟢
-      │
-      └── [ Leaf B: Risk ] -----> [ CHALLENGE (2FA) ] 🟡`}
+                                {`User Login 
+    ⬇
+Feature Engineering (Device Trust, Time-of-Day, Velocity)
+    ⬇
+Decision Tree Classifier
+    ⬇
+GRANULAR SEGMENTATION
+(Result: "Passive Auth" (No 2FA) for 90% of sessions)`}
                             </pre>
                         </div>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Why Trees Won</h3>
-                        <p style={{ marginBottom: '24px' }}>
-                            Unlike a regression, which tries to fit a smooth line, trees naturally find <strong>non-linear segments</strong>.
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Why "Old School" Won: Trees as Segmenters</h3>
+                        <p style={{ marginBottom: '32px' }}>
+                            The superpower of the Decision Tree in this context wasn't just classification—it was <strong>hyper-segmentation</strong>.
                         </p>
                         <p style={{ marginBottom: '32px' }}>
-                            For example, we found that <em>Time of Day</em> matters, but only for certain countries. A regression might struggle to "turn off" the Time variable for US users while keeping it for others without complex interaction terms. A tree just splits.
+                             A logistic regression would have forced us to determine a single global probability threshold (e.g., Score > 0.7). This is often insufficient for global products. We found that risk factors like "Time of Day" were highly predictive for specific geos but irrelevant for others.
+                        </p>
+                        <p style={{ marginBottom: '40px' }}>
+                            A regression struggles to "turn off" a variable for a specific subset of users without complex interaction terms. A tree, however, naturally isolates these sub-populations. It allowed us to automatically carve out "Safe Zones"—hyper-rectangles of logic where we could confidently suppress 2FA.
                         </p>
 
-                        <div style={{
-                            background: '#0a0a0a', padding: '32px', borderRadius: '8px',
-                            border: '1px solid rgba(255,255,255,0.1)', marginBottom: '40px',
-                            overflowX: 'auto',
-                            fontFamily: 'monospace'
-                        }}>
-                            <pre style={{ color: '#fff', lineHeight: 1.5 }}>
-                                {`       [ Purchases &lt;= 3.5? ]
-          /           \\
-    [ YES ]           [ NO ]
-    (52% of users)    (48% of users)
-      |                 |
- [ Purchases &lt;= 0.5? ] [ Country = France? ]
-    /      \\             /        \\
-[Leaf 1]  [Leaf 2]   [Leaf 3]    [Leaf 4]
-(Pure)    (Mix)      (Risk)      (Safe)
-`}
-                            </pre>
-                            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', marginTop: '16px' }}>
-                                <em>*Visualization of how trees carve out "hyper-rectangles" of logic.</em>
-                            </p>
-                        </div>
-
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Metric Building</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Hidden Value: Data-Driven Definitions</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            The most underrated use of trees is <strong>generating definitions</strong>. In Product Science, we often need to define a "Power User." Is it 5 purchases? 10?
+                            The most underrated utility of this approach was using the model to settle business debates. Product and Engineering often argued over definitions: <em>What is a "Trusted Device"? Is it 3 successful logins? 5?</em>
                         </p>
-                        <p style={{ marginBottom: '48px' }}>
-                            Instead of guessing, we run a tree predicting <em>Retention</em>. The first split (e.g., <code>Purchases &gt; 3.5</code>) gives us a mathematically justified threshold. We used this to define our "Risk Segments" for the 2FA rollout, reducing false positives by 13% because we weren't just guessing—we were following the data's natural breakpoints.
+                        <p style={{ marginBottom: '40px' }}>
+                            Instead of guessing, we let the tree dictate the policy. We ran a tree predicting <code>Future_Fraud_Event</code>. The first split (e.g., <code>Successful_Logins >= 4</code>) gave us a mathematically justified threshold. We replaced "gut feel" rules with data-derived breakpoints.
                         </p>
+
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Impact & Optimization</h3>
+                        <ul style={{ listStyle: 'none', padding: 0, marginBottom: '40px' }}>
+                            <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>13% Reduction in 2FA Challenges:</strong> We successfully identified low-risk segments that were previously flagged by static rules.</span>
+                            </li>
+                            <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Zero Increase in Fraud:</strong> The reduction in friction did not compromise security.</span>
+                            </li>
+                        </ul>
 
                         <div style={{ padding: '32px', background: 'rgba(189, 0, 255, 0.05)', borderRadius: '12px', border: '1px solid rgba(189, 0, 255, 0.1)' }}>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#bd00ff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Advanced: Going Deeper with RuleFit</h3>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#bd00ff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Going Deeper: RuleFit</h3>
                             <p style={{ marginBottom: '16px', fontSize: '1rem', color: 'rgba(255,255,255,0.8)' }}>
-                                To extract the maximum possible insight, we sometimes go beyond simple trees to <strong>RuleFit</strong>. It combines the best of both worlds:
+                                To maximize performance without losing interpretability, we eventually upgraded to <strong>RuleFit</strong>. This allowed us to:
                             </p>
                             <ul style={{ paddingLeft: '20px', marginBottom: '16px', fontSize: '1rem', color: 'rgba(255,255,255,0.8)' }}>
-                                <li><strong>Trees:</strong> To generate non-linear features (rules).</li>
-                                <li><strong>Lasso Regression:</strong> To select only the most predictive rules.</li>
+                                <li>Use a Random Forest to generate thousands of candidate rules (non-linear feature interactions).</li>
+                                <li>Use Lasso Regression to select only the sparse set of rules that actually mattered.</li>
                             </ul>
                             <p style={{ marginBottom: '0', fontSize: '1rem', color: 'rgba(255,255,255,0.8)' }}>
-                                It's computationally expensive because you build a forest, extract thousands of rules, and then regress on them—but for high-stakes problem spaces like Fraud or Medical Diagnosis, the interpretability + accuracy trade-off is often worth the compute cost.
+                                This gave us the accuracy of an ensemble method while retaining the "If-Then" auditability required for a security product.
                             </p>
                         </div>
 
