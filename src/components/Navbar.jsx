@@ -52,7 +52,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div style={{
+                <div className="nav-desktop" style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '2.5rem'
@@ -121,11 +121,12 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                {/* Mobile Toggle - hidden on desktop */}
+                {/* Mobile Toggle */}
                 <button
+                    className="nav-mobile-toggle"
                     onClick={() => setIsOpen(!isOpen)}
                     style={{
-                        display: 'none', // Hide on desktop for now
+                        display: 'none',
                         color: '#fff',
                         background: 'none',
                         border: 'none',

@@ -170,4 +170,13 @@ body {
     width: 100%;
     justify-content: center;
   }
+
+  /* Mobile Navbar */
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .nav-mobile-toggle {
+    display: block !important;
+  }
 }
