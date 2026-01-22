@@ -129,12 +129,12 @@ const DecisionTreesPage = () => {
                             fontFamily: 'monospace'
                         }}>
                             <pre style={{ color: '#fff', lineHeight: 1.5 }}>
-                                {`       [ Purchases <= 3.5? ]
+                                {`       [ Purchases &lt;= 3.5? ]
           /           \\
     [ YES ]           [ NO ]
     (52% of users)    (48% of users)
       |                 |
- [ Purchases <= 0.5? ] [ Country = France? ]
+ [ Purchases &lt;= 0.5? ] [ Country = France? ]
     /      \\             /        \\
 [Leaf 1]  [Leaf 2]   [Leaf 3]    [Leaf 4]
 (Pure)    (Mix)      (Risk)      (Safe)
