@@ -179,43 +179,43 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    Senior Data Scientist · 7+ Years
+                                    Senior Data Scientist · Experimentation & ML
                                 </span>
                             </div>
 
                             <h1 style={{
-                                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                                fontSize: 'clamp(2.5rem, 5vw, 3.75rem)',
                                 fontWeight: 700,
                                 lineHeight: 1.1,
                                 letterSpacing: '-0.03em',
-                                marginBottom: '24px'
+                                marginBottom: '20px'
                             }}>
-                                From Experiments{' '}
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent'
                                 }}>
-                                    to Impact
+                                    $150M+ Impact
                                 </span>
                                 <br />
-                                at Scale.
+                                Through Experimentation
                             </h1>
 
                             <p style={{
-                                fontSize: '1.15rem',
+                                fontSize: '1.1rem',
                                 color: 'rgba(255,255,255,0.6)',
                                 lineHeight: 1.7,
                                 marginBottom: '32px',
                                 maxWidth: '520px'
                             }}>
-                                Driving product growth through experimentation & ML at <strong style={{ color: '#fff' }}>Fortune 500</strong> companies.
-                                Built systems that scaled testing velocity 3× and delivered <strong style={{ color: '#00f3ff' }}>$150M+</strong> in measurable business impact.
+                                Architect of the <strong style={{ color: '#fff' }}>SAFE platform</strong> that scaled A/B testing from 3→8+ experiments/week at Fortune 500.
+                                Combining product sense, analytical rigor, and ML systems.
                             </p>
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                                <Link
-                                    to="/ventures"
+                                <a
+                                    href="/SuyashResume-Brainworks.pdf"
+                                    target="_blank"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -227,14 +227,14 @@ const HomePage = () => {
                                         fontWeight: 700,
                                         fontSize: '0.95rem',
                                         transition: 'all 0.3s ease',
-                                        boxShadow: '0 0 30px rgba(0, 243, 255, 0.3)'
+                                        boxShadow: '0 0 30px rgba(0, 243, 255, 0.3)',
+                                        textDecoration: 'none'
                                     }}
                                 >
-                                    View Venture Lab <ArrowRight size={18} />
-                                </Link>
-                                <a
-                                    href="/SuyashResume-Brainworks.pdf"
-                                    target="_blank"
+                                    View Resume <ArrowRight size={18} />
+                                </a>
+                                <Link
+                                    to="/contact"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -249,11 +249,69 @@ const HomePage = () => {
                                         transition: 'all 0.3s ease'
                                     }}
                                 >
-                                    Download Resume
-                                </a>
+                                    Get in Touch
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* Signature Outcomes Section */}
+            <section style={{ padding: '60px 0', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                <div className="container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            marginBottom: '24px'
+                        }}>
+                            <span style={{
+                                color: '#00f3ff',
+                                fontSize: '0.7rem',
+                                fontWeight: 700,
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.1em'
+                            }}>✦ Signature Outcomes</span>
+                        </div>
+
+                        <div className="grid-responsive" style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(4, 1fr)',
+                            gap: '20px'
+                        }}>
+                            {[
+                                { metric: '3→8+', label: 'experiments/week via SAFE Platform', color: '#00f3ff' },
+                                { metric: '$150M+', label: 'measurable business impact', color: '#bd00ff' },
+                                { metric: '7+', label: 'years at Fortune 500 companies', color: '#22c55e' },
+                                { metric: 'Solo', label: 'shipped consumer learning products', color: '#f59e0b' }
+                            ].map((item, idx) => (
+                                <div key={idx} style={{
+                                    padding: '20px',
+                                    borderRadius: '12px',
+                                    background: 'rgba(255,255,255,0.02)',
+                                    border: '1px solid rgba(255,255,255,0.05)'
+                                }}>
+                                    <div style={{
+                                        fontSize: '1.75rem',
+                                        fontWeight: 700,
+                                        color: item.color,
+                                        marginBottom: '8px'
+                                    }}>{item.metric}</div>
+                                    <div style={{
+                                        fontSize: '0.85rem',
+                                        color: 'rgba(255,255,255,0.5)',
+                                        lineHeight: 1.4
+                                    }}>{item.label}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
