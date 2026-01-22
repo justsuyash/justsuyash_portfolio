@@ -179,7 +179,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    Senior Data Scientist · AI Systems Architect
+                                    SENIOR DATA SCIENTIST · PRODUCT EXPERIMENTATION & AI SYSTEMS ARCHITECT
                                 </span>
                             </div>
 
@@ -190,16 +190,15 @@ const HomePage = () => {
                                 letterSpacing: '-0.03em',
                                 marginBottom: '20px'
                             }}>
-                                Driving Growth{' '}
+                                $150M+ Impact Through
+                                <br />
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent'
                                 }}>
-                                    & Building
+                                    Experimentation & AI
                                 </span>
-                                <br />
-                                World Class Products
                             </h1>
 
                             <p style={{
@@ -207,10 +206,9 @@ const HomePage = () => {
                                 color: 'rgba(255,255,255,0.6)',
                                 lineHeight: 1.7,
                                 marginBottom: '32px',
-                                maxWidth: '560px'
+                                maxWidth: '650px'
                             }}>
-                                I build products to understand users deeply—then apply that insight to scale{' '}
-                                <strong style={{ color: '#00f3ff' }}>AI systems</strong> at Fortune 500 companies.{' '}
+                                I help teams learn faster. Built up SAFE (3→8+ experiments/week), <strong style={{ color: '#00f3ff' }}>architect AI systems</strong> at Fortune 500 scale, and apply this across various domains like education, health, social and finance.{' '}
                                 <Link to="/ventures" style={{ color: '#bd00ff', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Explore my Applied Labs →</Link>
                             </p>
 
@@ -257,10 +255,10 @@ const HomePage = () => {
                         </motion.div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Signature Outcomes Section */}
-            <section style={{ padding: '60px 0', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+            < section style={{ padding: '60px 0', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -315,10 +313,10 @@ const HomePage = () => {
                         </div>
                     </motion.div>
                 </div>
-            </section>
+            </section >
 
             {/* Current Work Section */}
-            <section style={{ padding: '120px 0' }} className="section-divider">
+            < section style={{ padding: '120px 0' }} className="section-divider" >
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -419,10 +417,10 @@ const HomePage = () => {
                         </motion.div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* How I Think Section */}
-            <section id="how-i-think" style={{ padding: '120px 0' }} className="section-divider">
+            < section id="how-i-think" style={{ padding: '120px 0' }} className="section-divider" >
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -592,8 +590,8 @@ const HomePage = () => {
                         </Link>
                     </motion.div>
                 </div>
-            </section>
-        </main>
+            </section >
+        </main >
     );
 };
 

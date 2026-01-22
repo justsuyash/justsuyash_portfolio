@@ -110,7 +110,7 @@ const VentureLabPage = () => {
                         lineHeight: 1.7,
                         maxWidth: '600px'
                     }}>
-                        Building products teaches me how users think. I apply these insights to architect AI systems that drive revenue at enterprise scale.
+                        Building products teaches me how users think. I apply these insights to architect AI systems that drive revenue at enterprise scale. These experiments span education, health, social, and finance, serving as a live testing ground for the learning systems I architect.
                     </p>
                 </motion.div>
 
@@ -140,7 +140,7 @@ const VentureLabPage = () => {
                                         borderLeft: `2px solid ${venture.color}`
                                     }}
                                 >
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
                                         <div style={{
                                             width: '48px', height: '48px', borderRadius: '12px',
                                             background: venture.color + '10', border: `1px solid ${venture.color}20`,
@@ -148,13 +148,22 @@ const VentureLabPage = () => {
                                         }}>
                                             <Zap size={24} />
                                         </div>
-                                        <span style={{
-                                            fontSize: '0.75rem', fontWeight: 700,
-                                            color: venture.color, border: `1px solid ${venture.color}40`,
-                                            padding: '4px 10px', borderRadius: '99px'
-                                        }}>
-                                            {venture.status}
-                                        </span>
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setSelectedVenture(venture);
+                                                setActiveTab('lab');
+                                            }}
+                                            style={{
+                                                fontSize: '0.75rem', fontWeight: 700,
+                                                color: venture.color, border: `1px solid ${venture.color}40`,
+                                                background: venture.color + '10',
+                                                padding: '6px 12px', borderRadius: '99px',
+                                                cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px'
+                                            }}
+                                        >
+                                            <Beaker size={14} /> Test Feature
+                                        </button>
                                     </div>
 
                                     <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '8px' }}>{venture.name}</h3>
@@ -208,7 +217,7 @@ const VentureLabPage = () => {
                                 }}>
                                     <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '8px' }}>{selectedVenture.name}</h2>
                                     <div style={{ color: selectedVenture.color, fontSize: '1rem', fontWeight: 600, letterSpacing: '0.05em', marginBottom: '24px' }}>
-                                        {selectedVenture.tagline} // {selectedVenture.status}
+                                        {selectedVenture.tagline}
                                     </div>
 
                                     {/* Tabs */}
@@ -307,9 +316,9 @@ const VentureLabPage = () => {
                                                 }}>
                                                     <Beaker size={40} color={selectedVenture.color} />
                                                 </div>
-                                                <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '16px' }}>Ready to Test?</h3>
+                                                <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '16px' }}>Interactive Lab</h3>
                                                 <p style={{ maxWidth: '400px', margin: '0 auto 32px auto', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
-                                                    Access the live Alpha environment to test the {selectedVenture.name} engine logic with your own data.
+                                                    Try out a feature from our product. Access the live Alpha environment to test the {selectedVenture.name} engine logic with your own data.
                                                 </p>
                                                 <a
                                                     href={selectedVenture.link}
@@ -349,7 +358,7 @@ const VentureLabPage = () => {
                     ))}
                 </div>
             </div>
-        </main>
+        </main >
     );
 };
 
