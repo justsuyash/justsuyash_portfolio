@@ -111,7 +111,7 @@ GRANULAR SEGMENTATION
                         The superpower of the Decision Tree in this context wasn't just classification—it was <strong>hyper-segmentation</strong>.
                     </p>
                     <p style={{ marginBottom: '32px' }}>
-                             A logistic regression would have forced us to determine a single global probability threshold (e.g., Score > 0.7). This is often insufficient for global products. We found that risk factors like "Time of Day" were highly predictive for specific geos but irrelevant for others.
+                        A logistic regression would have forced us to determine a single global probability threshold (e.g., Score &gt; 0.7). This is often insufficient for global products. We found that risk factors like "Time of Day" were highly predictive for specific geos but irrelevant for others.
                     </p>
                     <p style={{ marginBottom: '40px' }}>
                         A regression struggles to "turn off" a variable for a specific subset of users without complex interaction terms. A tree, however, naturally isolates these sub-populations. It allowed us to automatically carve out "Safe Zones"—hyper-rectangles of logic where we could confidently suppress 2FA.
