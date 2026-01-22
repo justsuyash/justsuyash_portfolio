@@ -542,57 +542,7 @@ const HomePage = () => {
                     </div>
 
                     {/* Lab Funnel */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        style={{ marginTop: '60px' }}
-                    >
-                        <Link to="/lab" style={{ textDecoration: 'none' }}>
-                            <div className="glass-panel" style={{
-                                padding: '40px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                background: 'linear-gradient(90deg, rgba(8,8,12,0.8) 0%, rgba(34, 197, 94, 0.05) 100%)',
-                                border: '1px solid rgba(34, 197, 94, 0.2)',
-                                cursor: 'pointer'
-                            }}>
-                                <div>
-                                    <div style={{
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        gap: '8px',
-                                        marginBottom: '12px',
-                                        color: '#22c55e',
-                                        fontFamily: 'monospace',
-                                        fontSize: '0.8rem'
-                                    }}>
-                                        <div style={{ width: '8px', height: '8px', background: '#22c55e', borderRadius: '50%' }} />
-                                        SYSTEM_STATUS: ONLINE
-                                    </div>
-                                    <h3 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>
-                                        Run the Protocols vs Read them.
-                                    </h3>
-                                    <p style={{ color: 'rgba(255,255,255,0.6)' }}>
-                                        Test the Mana Intelligence Engine with your own data in the live lab.
-                                    </p>
-                                </div>
-                                <div style={{
-                                    width: '48px',
-                                    height: '48px',
-                                    borderRadius: '12px',
-                                    background: 'rgba(34, 197, 94, 0.1)',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    border: '1px solid rgba(34, 197, 94, 0.2)'
-                                }}>
-                                    <ArrowRight size={24} color="#22c55e" />
-                                </div>
-                            </div>
-                        </Link>
-                    </motion.div>
+
                 </div>
             </section >
         </main >
