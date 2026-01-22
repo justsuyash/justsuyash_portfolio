@@ -179,7 +179,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    Senior Data Scientist · Experimentation & ML
+                                    Senior Data Scientist
                                 </span>
                             </div>
 
@@ -190,15 +190,16 @@ const HomePage = () => {
                                 letterSpacing: '-0.03em',
                                 marginBottom: '20px'
                             }}>
+                                Driving{' '}
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent'
                                 }}>
-                                    $150M+ Impact
+                                    Revenue & Growth
                                 </span>
                                 <br />
-                                Through Experimentation
+                                Through Data & AI
                             </h1>
 
                             <p style={{
@@ -206,10 +207,11 @@ const HomePage = () => {
                                 color: 'rgba(255,255,255,0.6)',
                                 lineHeight: 1.7,
                                 marginBottom: '32px',
-                                maxWidth: '520px'
+                                maxWidth: '560px'
                             }}>
-                                Architect of the <strong style={{ color: '#fff' }}>SAFE platform</strong> that scaled A/B testing from 3→8+ experiments/week at Fortune 500.
-                                Combining product sense, analytical rigor, and ML systems.
+                                <strong style={{ color: '#00f3ff' }}>$100M+ impact</strong> at Fortune 500 companies.
+                                I build products by analyzing market trends and turning data insights into action.
+                                <a href="#how-i-think" style={{ color: '#bd00ff', textDecoration: 'underline', textUnderlineOffset: '3px' }}>See how I think →</a>
                             </p>
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -419,8 +421,8 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* Published Articles Section */}
-            <section style={{ padding: '120px 0' }} className="section-divider">
+            {/* How I Think Section */}
+            <section id="how-i-think" style={{ padding: '120px 0' }} className="section-divider">
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -441,7 +443,7 @@ const HomePage = () => {
                             fontSize: 'clamp(2rem, 4vw, 3rem)',
                             fontWeight: 700,
                             letterSpacing: '-0.02em'
-                        }}>Latest Thinking</h2>
+                        }}>How I Think</h2>
                     </motion.div>
 
                     <div className="grid-responsive" style={{
