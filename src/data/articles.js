@@ -9,22 +9,22 @@ export const articles = [
         readTime: "8 min"
     },
     {
-        title: "Why We Deleted 80% of Our Features",
-        description: "The counterintuitive decision that 3x'd our engagement. Signal-only design isn't minimalism—it's focus.",
-        publication: "Bheed Studio",
-        date: "Dec 2023",
-        link: "#",
-        tag: "Product",
-        readTime: "5 min"
+        title: "The $114M Friction Fix: Employment Verification Optimization",
+        description: "How causal inference and surgical A/B testing challenged a core risk assumption, removing friction for high-quality borrowers and unlocking $114M in annualized volume.",
+        publication: "Product Science",
+        date: "Aug 2023",
+        link: "/articles/employment-verification",
+        tag: "Case Study",
+        readTime: "6 min"
     },
     {
-        title: "Astrology × Machine Learning: Building Aligned",
-        description: "Yes, we built an AI dating app using birth charts. Here's the technical deep-dive (and why it actually works).",
-        publication: "Technical",
-        date: "Nov 2023",
-        link: "#",
+        title: "GenAI Experimentation Copilot",
+        description: "Eliminating 8+ hours/week of manual SQL toil by building an internal LLM agent that turns product questions into verified experiment analysis.",
+        publication: "AI Systems",
+        date: "Mar 2024",
+        link: "/articles/genai-copilot",
         tag: "Build Log",
-        readTime: "12 min"
+        readTime: "5 min"
     },
     {
         title: "Statistical Methods That Actually Matter for A/B Tests",

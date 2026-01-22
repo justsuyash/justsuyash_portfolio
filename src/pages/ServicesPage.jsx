@@ -5,7 +5,7 @@ import {
     Star, Quote, ExternalLink, Calendar, ArrowRight, Sparkles, Clock
 } from 'lucide-react';
 
-// IMPORTANT: Replace with your actual Calendly URL
+// Calendly Base
 const CALENDLY_URL = "https://calendly.com/justsuyash";
 
 const services = [
@@ -18,7 +18,7 @@ const services = [
         gradient: "linear-gradient(135deg, #22c55e 0%, #10b981 100%)",
         color: "#22c55e",
         badge: "By Application",
-        link: `${CALENDLY_URL}/technical-mentorship`,
+        link: "https://topmate.io/justsuyash",
         extraLink: null
     },
     {
@@ -31,7 +31,7 @@ const services = [
         color: "#bd00ff",
         badge: "Limited Slots",
         link: `${CALENDLY_URL}/career-advisory`,
-        extraLink: { label: "or book on Topmate", url: "https://topmate.io/justsuyash/" }
+        extraLink: { label: "or book on Topmate", url: "https://topmate.io/justsuyash" }
     },
 
     {
@@ -43,7 +43,7 @@ const services = [
         gradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
         color: "#f59e0b",
         badge: null,
-        link: `${CALENDLY_URL}/coffee-chat`,
+        link: "https://calendly.com/justsuyash/dsc-interview",
         extraLink: null
     }
 ];

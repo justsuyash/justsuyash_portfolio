@@ -9,6 +9,8 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const LabPage = lazy(() => import('./pages/LabPage'));
 const ExperimentationArchitecturePage = lazy(() => import('./pages/articles/ExperimentationArchitecturePage'));
+const EmploymentVerificationPage = lazy(() => import('./pages/articles/EmploymentVerificationPage'));
+const GenAiCopilotPage = lazy(() => import('./pages/articles/GenAiCopilotPage'));
 const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
 
 // Loading fallback component
@@ -46,6 +48,8 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/articles/experimentation-architecture" element={<ExperimentationArchitecturePage />} />
+            <Route path="/articles/employment-verification" element={<EmploymentVerificationPage />} />
+            <Route path="/articles/genai-copilot" element={<GenAiCopilotPage />} />
             <Route path="/articles" element={<ArticlesPage />} />
           </Routes>
         </Suspense>
