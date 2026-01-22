@@ -190,16 +190,16 @@ const HomePage = () => {
                                 letterSpacing: '-0.03em',
                                 marginBottom: '20px'
                             }}>
-                                Driving{' '}
+                                Driving Growth{' '}
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent'
                                 }}>
-                                    Revenue & Growth
+                                    & Building
                                 </span>
                                 <br />
-                                Through Data & AI
+                                World Class Products
                             </h1>
 
                             <p style={{
