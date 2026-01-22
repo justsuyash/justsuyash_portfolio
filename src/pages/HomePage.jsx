@@ -370,8 +370,7 @@ const HomePage = () => {
                                 }}>Active</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-                                Leading predictive modeling and customer insight initiatives for one of America's largest food retailers.
-                                Architecting scalable data pipelines for enterprise analytics.
+                                Leading predictive modeling initiatives. Currently integrating our synthetic control platform with GenAI to build a self-serving system for enterprise analytics.
                             </p>
                         </motion.div>
 
