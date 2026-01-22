@@ -190,7 +190,7 @@ const HomePage = () => {
                                 letterSpacing: '-0.03em',
                                 marginBottom: '20px'
                             }}>
-                                $100+ Million Impact Through
+                                $150+ Million Impact Through
                                 <br />
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
