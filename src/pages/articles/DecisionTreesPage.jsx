@@ -73,10 +73,13 @@ const DecisionTreesPage = () => {
                         <p style={{ marginBottom: '32px' }}>
                             We were building a fraud detection system for authentication. The stakes were high:
                             <ul style={{ marginTop: '16px' }}>
-                                <li><strong>Miss a threat?</strong> Account takeover.</li>
-                                <li><strong>Flag a safe user?</strong> You force them through 2FA/MFA, annoying them and potentially causing churn.</li>
+                                <li><strong>Miss a threat?</strong> Account takeover (False Negative).</li>
+                                <li><strong>Flag a safe user?</strong> You force them through 2FA/MFA, annoying them and potentially causing churn (False Positive).</li>
                             </ul>
-                            We needed to reduce "False Positives" (annoying safe users) without letting bad actors in.
+                            This is exactly like choosing a threshold in a logistic regression. If you lower the threshold to catch more bad actors, you inevitably block more good ones. <strong>2FA is the cost of that threshold.</strong>
+                        </p>
+                        <p style={{ marginBottom: '40px' }}>
+                            We needed a way to segment users so surgically that we only "paid" that cost for high-risk segments, leaving the rest with a frictionless experience.
                         </p>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Architecture Change</h3>
@@ -149,9 +152,23 @@ const DecisionTreesPage = () => {
                         <p style={{ marginBottom: '32px' }}>
                             The most underrated use of trees is <strong>generating definitions</strong>. In Product Science, we often need to define a "Power User." Is it 5 purchases? 10?
                         </p>
-                        <p style={{ marginBottom: '32px' }}>
-                            Instead of guessing, we run a tree predicting <em>Retention</em>. The first split (e.g., <code>Purchases > 3.5</code>) gives us a mathematically justified threshold. We used this to define our "Risk Segments" for the 2FA rollout, reducing false positives by 13% because we weren't just guessing—we were following the data's natural breakpoints.
+                        <p style={{ marginBottom: '48px' }}>
+                            Instead of guessing, we run a tree predicting <em>Retention</em>. The first split (e.g., <code>Purchases &gt; 3.5</code>) gives us a mathematically justified threshold. We used this to define our "Risk Segments" for the 2FA rollout, reducing false positives by 13% because we weren't just guessing—we were following the data's natural breakpoints.
                         </p>
+
+                        <div style={{ padding: '32px', background: 'rgba(189, 0, 255, 0.05)', borderRadius: '12px', border: '1px solid rgba(189, 0, 255, 0.1)' }}>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#bd00ff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Advanced: Going Deeper with RuleFit</h3>
+                            <p style={{ marginBottom: '16px', fontSize: '1rem', color: 'rgba(255,255,255,0.8)' }}>
+                                To extract the maximum possible insight, we sometimes go beyond simple trees to <strong>RuleFit</strong>. It combines the best of both worlds:
+                            </p>
+                            <ul style={{ paddingLeft: '20px', marginBottom: '16px', fontSize: '1rem', color: 'rgba(255,255,255,0.8)' }}>
+                                <li><strong>Trees:</strong> To generate non-linear features (rules).</li>
+                                <li><strong>Lasso Regression:</strong> To select only the most predictive rules.</li>
+                            </ul>
+                            <p style={{ marginBottom: '0', fontSize: '1rem', color: 'rgba(255,255,255,0.8)' }}>
+                                It's computationally expensive because you build a forest, extract thousands of rules, and then regress on them—but for high-stakes problem spaces like Fraud or Medical Diagnosis, the interpretability + accuracy trade-off is often worth the compute cost.
+                            </p>
+                        </div>
 
                     </div>
                 </motion.div>
