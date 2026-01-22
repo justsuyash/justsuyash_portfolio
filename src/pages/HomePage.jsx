@@ -179,7 +179,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    Product Data Scientist
+                                    Senior Data Scientist · 7+ Years
                                 </span>
                             </div>
 
@@ -190,28 +190,27 @@ const HomePage = () => {
                                 letterSpacing: '-0.03em',
                                 marginBottom: '24px'
                             }}>
-                                Building{' '}
+                                From Experiments{' '}
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent'
                                 }}>
-                                    Intelligence
+                                    to Impact
                                 </span>
                                 <br />
-                                That Scales.
+                                at Scale.
                             </h1>
 
                             <p style={{
-                                fontSize: '1.25rem',
+                                fontSize: '1.15rem',
                                 color: 'rgba(255,255,255,0.6)',
                                 lineHeight: 1.7,
                                 marginBottom: '32px',
-                                maxWidth: '480px'
+                                maxWidth: '520px'
                             }}>
-                                Product Data Scientist at <strong style={{ color: '#fff' }}>Albertsons</strong>.
-                                Founder at <strong style={{ color: '#fff' }}>Bheed Studio</strong>.
-                                Transforming noise into structural advantage through AI and data.
+                                Driving product growth through experimentation & ML at <strong style={{ color: '#fff' }}>Fortune 500</strong> companies.
+                                Built systems that scaled testing velocity 3× and delivered <strong style={{ color: '#00f3ff' }}>$150M+</strong> in measurable business impact.
                             </p>
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
