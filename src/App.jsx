@@ -8,7 +8,7 @@ const VentureLabPage = lazy(() => import('./pages/VentureLabPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const LabPage = lazy(() => import('./pages/LabPage'));
-const SafePlatformPage = lazy(() => import('./pages/SafePlatformPage'));
+const ExperimentationArchitecturePage = lazy(() => import('./pages/articles/ExperimentationArchitecturePage'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -42,8 +42,9 @@ function App() {
             <Route path="/ventures" element={<VentureLabPage />} />
             <Route path="/lab" element={<LabPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/safe" element={<SafePlatformPage />} />
+            <Route path="/articles/experimentation-architecture" element={<ExperimentationArchitecturePage />} />
           </Routes>
         </Suspense>
 

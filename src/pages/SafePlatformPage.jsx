@@ -123,7 +123,76 @@ const SafePlatformPage = () => {
                     </div>
                 </div>
             </section>
+            {/* Architecture Evolution Section */}
+            <section style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 64px auto' }}>
+                        <span style={{ color: '#bd00ff', fontSize: '0.875rem', fontWeight: 700, letterSpacing: '0.1em', display: 'block', marginBottom: '16px' }}>SYSTEM EVOLUTION</span>
+                        <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px' }}>Primitive vs. Optimized Design</h2>
+                        <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7 }}>
+                            Re-architecting for scale: Switching from naive sequential processing to parallelized data bundles.
+                        </p>
+                    </div>
 
+                    <div className="grid-responsive" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '48px' }}>
+
+                        {/* Legacy Architecture */}
+                        <div className="glass-panel" style={{ padding: '40px', position: 'relative', overflow: 'hidden' }}>
+                            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '4px', background: '#ef4444' }} />
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '8px', color: '#ef4444' }}>Legacy: Sequential</h3>
+                            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', marginBottom: '32px' }}>15+ Separate Queries · 15min Runtime</p>
+
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center', opacity: 0.8 }}>
+                                <div style={{ width: '100%', padding: '16px', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
+                                    <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Engagement Query</span>
+                                </div>
+                                <ArrowRight size={20} style={{ transform: 'rotate(90deg)', color: 'rgba(255,255,255,0.3)' }} />
+                                <div style={{ width: '100%', padding: '16px', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
+                                    <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Margin Query</span>
+                                </div>
+                                <ArrowRight size={20} style={{ transform: 'rotate(90deg)', color: 'rgba(255,255,255,0.3)' }} />
+                                <div style={{ width: '100%', padding: '16px', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
+                                    <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Transactions Query</span>
+                                </div>
+                                <ArrowRight size={20} style={{ transform: 'rotate(90deg)', color: 'rgba(255,255,255,0.3)' }} />
+                                <div style={{ opacity: 0.5, fontStyle: 'italic', fontSize: '0.9rem' }}>...12 More Sequential Queries</div>
+                            </div>
+                        </div>
+
+                        {/* New Architecture */}
+                        <div className="glass-panel" style={{ padding: '40px', position: 'relative', overflow: 'hidden' }}>
+                            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '4px', background: '#22c55e' }} />
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '8px', color: '#22c55e' }}>New: Parallel Bundles</h3>
+                            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', marginBottom: '32px' }}>4 Grouped Scans · 4min Runtime</p>
+
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                                {/* Inputs */}
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
+                                    <div style={{ padding: '12px', background: 'rgba(34, 197, 94, 0.1)', border: '1px solid rgba(34, 197, 94, 0.2)', borderRadius: '8px', textAlign: 'center', fontSize: '0.8rem', color: '#22c55e' }}>Transact.</div>
+                                    <div style={{ padding: '12px', background: 'rgba(0, 243, 255, 0.1)', border: '1px solid rgba(0, 243, 255, 0.2)', borderRadius: '8px', textAlign: 'center', fontSize: '0.8rem', color: '#00f3ff' }}>Engage.</div>
+                                    <div style={{ padding: '12px', background: 'rgba(189, 0, 255, 0.1)', border: '1px solid rgba(189, 0, 255, 0.2)', borderRadius: '8px', textAlign: 'center', fontSize: '0.8rem', color: '#bd00ff' }}>Other</div>
+                                </div>
+
+                                <div style={{ textAlign: 'center' }}><ArrowRight size={20} style={{ transform: 'rotate(90deg)', color: 'rgba(255,255,255,0.3)' }} /></div>
+
+                                {/* Bundles */}
+                                <div style={{ padding: '20px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)', border: '1px dashed rgba(255,255,255,0.2)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                                    <div style={{ gridColumn: 'span 2', textAlign: 'center', fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', marginBottom: '4px' }}>PARALLEL EXECUTION</div>
+                                    <div style={{ padding: '12px', background: '#22c55e20', borderRadius: '6px', textAlign: 'center', fontSize: '0.85rem', fontWeight: 600 }}>Txn Bundle</div>
+                                    <div style={{ padding: '12px', background: '#00f3ff20', borderRadius: '6px', textAlign: 'center', fontSize: '0.85rem', fontWeight: 600 }}>Eng Bundle</div>
+                                </div>
+
+                                <div style={{ textAlign: 'center' }}><ArrowRight size={20} style={{ transform: 'rotate(90deg)', color: 'rgba(255,255,255,0.3)' }} /></div>
+
+                                {/* Output */}
+                                <div style={{ width: '100%', padding: '16px', borderRadius: '8px', background: 'linear-gradient(135deg, #22c55e 0%, #00f3ff 100%)', color: '#000', fontWeight: 700, textAlign: 'center', boxShadow: '0 5px 20px rgba(0, 243, 255, 0.2)' }}>
+                                    Unified Dashboard
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             {/* The SAFE Solution */}
             <section style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(34, 197, 94, 0.02)' }}>
                 <div className="container">

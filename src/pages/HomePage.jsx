@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 // Articles/News Feed data - Update with your actual articles
 const articles = [
     {
-        title: "We Built a RAG Pipeline That Actually Works in Healthcare",
-        description: "Most RAG tutorials skip the hard parts. Here's how we handled HIPAA, chunking medical records, and the retrieval failures nobody talks about.",
-        publication: "Bheed Studio",
+        title: "From Sequential To Parallel: Scaling Experimentation Inference",
+        description: "A technical retrospective on re-architecting a data pipeline to reduce runtime by 75% and unlock $150M+ in revenue attribution.",
+        publication: "Architecture",
         date: "Jan 2024",
-        link: "#",
+        link: "/articles/experimentation-architecture",
         tag: "Deep Dive",
         readTime: "8 min"
     },
@@ -377,12 +377,6 @@ const HomePage = () => {
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
                                 Leading predictive modeling initiatives. Currently integrating our synthetic control platform with GenAI to build a self-serving system for enterprise analytics.
                             </p>
-                            <Link to="/safe" style={{
-                                display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '16px',
-                                fontSize: '0.875rem', fontWeight: 600, color: '#fff', transition: 'color 0.3s'
-                            }}>
-                                View Case Study <ArrowRight size={14} />
-                            </Link>
                         </motion.div>
 
                         {/* Bheed Studio Card */}
