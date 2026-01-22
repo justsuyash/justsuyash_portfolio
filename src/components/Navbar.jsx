@@ -141,33 +141,130 @@ const Navbar = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         style={{
                             position: 'fixed',
                             inset: 0,
-                            top: 0,
-                            background: '#08080c',
-                            padding: '100px 2rem 2rem 2rem',
-                            zIndex: 999
+                            background: 'linear-gradient(180deg, #08080c 0%, #0a0a12 50%, #08080c 100%)',
+                            zIndex: 999,
+                            display: 'flex',
+                            flexDirection: 'column'
                         }}
                     >
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                            {navLinks.map((link) => (
-                                <Link
+                        {/* Menu Header */}
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            padding: '1.5rem 2rem',
+                            borderBottom: '1px solid rgba(255,255,255,0.05)'
+                        }}>
+                            <Link to="/" onClick={() => setIsOpen(false)} style={{
+                                fontSize: '1.25rem',
+                                fontWeight: 700,
+                                color: '#fff'
+                            }}>
+                                SUYASH<span style={{ color: '#00f3ff' }}>.</span>
+                            </Link>
+                            <button
+                                onClick={() => setIsOpen(false)}
+                                style={{
+                                    color: '#fff',
+                                    background: 'rgba(255,255,255,0.05)',
+                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    borderRadius: '8px',
+                                    padding: '8px',
+                                    cursor: 'pointer'
+                                }}
+                            >
+                                <X size={20} />
+                            </button>
+                        </div>
+
+                        {/* Gradient Glow */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '30%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            width: '300px',
+                            height: '300px',
+                            background: 'radial-gradient(circle, rgba(0, 243, 255, 0.08) 0%, transparent 70%)',
+                            borderRadius: '50%',
+                            filter: 'blur(60px)',
+                            pointerEvents: 'none'
+                        }} />
+
+                        {/* Nav Links */}
+                        <div style={{
+                            flex: 1,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            gap: '0.5rem',
+                            padding: '2rem'
+                        }}>
+                            {navLinks.map((link, index) => (
+                                <motion.div
                                     key={link.name}
-                                    to={link.path}
-                                    style={{
-                                        fontSize: '1.5rem',
-                                        fontWeight: 500,
-                                        color: isActive(link.path) ? '#fff' : 'rgba(255,255,255,0.5)'
-                                    }}
-                                    onClick={() => setIsOpen(false)}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: index * 0.08 }}
                                 >
-                                    {link.name}
-                                </Link>
+                                    <Link
+                                        to={link.path}
+                                        style={{
+                                            display: 'block',
+                                            fontSize: '2rem',
+                                            fontWeight: 600,
+                                            color: isActive(link.path) ? '#fff' : 'rgba(255,255,255,0.4)',
+                                            padding: '12px 0',
+                                            borderBottom: '1px solid rgba(255,255,255,0.05)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {link.name}
+                                        {isActive(link.path) && (
+                                            <span style={{
+                                                display: 'inline-block',
+                                                width: '8px',
+                                                height: '8px',
+                                                borderRadius: '50%',
+                                                background: 'linear-gradient(135deg, #00f3ff, #bd00ff)',
+                                                marginLeft: '12px',
+                                                boxShadow: '0 0 10px rgba(0, 243, 255, 0.5)'
+                                            }} />
+                                        )}
+                                    </Link>
+                                </motion.div>
                             ))}
+                        </div>
+
+                        {/* Footer CTA */}
+                        <div style={{ padding: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                            <a
+                                href="/SuyashResume-Brainworks.pdf"
+                                target="_blank"
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '10px',
+                                    width: '100%',
+                                    padding: '16px',
+                                    borderRadius: '12px',
+                                    background: 'linear-gradient(135deg, #00f3ff 0%, #00c8ff 100%)',
+                                    color: '#000',
+                                    fontWeight: 700,
+                                    fontSize: '1rem',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                Download Resume <ArrowUpRight size={18} />
+                            </a>
                         </div>
                     </motion.div>
                 )}
