@@ -179,7 +179,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
-                                    SENIOR DATA SCIENTIST · PRODUCT EXPERIMENTATION & AI SYSTEMS ARCHITECT
+                                    SENIOR DATA SCIENTIST · PRODUCT, EXPERIMENTATION & AI
                                 </span>
                             </div>
 
@@ -190,7 +190,7 @@ const HomePage = () => {
                                 letterSpacing: '-0.03em',
                                 marginBottom: '20px'
                             }}>
-                                $100M+ Impact Through
+                                $100+ Million Impact Through
                                 <br />
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
@@ -205,12 +205,17 @@ const HomePage = () => {
                                 fontSize: '1.1rem',
                                 color: 'rgba(255,255,255,0.6)',
                                 lineHeight: 1.7,
-                                marginBottom: '32px',
+                                marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                I help teams learn faster. Built up an Experimentation Platform (3→8+ experiments/week), <strong style={{ color: '#00f3ff' }}>architect AI systems</strong> at Fortune 500 scale, and apply this across various domains like education, health, social and finance.{' '}
-                                <Link to="/ventures" style={{ color: '#bd00ff', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Explore my Applied Labs →</Link>
+                                I help teams learn faster. Built up an Experimentation Platform (3→8+ experiments/week), <strong style={{ color: '#00f3ff' }}>architect AI systems</strong> at Fortune 500 scale, and apply this across various domains like education, health, social and finance.
                             </p>
+
+                            <div style={{ marginBottom: '32px' }}>
+                                <Link to="/ventures" style={{ color: '#bd00ff', textDecoration: 'underline', textUnderlineOffset: '3px', fontWeight: 600 }}>
+                                    Explore my Applied Labs →
+                                </Link>
+                            </div>
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                                 <a
