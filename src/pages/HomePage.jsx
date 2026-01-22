@@ -178,7 +178,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    Data Scientist & Founder
+                                    Product Data Scientist
                                 </span>
                             </div>
 
@@ -195,10 +195,10 @@ const HomePage = () => {
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent'
                                 }}>
-                                    Intelligence
+                                    Zero-Bloat
                                 </span>
                                 <br />
-                                That Scales.
+                                Product Intelligence.
                             </h1>
 
                             <p style={{
@@ -208,9 +208,9 @@ const HomePage = () => {
                                 marginBottom: '32px',
                                 maxWidth: '480px'
                             }}>
-                                Data Scientist at <strong style={{ color: '#fff' }}>Albertsons</strong>.
+                                Product Data Scientist at <strong style={{ color: '#fff' }}>Albertsons</strong>.
                                 Founder at <strong style={{ color: '#fff' }}>Bheed Studio</strong>.
-                                Transforming noise into structural advantage through AI and data.
+                                A private venture lab analyzing <strong>market signals</strong> to build autonomous systems.
                             </p>
 
                             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
