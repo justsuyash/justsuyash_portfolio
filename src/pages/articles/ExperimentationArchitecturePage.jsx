@@ -62,17 +62,17 @@ const ExperimentationArchitecturePage = () => {
 
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
 
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Context</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            In large-scale retail experimentation, the bottleneck often shifts from <em>data collection</em> to <em>inference latency</em>. When you have tens of millions of users and dozens of concurrent experiments, naively querying transaction logs for every metric creates a massive compute debt.
+                            Fortune 100 retailer, tens of millions of shoppers, dozens of concurrent experiments. The challenge was to scale from 3 to 8+ tests/week while maintaining statistical rigor.
                         </p>
 
-                        <p style={{ marginBottom: '40px' }}>
-                            The initial state of the system was a classic case of organic growth leading to technical debt. The analysis pipeline was running 15+ sequential queries to compute everything from revenue to basket penetration.
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Problem</h3>
+                        <p style={{ marginBottom: '32px' }}>
+                            Legacy system: 15+ sequential queries per experiment = ~15 min runtime. As metrics increased, latency scaled linearly toward 25-30 minutes.
+                            <br /><br />
+                            <strong>Bottleneck:</strong> Business needed 8+ concurrent experiments per week = impossible at 15 min/test.
                         </p>
-
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif', marginTop: '60px' }}>
-                            The Architectural Bottleneck
-                        </h3>
 
                         <div style={{
                             background: '#0a0a0a', padding: '32px', borderRadius: '8px',
@@ -94,21 +94,15 @@ Runtime: ~15 mins / experiment
 [   Hypothesis Test  ]
 
 🔴 O(N) Table Scans matches metric count
-🔴 High I/O overhead
-🔴 Redundant "Combined_Txn" reads`}
+🔴 High I/O overhead & Redundant reads`}
                             </pre>
                         </div>
 
-                        <p style={{ marginBottom: '32px' }}>
-                            This sequential pattern meant that as we added more interesting metrics (e.g., Gas Rewards, Digital Coupons), the runtime grew linearly. It was unscalable.
-                        </p>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Solution</h3>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif', marginTop: '60px' }}>
-                            The Parallel Bundle Optimization
-                        </h3>
-
-                        <p style={{ marginBottom: '32px' }}>
-                            We re-architected the system to treat metrics not as individual queries, but as <strong>bundles</strong> based on their source of truth. By grouping all transaction-based metrics into a single pass and parallelizing independent streams, we achieved O(1) table scans per source.
+                        <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00f3ff', marginBottom: '12px', fontFamily: 'system-ui, sans-serif' }}>Part 1: Parallel Metric Bundles</h4>
+                        <p style={{ marginBottom: '24px' }}>
+                            We re-architected the system to treat metrics not as individual queries, but as <strong>bundles</strong> based on their source. By grouping all transaction-based metrics into a single pass and parallelizing independent streams, we reduced runtime to ~4 minutes (75% reduction).
                         </p>
 
                         <div style={{
@@ -121,7 +115,6 @@ Runtime: ~15 mins / experiment
 Runtime: ~4 mins / experiment
 
 [ Txn Bundle ]    [ Eng Bundle ]    [ Other ]
-(Rev, Mrgn, ...)  (Visits, ...)     (Gas, ...)
       │                 │               │
       └─────────┬───────┴───────────────┘
                 ▼
@@ -133,26 +126,44 @@ Runtime: ~4 mins / experiment
       [   Dashboard output ]
 
 🟢 Single pass per massive table
-🟢 Parallel execution
-🟢 Pre-computation of standard deviations`}
+🟢 Parallel execution & Pre-computation`}
                             </pre>
                         </div>
 
-                        <p style={{ marginBottom: '40px' }}>
-                            This approach didn't just save cloud costs; it fundamentally changed the culture. When results take 4 minutes instead of 20 (or hours of manual Excel work), engineers check them more often. Velocity increased from 3 to 8+ experiments per week.
-                        </p>
-
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif', marginTop: '60px' }}>
-                            Impact: The $150M+ Unlock
-                        </h3>
-
+                        <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00f3ff', marginBottom: '12px', fontFamily: 'system-ui, sans-serif' }}>Part 2: CUPED Variance Reduction</h4>
                         <p style={{ marginBottom: '32px' }}>
-                            Speed is value. By reducing variance with CUPED (Controlled-Experiment Using Pre-Experiment Data), we essentially "turned down the noise" in our metrics. Lower variance means lower Minimum Detectable Effect (MDE), which means we could detect smaller wins that were previously invisible.
+                            Implemented CUPED (Controlled-Experiment Using Pre-Experiment Data) using pre-experiment user behavior as covariates to reduce noise. This resulted in a <strong>30% lower Minimum Detectable Effect (MDE)</strong>, allowing us to shorten test duration from 6-8 weeks to 3-4 weeks.
                         </p>
 
-                        <p>
-                            That sensitivity, combined with higher velocity, allowed us to confidently ship changes that contributed over <strong>$150M+ in attributed revenue</strong>. The system evolved from a bottleneck into a strategic asset.
-                        </p>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Results</h3>
+                        <ul style={{ listStyle: 'none', padding: 0, marginBottom: '40px' }}>
+                            <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Inference Time:</strong> Reduced from 15 min to 4 min.</span>
+                            </li>
+                            <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Velocity:</strong> Scaled from 3 to 8+ tests/week.</span>
+                            </li>
+                            <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Sensitivity:</strong> Can detect 0.5% lifts (vs 1.5% before).</span>
+                            </li>
+                            <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Impact:</strong> $150M+ in attributed revenue enabled by velocity + sensitivity.</span>
+                            </li>
+                        </ul>
+
+                        <div style={{ padding: '24px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', marginBottom: '40px' }}>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Technologies</h3>
+                            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', fontFamily: 'monospace', fontSize: '0.9rem', color: '#bd00ff' }}>
+                                <span>Python</span> <span>•</span> <span>PySpark</span> <span>•</span> <span>GCP BigQuery</span> <span>•</span> <span>Bayesian Statistics</span> <span>•</span> <span>CUPED</span>
+                            </div>
+                        </div>
+
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Lessons</h3>
+                        <ol style={{ paddingLeft: '20px', marginBottom: '40px' }}>
+                            <li style={{ marginBottom: '12px' }}><strong>O(1) table scans force good architecture.</strong> Constraints drive better design than unlimited compute.</li>
+                            <li style={{ marginBottom: '12px' }}><strong>Variance reduction compounds with velocity.</strong> Lower noise means faster tests, which means more tests, which means more learning.</li>
+                            <li><strong>Infrastructure quality enables organizational velocity.</strong> You can't change culture if the tools are slow.</li>
+                        </ol>
 
                     </div>
                 </motion.div>
