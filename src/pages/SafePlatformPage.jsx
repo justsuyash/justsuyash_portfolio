@@ -49,9 +49,9 @@ const SafePlatformPage = () => {
 
                         <p style={{
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7,
-                            maxWidth: '700px', marginBottom: '48px'
+                            maxWidth: '750px', marginBottom: '48px'
                         }}>
-                            How I architected <strong>SAFE</strong>: A self-optimizing experimentation platform that replaced manual SQL/Excel workflows with an automated, CUPED-enhanced causal inference engine.
+                            At a <strong>Fortune 100 US grocery retailer</strong> serving tens of millions of households, I led the design and rollout of <strong>SAFE</strong>: a self-optimizing experimentation platform that replaced manual workflows with an automated, CUPED-enhanced causal inference engine.
                         </p>
                     </motion.div>
 

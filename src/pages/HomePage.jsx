@@ -369,232 +369,233 @@ const HomePage = () => {
                                     letterSpacing: '0.05em'
                                 }}>Active</span>
                             </div>
-                            Leading predictive modeling initiatives. Currently integrating our synthetic control platform with GenAI to build a self-serving system for enterprise analytics.
-                        </p>
-                        <Link to="/safe" style={{
-                            display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '16px',
-                            fontSize: '0.875rem', fontWeight: 600, color: '#fff', transition: 'color 0.3s'
-                        }}>
-                            View Case Study <ArrowRight size={14} />
-                        </Link>
-                    </motion.div>
+                            <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
+                                Leading predictive modeling initiatives. Currently integrating our synthetic control platform with GenAI to build a self-serving system for enterprise analytics.
+                            </p>
+                            <Link to="/safe" style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '16px',
+                                fontSize: '0.875rem', fontWeight: 600, color: '#fff', transition: 'color 0.3s'
+                            }}>
+                                View Case Study <ArrowRight size={14} />
+                            </Link>
+                        </motion.div>
 
-                    {/* Bheed Studio Card */}
+                        {/* Bheed Studio Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="glass-panel"
+                            style={{ padding: '32px' }}
+                        >
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Bheed Studio</h3>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Founder & Principal Product Scientist</p>
+                                </div>
+                                <span style={{
+                                    padding: '4px 10px',
+                                    borderRadius: '6px',
+                                    background: 'rgba(189, 0, 255, 0.15)',
+                                    color: '#bd00ff',
+                                    fontSize: '0.65rem',
+                                    fontWeight: 700,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.05em'
+                                }}>Building</span>
+                            </div>
+                            <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
+                                A Product Intelligence & Venture Lab building "Zero-Bloat" applications using autonomous GenAI architectures.
+                            </p>
+                            <Link to="/ventures" style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                fontSize: '0.875rem',
+                                fontWeight: 600,
+                                color: '#fff',
+                                transition: 'color 0.3s'
+                            }}>
+                                Explore the Lab <ArrowRight size={14} />
+                            </Link>
+                        </motion.div>
+                    </div>
+                </div>
+            </section >
+
+            {/* How I Think Section */}
+            < section id="how-i-think" style={{ padding: '120px 0' }} className="section-divider" >
+                <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="glass-panel"
-                        style={{ padding: '32px' }}
+                        style={{ marginBottom: '48px' }}
                     >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
-                            <div>
-                                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Bheed Studio</h3>
-                                <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Founder & Principal Product Scientist</p>
+                        <span style={{
+                            color: '#00f3ff',
+                            fontSize: '0.75rem',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.1em',
+                            marginBottom: '12px',
+                            display: 'block'
+                        }}>From the Blog</span>
+                        <h2 style={{
+                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                            fontWeight: 700,
+                            letterSpacing: '-0.02em'
+                        }}>How I Think</h2>
+                    </motion.div>
+
+                    <div className="grid-responsive" style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gap: '20px'
+                    }}>
+                        {articles.map((article, idx) => (
+                            <motion.a
+                                key={idx}
+                                href={article.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 15 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.08 }}
+                                className="glass-panel"
+                                style={{
+                                    padding: '28px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    cursor: 'pointer',
+                                    textDecoration: 'none',
+                                    minHeight: '180px'
+                                }}
+                            >
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    marginBottom: '12px'
+                                }}>
+                                    <span style={{
+                                        padding: '4px 10px',
+                                        borderRadius: '6px',
+                                        background: 'rgba(0, 243, 255, 0.1)',
+                                        border: '1px solid rgba(0, 243, 255, 0.2)',
+                                        color: '#00f3ff',
+                                        fontSize: '0.65rem',
+                                        fontWeight: 700,
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.05em'
+                                    }}>{article.tag}</span>
+                                    <ExternalLink size={16} style={{ color: 'rgba(255,255,255,0.25)' }} />
+                                </div>
+
+                                <h3 style={{
+                                    fontSize: '1.15rem',
+                                    fontWeight: 700,
+                                    marginBottom: '10px',
+                                    color: '#fff',
+                                    lineHeight: 1.4
+                                }}>{article.title}</h3>
+
+                                <p style={{
+                                    color: 'rgba(255,255,255,0.5)',
+                                    fontSize: '0.9rem',
+                                    lineHeight: 1.7,
+                                    flex: 1,
+                                    marginBottom: '16px'
+                                }}>{article.description}</p>
+
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    marginTop: 'auto'
+                                }}>
+                                    <div style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '12px',
+                                        fontSize: '0.8rem',
+                                        color: 'rgba(255,255,255,0.35)'
+                                    }}>
+                                        <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                            <Clock size={12} /> {article.readTime} read
+                                        </span>
+                                        <span>·</span>
+                                        <span>{article.date}</span>
+                                    </div>
+                                    <span style={{
+                                        fontSize: '0.85rem',
+                                        fontWeight: 600,
+                                        color: '#00f3ff',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '4px'
+                                    }}>Read <ArrowRight size={14} /></span>
+                                </div>
+                            </motion.a>
+                        ))}
+                    </div>
+
+                    {/* Lab Funnel */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        style={{ marginTop: '60px' }}
+                    >
+                        <Link to="/lab" style={{ textDecoration: 'none' }}>
+                            <div className="glass-panel" style={{
+                                padding: '40px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                background: 'linear-gradient(90deg, rgba(8,8,12,0.8) 0%, rgba(34, 197, 94, 0.05) 100%)',
+                                border: '1px solid rgba(34, 197, 94, 0.2)',
+                                cursor: 'pointer'
+                            }}>
+                                <div>
+                                    <div style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '8px',
+                                        marginBottom: '12px',
+                                        color: '#22c55e',
+                                        fontFamily: 'monospace',
+                                        fontSize: '0.8rem'
+                                    }}>
+                                        <div style={{ width: '8px', height: '8px', background: '#22c55e', borderRadius: '50%' }} />
+                                        SYSTEM_STATUS: ONLINE
+                                    </div>
+                                    <h3 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>
+                                        Run the Protocols vs Read them.
+                                    </h3>
+                                    <p style={{ color: 'rgba(255,255,255,0.6)' }}>
+                                        Test the Mana Intelligence Engine with your own data in the live lab.
+                                    </p>
+                                </div>
+                                <div style={{
+                                    width: '48px',
+                                    height: '48px',
+                                    borderRadius: '12px',
+                                    background: 'rgba(34, 197, 94, 0.1)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    border: '1px solid rgba(34, 197, 94, 0.2)'
+                                }}>
+                                    <ArrowRight size={24} color="#22c55e" />
+                                </div>
                             </div>
-                            <span style={{
-                                padding: '4px 10px',
-                                borderRadius: '6px',
-                                background: 'rgba(189, 0, 255, 0.15)',
-                                color: '#bd00ff',
-                                fontSize: '0.65rem',
-                                fontWeight: 700,
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.05em'
-                            }}>Building</span>
-                        </div>
-                        <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
-                            A Product Intelligence & Venture Lab building "Zero-Bloat" applications using autonomous GenAI architectures.
-                        </p>
-                        <Link to="/ventures" style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '8px',
-                            fontSize: '0.875rem',
-                            fontWeight: 600,
-                            color: '#fff',
-                            transition: 'color 0.3s'
-                        }}>
-                            Explore the Lab <ArrowRight size={14} />
                         </Link>
                     </motion.div>
                 </div>
-            </div>
-        </section >
-
-            {/* How I Think Section */ }
-    < section id="how-i-think" style={{ padding: '120px 0' }} className="section-divider" >
-        <div className="container">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                style={{ marginBottom: '48px' }}
-            >
-                <span style={{
-                    color: '#00f3ff',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.1em',
-                    marginBottom: '12px',
-                    display: 'block'
-                }}>From the Blog</span>
-                <h2 style={{
-                    fontSize: 'clamp(2rem, 4vw, 3rem)',
-                    fontWeight: 700,
-                    letterSpacing: '-0.02em'
-                }}>How I Think</h2>
-            </motion.div>
-
-            <div className="grid-responsive" style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '20px'
-            }}>
-                {articles.map((article, idx) => (
-                    <motion.a
-                        key={idx}
-                        href={article.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.08 }}
-                        className="glass-panel"
-                        style={{
-                            padding: '28px',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            cursor: 'pointer',
-                            textDecoration: 'none',
-                            minHeight: '180px'
-                        }}
-                    >
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            marginBottom: '12px'
-                        }}>
-                            <span style={{
-                                padding: '4px 10px',
-                                borderRadius: '6px',
-                                background: 'rgba(0, 243, 255, 0.1)',
-                                border: '1px solid rgba(0, 243, 255, 0.2)',
-                                color: '#00f3ff',
-                                fontSize: '0.65rem',
-                                fontWeight: 700,
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.05em'
-                            }}>{article.tag}</span>
-                            <ExternalLink size={16} style={{ color: 'rgba(255,255,255,0.25)' }} />
-                        </div>
-
-                        <h3 style={{
-                            fontSize: '1.15rem',
-                            fontWeight: 700,
-                            marginBottom: '10px',
-                            color: '#fff',
-                            lineHeight: 1.4
-                        }}>{article.title}</h3>
-
-                        <p style={{
-                            color: 'rgba(255,255,255,0.5)',
-                            fontSize: '0.9rem',
-                            lineHeight: 1.7,
-                            flex: 1,
-                            marginBottom: '16px'
-                        }}>{article.description}</p>
-
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            marginTop: 'auto'
-                        }}>
-                            <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '12px',
-                                fontSize: '0.8rem',
-                                color: 'rgba(255,255,255,0.35)'
-                            }}>
-                                <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                                    <Clock size={12} /> {article.readTime} read
-                                </span>
-                                <span>·</span>
-                                <span>{article.date}</span>
-                            </div>
-                            <span style={{
-                                fontSize: '0.85rem',
-                                fontWeight: 600,
-                                color: '#00f3ff',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '4px'
-                            }}>Read <ArrowRight size={14} /></span>
-                        </div>
-                    </motion.a>
-                ))}
-            </div>
-
-            {/* Lab Funnel */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                style={{ marginTop: '60px' }}
-            >
-                <Link to="/lab" style={{ textDecoration: 'none' }}>
-                    <div className="glass-panel" style={{
-                        padding: '40px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        background: 'linear-gradient(90deg, rgba(8,8,12,0.8) 0%, rgba(34, 197, 94, 0.05) 100%)',
-                        border: '1px solid rgba(34, 197, 94, 0.2)',
-                        cursor: 'pointer'
-                    }}>
-                        <div>
-                            <div style={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '8px',
-                                marginBottom: '12px',
-                                color: '#22c55e',
-                                fontFamily: 'monospace',
-                                fontSize: '0.8rem'
-                            }}>
-                                <div style={{ width: '8px', height: '8px', background: '#22c55e', borderRadius: '50%' }} />
-                                SYSTEM_STATUS: ONLINE
-                            </div>
-                            <h3 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>
-                                Run the Protocols vs Read them.
-                            </h3>
-                            <p style={{ color: 'rgba(255,255,255,0.6)' }}>
-                                Test the Mana Intelligence Engine with your own data in the live lab.
-                            </p>
-                        </div>
-                        <div style={{
-                            width: '48px',
-                            height: '48px',
-                            borderRadius: '12px',
-                            background: 'rgba(34, 197, 94, 0.1)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            border: '1px solid rgba(34, 197, 94, 0.2)'
-                        }}>
-                            <ArrowRight size={24} color="#22c55e" />
-                        </div>
-                    </div>
-                </Link>
-            </motion.div>
-        </div>
-    </section >
+            </section >
         </main >
     );
 };
