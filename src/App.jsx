@@ -8,6 +8,7 @@ const VentureLabPage = lazy(() => import('./pages/VentureLabPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const LabPage = lazy(() => import('./pages/LabPage'));
+const SafePlatformPage = lazy(() => import('./pages/SafePlatformPage'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -42,6 +43,7 @@ function App() {
             <Route path="/lab" element={<LabPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/safe" element={<SafePlatformPage />} />
           </Routes>
         </Suspense>
 
