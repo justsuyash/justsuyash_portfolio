@@ -64,7 +64,7 @@ const EmploymentVerificationPage = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Context</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            At a major financial institution (Discover), the loan origination flow is a balance between <strong>risk mitigation</strong> and <strong>conversion</strong>. Every extra step added to verify a borrower reduces fraud risk but also increases drop-off.
+                            At a major financial product company, the loan origination flow is a balance between <strong>risk mitigation</strong> and <strong>conversion</strong>. Every extra step added to verify a borrower reduces fraud risk but also increases drop-off.
                         </p>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Problem</h3>
