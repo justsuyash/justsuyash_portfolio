@@ -179,7 +179,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    Senior Data Scientist
+                                    Senior Data Scientist · AI Systems Architect
                                 </span>
                             </div>
 
@@ -209,9 +209,9 @@ const HomePage = () => {
                                 marginBottom: '32px',
                                 maxWidth: '560px'
                             }}>
-                                <strong style={{ color: '#00f3ff' }}>$100M+ impact</strong> at Fortune 500 companies.
-                                I build products by analyzing market trends and turning data insights into action.
-                                <a href="#how-i-think" style={{ color: '#bd00ff', textDecoration: 'underline', textUnderlineOffset: '3px' }}>See how I think →</a>
+                                I build products to understand users deeply—then apply that insight to scale{' '}
+                                <strong style={{ color: '#00f3ff' }}>AI systems</strong> at Fortune 500 companies.{' '}
+                                <Link to="/ventures" style={{ color: '#bd00ff', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Explore my Applied Labs →</Link>
                             </p>
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -291,7 +291,7 @@ const HomePage = () => {
                                 { metric: '3→8+', label: 'experiments/week via SAFE Platform', color: '#00f3ff' },
                                 { metric: '$150M+', label: 'measurable business impact', color: '#bd00ff' },
                                 { metric: '7+', label: 'years at Fortune 500 companies', color: '#22c55e' },
-                                { metric: 'Solo', label: 'shipped consumer learning products', color: '#f59e0b' }
+                                { metric: 'Solo', label: 'full-stack product engineering', color: '#f59e0b' }
                             ].map((item, idx) => (
                                 <div key={idx} style={{
                                     padding: '20px',

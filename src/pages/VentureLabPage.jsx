@@ -94,7 +94,7 @@ const VentureLabPage = () => {
                         letterSpacing: '0.1em',
                         marginBottom: '16px',
                         display: 'block'
-                    }}>VENTURE LAB // PORTFOLIO</span>
+                    }}>APPLIED RESEARCH LAB</span>
                     <h1 style={{
                         fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                         fontWeight: 700,
@@ -102,8 +102,16 @@ const VentureLabPage = () => {
                         marginBottom: '24px',
                         lineHeight: 1.1
                     }}>
-                        Building the <span className="gradient-text">Protocols</span> of Tomorrow.
+                        Where I Sharpen <span className="gradient-text">Product Intuition</span>.
                     </h1>
+                    <p style={{
+                        fontSize: '1.1rem',
+                        color: 'rgba(255,255,255,0.6)',
+                        lineHeight: 1.7,
+                        maxWidth: '600px'
+                    }}>
+                        Building products teaches me how users think. I apply these insights to architect AI systems that drive revenue at enterprise scale.
+                    </p>
                 </motion.div>
 
                 {/* Main Content Area - Swaps between Grid and Detail */}
