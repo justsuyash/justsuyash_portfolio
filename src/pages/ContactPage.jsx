@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, Send, Sparkles } from 'lucide-react';
 
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; // TODO: REPLACE WITH YOUR FORMSPREE ID
+const FORM_ENDPOINT = "https://formspree.io/f/xjggdzzj";
 
 const ContactPage = () => {
     const handleSubmit = async (e) => {
