@@ -179,4 +179,14 @@ body {
   .nav-mobile-toggle {
     display: block !important;
   }
+
+  /* Responsive Grids */
+  .grid-responsive {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Glass panels on mobile */
+  .glass-panel {
+    padding: 24px !important;
+  }
 }

@@ -283,7 +283,7 @@ const HomePage = () => {
                         }}>What I'm Working On</h2>
                     </motion.div>
 
-                    <div style={{
+                    <div className="grid-responsive" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '24px'
@@ -387,7 +387,7 @@ const HomePage = () => {
                         }}>Latest Thinking</h2>
                     </motion.div>
 
-                    <div style={{
+                    <div className="grid-responsive" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '20px'

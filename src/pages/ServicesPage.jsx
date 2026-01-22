@@ -161,7 +161,7 @@ const ServicesPage = () => {
             {/* Services Grid - 2x2 Layout */}
             <section style={{ padding: '60px 0' }} className="section-divider">
                 <div className="container">
-                    <div style={{
+                    <div className="grid-responsive" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '28px'
@@ -310,7 +310,7 @@ const ServicesPage = () => {
                         }}>Client Outcomes</h2>
                     </motion.div>
 
-                    <div style={{
+                    <div className="grid-responsive" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
                         gap: '24px'
