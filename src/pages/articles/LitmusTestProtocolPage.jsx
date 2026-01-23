@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Calendar, Tag, Clock, ArrowRight, GitBranch, Zap, Shield } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, ArrowRight, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const LitmusTestProtocolPage = () => {
@@ -46,300 +46,253 @@ const LitmusTestProtocolPage = () => {
 
                         <h1 style={{
                             fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: 700,
-                            lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: '24px',
+                            lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px',
                             fontFamily: 'system-ui, -apple-system, sans-serif'
                         }}>
-                            The "Litmus Test" Protocol: De-Risking Advanced Statistics
+                            The Litmus Test: How We Validated CUPED in 5 Days Without Engineering
                         </h1>
 
                         <p style={{
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)',
                             lineHeight: 1.7, fontFamily: 'Georgia, serif'
                         }}>
-                            Why we validated CUPED in a Power Calculator before touching the Production Engine.
+                            We had a choice: Spend 8 weeks building a complex statistical engine that <em>might</em> save us money, or find a way to prove it works before writing a single line of production code.
                         </p>
                     </header>
 
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
 
-
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Core Insight</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Core Tension</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            CUPED (Controlled-experiment Using Pre-experiment Data) is a powerful variance reduction technique—<em>when the pre-experiment data correlates strongly with your post-experiment metrics.</em>
+                            CUPED (Controlled-experiment Using Pre-experiment Data) is the "Active Noise Cancellation" of statistics. It promises to shave weeks off experiment runtimes by mathematically removing noise.
                         </p>
                         <p style={{ marginBottom: '32px' }}>
-                            The problem: You don't know if it will work for your data until you try it. And the standard approach is to integrate it into production first, then measure the results.
+                            But there's a catch: <strong>It only works if your pre-experiment data correlates strongly with your post-experiment metrics.</strong> If it doesn't, you just built a very expensive calculator that does nothing.
                         </p>
                         <p style={{ marginBottom: '32px' }}>
-                            For a Fortune 100 experimentation platform processing 8+ concurrent tests per week, this "build first, validate later" approach carries hidden costs:
+                            For our platform, the stakes were high:
                         </p>
-                        <ul style={{ marginBottom: '32px' }}>
-                            <li style={{ marginBottom: '12px' }}><strong>6-8 weeks</strong> of engineering effort to rewrite query pipelines.</li>
-                            <li style={{ marginBottom: '12px' }}><strong>Ongoing compute overhead</strong> for every test, even if CUPED adds no value.</li>
-                            <li style={{ marginBottom: '12px' }}><strong>Opportunity cost</strong> of engineering time that could go toward proven high-ROI work.</li>
+                        <ul style={{ marginBottom: '40px', fontSize: '1rem', background: 'rgba(255,255,255,0.03)', padding: '24px', borderRadius: '8px' }}>
+                            <li style={{ marginBottom: '12px' }}><strong>The Cost:</strong> 6-8 weeks of Data Engineering time to rewrite query pipelines.</li>
+                            <li style={{ marginBottom: '12px' }}><strong>The Risk:</strong> If correlations were weak (e.g., on low-intent pages), we'd burn 2 months for 0% gain.</li>
+                            <li style={{ marginBottom: '0' }}><strong>The Standard Approach:</strong> "Build it and see." (We rejected this).</li>
                         </ul>
 
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>The Solution: Simulation &gt; Speculation</h3>
+                        <p style={{ marginBottom: '32px' }}>
+                            We inverted the workflow. Instead of treating Power Calculation as a static planning step, we turned it into a dynamic simulation environment—a "Litmus Test."
+                        </p>
+                        <p style={{ marginBottom: '32px' }}>
+                            By implementing the CUPED logic within a lightweight notebook <em>before</em> the experiment launched, we could perform a simple check:
+                        </p>
                         <div style={{
-                            padding: '24px', borderLeft: '4px solid #00f3ff',
-                            background: 'rgba(0, 243, 255, 0.05)', marginBottom: '40px'
+                            padding: '24px',
+                            borderLeft: '4px solid #00f3ff',
+                            background: 'linear-gradient(90deg, rgba(0, 243, 255, 0.05) 0%, transparent 100%)',
+                            marginBottom: '48px'
                         }}>
-                            <p style={{ marginBottom: '16px', fontWeight: 600, color: '#00f3ff' }}>The Question:</p>
-                            <p style={{ margin: 0, fontStyle: 'italic' }}>
-                                How do we validate a statistical approach <em>before</em> committing engineering resources?
+                            <p style={{ margin: 0, fontStyle: 'italic', color: '#fff', fontSize: '1.2rem' }}>
+                                "If the simulation shows &lt;5% variance reduction on historical data, we don't build it. If it shows &gt;30%, we have a mandate."
                             </p>
                         </div>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Solution: The Power Calc "Litmus Test"</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>Visualizing the Math: CUPED as "Audio Mixing"</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            We inverted the workflow. Instead of treating Power Calculation as a static planning step, we turned it into a dynamic simulation environment.
-                        </p>
-                        <p style={{ marginBottom: '32px' }}>
-                            By implementing the entire CUPED logic within the Power Calc notebook, we created a low-cost "Litmus Test."
-                        </p>
-                        <ul style={{ marginBottom: '40px' }}>
-                            <li style={{ marginBottom: '16px' }}><strong>The Check:</strong> Before every experiment, we run the Power Calc. It fetches the actual pre-experiment history of the target population.</li>
-                            <li style={{ marginBottom: '16px' }}><strong>The Gate:</strong> If the notebook shows &lt;5% variance reduction, we simply don't use CUPED for that test. We save the compute cost and complexity.</li>
-                            <li style={{ marginBottom: '16px' }}><strong>The Win:</strong> If it shows &gt;30% reduction, we have mathematical proof that the engineering investment for this specific test is worth it.</li>
-                        </ul>
-                        <p style={{ marginBottom: '48px', fontWeight: 600 }}>
-                            This transforms Power Calc from a "guess" into a "guarantee."
+                            The most intuitive way to understand this isn't through formulas, but waves.
                         </p>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Intuitive Mental Model: CUPED as "Superposition"</h3>
-                        <p style={{ marginBottom: '32px' }}>
-                            Mathematically, CUPED (Controlled-Experiment Using Pre-Experiment Data) uses the correlation between pre- and post-experiment metrics to reduce variance.
-                            <br /><br />
-                            Visually, however, the best way to understand it is Superposition—or more commonly, Active Noise Cancellation.
-                        </p>
-                        <p style={{ marginBottom: '32px' }}>
-                            Imagine your metric (Revenue) as a waveform. It has peaks and valleys caused by natural user variation (some users are just big spenders). This is "Noise."
-                        </p>
-
-                        {/* Visual Diagram: Noise Cancellation */}
+                        {/* Professional SVG Waveform Visualization */}
                         <div style={{
-                            background: '#0a0a0a', padding: '40px', borderRadius: '12px',
-                            border: '1px solid rgba(255,255,255,0.1)', marginBottom: '40px'
+                            background: '#0a0a0a',
+                            borderRadius: '12px',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            marginBottom: '48px',
+                            overflow: 'hidden'
                         }}>
-                            <h4 style={{ fontSize: '0.9rem', color: '#888', textTransform: 'uppercase', marginBottom: '24px', letterSpacing: '1px' }}>Diagram: The Noise Cancellation Effect</h4>
-
-                            {/* Waveform 1: Signal */}
-                            <div style={{ marginBottom: '24px' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#fff', marginBottom: '8px' }}>
-                                    <span>Signal (Test Spend)</span>
-                                    <span style={{ color: '#ef4444' }}>High Variance</span>
-                                </div>
-                                <div style={{ height: '40px', display: 'flex', alignItems: 'flex-end', gap: '2px' }}>
-                                    {[20, 45, 80, 50, 25, 60, 90, 40, 30, 70, 45, 20].map((h, i) => (
-                                        <div key={i} style={{ width: '100%', height: `${h}%`, background: '#ef4444', opacity: 0.7, borderRadius: '2px 2px 0 0' }} />
-                                    ))}
-                                </div>
+                            <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                                <h4 style={{ margin: 0, fontSize: '0.9rem', color: '#888', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'system-ui' }}>
+                                    Signal Superposition
+                                </h4>
                             </div>
+                            <div style={{ padding: '40px 24px', position: 'relative', height: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <svg width="100%" height="100%" viewBox="0 0 800 200" style={{ overflow: 'visible' }}>
+                                    {/* Definitions for Gradients/Filters */}
+                                    <defs>
+                                        <linearGradient id="gradMetric" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stopColor="rgba(239, 68, 68, 0)" />
+                                            <stop offset="50%" stopColor="rgba(239, 68, 68, 0.8)" />
+                                            <stop offset="100%" stopColor="rgba(239, 68, 68, 0)" />
+                                        </linearGradient>
+                                        <linearGradient id="gradCovariate" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stopColor="rgba(0, 243, 255, 0)" />
+                                            <stop offset="50%" stopColor="rgba(0, 243, 255, 0.5)" />
+                                            <stop offset="100%" stopColor="rgba(0, 243, 255, 0)" />
+                                        </linearGradient>
+                                    </defs>
 
-                            {/* Waveform 2: Covariate */}
-                            <div style={{ marginBottom: '24px' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#fff', marginBottom: '8px' }}>
-                                    <span>Covariate (Pre-Test Spend)</span>
-                                    <span style={{ color: '#ef4444' }}>Similar "Noise"</span>
-                                </div>
-                                <div style={{ height: '40px', display: 'flex', alignItems: 'flex-end', gap: '2px', borderBottom: '1px solid #333' }}>
-                                    {[18, 42, 78, 48, 22, 58, 88, 38, 28, 68, 42, 18].map((h, i) => (
-                                        <div key={i} style={{ width: '100%', height: `${h}%`, background: '#ef4444', opacity: 0.4, borderRadius: '2px 2px 0 0' }} />
-                                    ))}
-                                </div>
+                                    {/* Grid Lines */}
+                                    <line x1="0" y1="100" x2="800" y2="100" stroke="rgba(255,255,255,0.1)" strokeWidth="1" strokeDasharray="4 4" />
+
+                                    {/* Metric Wave (Red) - Noisy */}
+                                    <path
+                                        d="M0,100 Q100,20 200,100 T400,100 T600,100 T800,100"
+                                        fill="none"
+                                        stroke="url(#gradMetric)"
+                                        strokeWidth="4"
+                                        style={{ mixBlendMode: 'screen' }}
+                                    >
+                                        <animate attributeName="d"
+                                            dur="10s"
+                                            repeatCount="indefinite"
+                                            values="
+                                            M0,100 Q100,20 200,100 T400,100 T600,100 T800,100;
+                                            M0,100 Q100,180 200,100 T400,100 T600,100 T800,100;
+                                            M0,100 Q100,20 200,100 T400,100 T600,100 T800,100"
+                                        />
+                                    </path>
+                                    <text x="50" y="40" fill="#ef4444" fontSize="12" fontFamily="monospace">Raw Metric (Noisy)</text>
+
+                                    {/* Covariate Wave (Cyan) - Correlated */}
+                                    <path
+                                        d="M0,100 Q100,30 200,100 T400,100 T600,100 T800,100"
+                                        fill="none"
+                                        stroke="url(#gradCovariate)"
+                                        strokeWidth="4"
+                                        strokeDasharray="4 2"
+                                        style={{ mixBlendMode: 'screen', opacity: 0.6 }}
+                                    >
+                                        <animate attributeName="d"
+                                            dur="10s"
+                                            repeatCount="indefinite"
+                                            values="
+                                            M0,100 Q100,30 200,100 T400,100 T600,100 T800,100;
+                                            M0,100 Q100,170 200,100 T400,100 T600,100 T800,100;
+                                            M0,100 Q100,30 200,100 T400,100 T600,100 T800,100"
+                                        />
+                                    </path>
+                                    <text x="50" y="60" fill="#00f3ff" fontSize="12" fontFamily="monospace">Pre-Exp History</text>
+
+                                    {/* Result Wave (Green) - Flat */}
+                                    <line x1="0" y1="100" x2="800" y2="100" stroke="#22c55e" strokeWidth="3" />
+                                    <text x="650" y="90" fill="#22c55e" fontSize="12" fontFamily="monospace" fontWeight="bold">Adjusted Signal (Clean)</text>
+                                </svg>
                             </div>
-
-                            {/* Waveform 3: CUPED Result */}
-                            <div style={{ marginBottom: '12px' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#fff', marginBottom: '8px' }}>
-                                    <span>CUPED Result (Signal - Covariate)</span>
-                                    <span style={{ color: '#22c55e' }}>Zero Noise</span>
-                                </div>
-                                <div style={{ height: '40px', display: 'flex', alignItems: 'center', gap: '2px', position: 'relative' }}>
-                                    <div style={{ position: 'absolute', width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)' }} />
-                                    {[2, 3, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2].map((h, i) => (
-                                        <div key={i} style={{ width: '100%', height: `4px`, background: '#22c55e', borderRadius: '2px' }} />
-                                    ))}
-                                </div>
+                            <div style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', fontSize: '0.9rem', color: '#aaa', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                                <p style={{ margin: 0 }}>
+                                    <strong>How it works:</strong> The red line is the user's spending (highly variable). The cyan dashed line is their <em>previous</em> spending. Because they match so closely, we can mathmatically subtract the cyan from the red. The result (green) is a flat line—meaning zero variance. Any blip in the green line is now purely due to our experiment.
+                                </p>
                             </div>
-                            <p style={{ margin: 0, fontSize: '0.8rem', color: '#666', fontStyle: 'italic', marginTop: '16px' }}>
-                                CUPED acts like Noise Canceling Headphones. It uses the pre-existing 'noise' of user habits to cancel out variance, leaving only the experimental signal.
-                            </p>
                         </div>
 
-                        <p style={{ marginBottom: '32px' }}>
-                            <strong>The Signal (Y):</strong> This is the user's behavior during the experiment. It's noisy.
-                            <br />
-                            <strong>The Covariate (X):</strong> This is the user's behavior before the experiment. Because behavior is sticky, this wave looks very similar to the Signal.
-                            <br />
-                            <strong>The Superposition (Subtraction):</strong> CUPED effectively "flips" the Covariate wave and superimposes it onto the Signal.
-                        </p>
-
-                        <div style={{ background: 'rgba(255,255,255,0.05)', padding: '24px', borderRadius: '8px', marginBottom: '24px', textAlign: 'center', fontFamily: 'monospace' }}>
-                            $$Y_{adjusted} = Y - \theta(X - \mu_X)$$
+                        <div style={{ background: 'rgba(255,255,255,0.05)', padding: '24px', borderRadius: '8px', marginBottom: '12px', textAlign: 'center', fontFamily: 'monospace', color: '#fff', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            Y_adjusted = Y - θ(X - μ_X)
                         </div>
-                        <div style={{ marginBottom: '32px', padding: '16px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
-                            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                <li style={{ marginBottom: '8px' }}><strong>Y</strong> = Post-experiment metric (e.g., Revenue during test)</li>
-                                <li style={{ marginBottom: '8px' }}><strong>X</strong> = Pre-experiment metric (e.g., Revenue before test)</li>
-                                <li style={{ marginBottom: '8px' }}><strong>μ_X</strong> = Mean of pre-experiment metric across population</li>
-                                <li><strong>θ</strong> = Optimal coefficient (chosen to minimize variance)</li>
-                            </ul>
+                        <div style={{ marginBottom: '32px', textAlign: 'center' }}>
+                            <span style={{ display: 'inline-block', padding: '6px 12px', borderRadius: '20px', background: '#222', color: '#bbb', fontSize: '0.85rem', border: '1px solid #333' }}>
+                                ⬇ In Plain English ⬇
+                            </span>
                         </div>
+                        <p style={{ marginBottom: '48px', padding: '0 16px', fontStyle: 'italic', textAlign: 'center', color: 'rgba(255,255,255,0.7)' }}>
+                            "Take what a user just did (Y), and subtract what we <strong>expected</strong> them to do based on history (X). The remainder is the true effect of your test."
+                        </p>
 
+
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>The Decision Engine</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            Where the Covariate "zigs," we know the Signal will likely "zig." By subtracting the expected movement, we flatten the wave. The "peaks" (high variance) cancel out, leaving only the new information generated by the experiment.
-                        </p>
-                        <p style={{ marginBottom: '40px' }}>
-                            <strong>Why this matters:</strong> We proved via our Litmus Test that for high-intent pages (Checkout), the waves match perfectly (high correlation), leading to massive noise cancellation. For low-intent pages (Homepage), the waves are out of sync, meaning Basic CUPED fails.
+                            We didn't just validate CUPED once; we built a router. This decision tree now runs automatically before every test launch.
                         </p>
 
-
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The "Meta-Optimization": Automated Flavor Selection</h3>
-                        <p style={{ marginBottom: '32px' }}>
-                            Because our "Litmus Test" notebook ran hundreds of simulations across different segments (using the segmentation_powercal notebook ), we didn't just validate CUPED; we generated a dataset.
-                        </p>
-                        <p style={{ marginBottom: '24px' }}>
-                            We logged the performance of three different CUPED "Flavors" for every run:
-                        </p>
-                        <ul style={{ marginBottom: '32px' }}>
-                            <li><strong>Basic:</strong> (Pre-Exp Revenue)</li>
-                            <li><strong>Multi-Covariate:</strong> (Pre-Exp Revenue + Order Count)</li>
-                            <li><strong>Time-Weighted:</strong> (Recent behavior weighted heavier)</li>
-                        </ul>
-                        <p style={{ marginBottom: '40px' }}>
-                            We fed this data into a Decision Tree to automate the engineering strategy.
-                        </p>
-
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Decision Tree Router</h3>
-                        <p style={{ marginBottom: '32px' }}>
-                            Instead of forcing one expensive model on all experiments, we use the "Litmus" results to route traffic.
-                        </p>
-
-                        {/* Decision Logic Table */}
-                        <div style={{ overflowX: 'auto', marginBottom: '40px' }}>
-                            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', textAlign: 'left' }}>
-                                <thead>
-                                    <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
-                                        <th style={{ padding: '16px', color: '#888' }}>Condition</th>
-                                        <th style={{ padding: '16px', color: '#22c55e' }}>YES</th>
-                                        <th style={{ padding: '16px', color: '#ef4444' }}>NO</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                                        <td style={{ padding: '16px', color: '#fff' }}><strong>Is Variance Reduction &gt; 5%?</strong><br /><span style={{ fontSize: '0.8em', color: '#666' }}>e.g. Revenue (Volatile) vs CVR (Stable)</span></td>
-                                        <td style={{ padding: '16px', color: 'rgba(255,255,255,0.8)' }}>Proceed to Node 2</td>
-                                        <td style={{ padding: '16px', color: 'rgba(255,255,255,0.8)' }}><strong>Stop.</strong> Use Standard Stats<br /><span style={{ fontSize: '0.8em', color: '#666' }}>(Save Compute)</span></td>
-                                    </tr>
-                                    <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                                        <td style={{ padding: '16px', color: '#fff' }}><strong>Is User History Deep?</strong><br /><span style={{ fontSize: '0.8em', color: '#666' }}>&gt; 3 months of data</span></td>
-                                        <td style={{ padding: '16px', color: '#00f3ff', fontWeight: 600 }}>Use Time-Weighted CUPED</td>
-                                        <td style={{ padding: '16px', color: 'rgba(255,255,255,0.8)' }}>Proceed to Node 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td style={{ padding: '16px', color: '#fff' }}><strong>Is there a Secondary Correlate?</strong><br /><span style={{ fontSize: '0.8em', color: '#666' }}>e.g. Add-to-Cart</span></td>
-                                        <td style={{ padding: '16px', color: '#bd00ff', fontWeight: 600 }}>Use Multi-Covariate CUPED</td>
-                                        <td style={{ padding: '16px', color: '#fff', fontWeight: 600 }}>Use Basic CUPED</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        {/* Visual Diagram: Decision Tree Router */}
+                        {/* Refired Decision Tree */}
                         <div style={{
-                            background: '#0a0a0a', padding: '40px', borderRadius: '12px',
-                            border: '1px solid rgba(255,255,255,0.1)', marginBottom: '40px',
-                            fontFamily: 'monospace', fontSize: '0.85rem'
+                            marginBottom: '64px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: '24px',
+                            fontFamily: 'system-ui, sans-serif'
                         }}>
-                            <h4 style={{ fontSize: '0.9rem', color: '#888', textTransform: 'uppercase', marginBottom: '24px', letterSpacing: '1px', fontFamily: 'system-ui' }}>Diagram: The "Litmus" Decision Architecture</h4>
+                            {/* Step 1 */}
+                            <div style={{ textAlign: 'center', position: 'relative' }}>
+                                <div style={{ border: '1px solid rgba(255,255,255,0.2)', padding: '12px 24px', borderRadius: '50px', display: 'inline-block', fontSize: '0.9rem', color: '#fff', background: '#000' }}>
+                                    New Experiment Request
+                                </div>
+                                <div style={{ height: '24px', width: '1px', background: 'rgba(255,255,255,0.2)', margin: '0 auto' }}></div>
+                            </div>
 
-                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
-                                {/* Start */}
-                                <div style={{ border: '1px solid #fff', padding: '8px 16px', borderRadius: '6px' }}>New Experiment Request</div>
-                                <div style={{ color: '#666' }}>↓</div>
-                                <div style={{ border: '1px dashed #fff', padding: '8px 16px', borderRadius: '6px' }}>Query Power Calc Logs</div>
-                                <div style={{ color: '#666' }}>↓</div>
-
-                                {/* Node 1 */}
-                                <div style={{ background: '#1a1a1a', padding: '12px', borderRadius: '8px', border: '1px solid #333', textAlign: 'center', width: '100%', maxWidth: '400px' }}>
-                                    <div style={{ color: '#bd00ff', marginBottom: '4px' }}>Is Variance Reduction &gt; 5%?</div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '12px' }}>
-                                        <div style={{ textAlign: 'center' }}>
-                                            <span style={{ color: '#ef4444', fontSize: '0.7rem' }}>NO</span>
-                                            <div style={{ marginTop: '8px', border: '1px solid #333', padding: '6px', borderRadius: '4px', background: '#000' }}>
-                                                Stats: Standard Frequentist<br />
-                                                <span style={{ color: '#666' }}>(Save Compute)</span>
-                                            </div>
-                                        </div>
-                                        <div style={{ textAlign: 'center' }}>
-                                            <span style={{ color: '#22c55e', fontSize: '0.7rem' }}>YES</span>
-                                            <div style={{ fontSize: '0.7rem', marginTop: '8px', color: '#888' }}> Check Best Flavor</div>
-                                        </div>
+                            {/* Node 1 */}
+                            <div style={{
+                                background: 'linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                padding: '24px',
+                                borderRadius: '16px',
+                                width: '100%',
+                                maxWidth: '500px',
+                                position: 'relative'
+                            }}>
+                                <h4 style={{ margin: '0 0 16px 0', fontSize: '1.1rem', color: '#fff', textAlign: 'center' }}>
+                                    Is Variance Reduction &gt; 5%?
+                                </h4>
+                                <div style={{ display: 'flex', gap: '16px' }}>
+                                    <div style={{ flex: 1, padding: '16px', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '8px', border: '1px solid rgba(239, 68, 68, 0.2)', textAlign: 'center' }}>
+                                        <div style={{ color: '#ef4444', fontWeight: 700, marginBottom: '8px' }}>NO</div>
+                                        <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Use Standard Stats</div>
+                                    </div>
+                                    <div style={{ flex: 1, padding: '16px', background: 'rgba(34, 197, 94, 0.1)', borderRadius: '8px', border: '1px solid rgba(34, 197, 94, 0.2)', textAlign: 'center' }}>
+                                        <div style={{ color: '#22c55e', fontWeight: 700, marginBottom: '8px' }}>YES</div>
+                                        <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Check Data Depth</div>
                                     </div>
                                 </div>
-                                <div style={{ color: '#22c55e' }}>↓</div>
+                            </div>
 
-                                {/* Node 2 */}
-                                <div style={{ background: '#1a1a1a', padding: '12px', borderRadius: '8px', border: '1px solid #333', textAlign: 'center', width: '100%', maxWidth: '400px' }}>
-                                    <div style={{ color: '#00f3ff', marginBottom: '4px' }}>Deep User History? (&gt;3mo)</div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '12px' }}>
-                                        <div style={{ textAlign: 'center', width: '45%' }}>
-                                            <span style={{ color: '#22c55e', fontSize: '0.7rem' }}>YES</span>
-                                            <div style={{ marginTop: '8px', border: '1px solid #00f3ff', padding: '6px', borderRadius: '4px', background: '#000', color: '#00f3ff' }}>
-                                                Time-Weighted CUPED<br />
-                                                <span style={{ color: 'rgba(0, 243, 255, 0.5)' }}>(Advanced Pipeline)</span>
-                                            </div>
-                                        </div>
-                                        <div style={{ textAlign: 'center', width: '45%' }}>
-                                            <span style={{ color: '#ef4444', fontSize: '0.7rem' }}>NO</span>
-                                            <div style={{ marginTop: '8px', border: '1px solid #333', padding: '6px', borderRadius: '4px', background: '#000' }}>
-                                                Basic / Multi-Covariate<br />
-                                                <span style={{ color: '#666' }}>(Simple SQL)</span>
-                                            </div>
-                                        </div>
+                            <div style={{ height: '24px', width: '1px', background: 'rgba(255,255,255,0.2)', margin: '0 auto' }}></div>
+
+                            {/* Node 2 */}
+                            <div style={{
+                                background: 'linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                padding: '24px',
+                                borderRadius: '16px',
+                                width: '100%',
+                                maxWidth: '500px',
+                                position: 'relative'
+                            }}>
+                                <h4 style={{ margin: '0 0 16px 0', fontSize: '1.1rem', color: '#fff', textAlign: 'center' }}>
+                                    Is User History &gt; 90 Days?
+                                </h4>
+                                <div style={{ display: 'flex', gap: '16px' }}>
+                                    <div style={{ flex: 1, padding: '16px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
+                                        <div style={{ color: '#aaa', fontWeight: 700, marginBottom: '8px' }}>NO</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#fff' }}>Basic CUPED</div>
+                                    </div>
+                                    <div style={{ flex: 1, padding: '16px', background: 'rgba(0, 243, 255, 0.1)', borderRadius: '8px', border: '1px solid rgba(0, 243, 255, 0.2)', textAlign: 'center' }}>
+                                        <div style={{ color: '#00f3ff', fontWeight: 700, marginBottom: '8px' }}>YES</div>
+                                        <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.9)' }}>Time-Weighted CUPED</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>Results: Engineering ROI</h3>
-                        <p style={{ marginBottom: '24px' }}>
-                            By using the Power Calculator as a "Litmus Test," we achieved:
-                        </p>
+
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '32px', fontFamily: 'system-ui, sans-serif' }}>The ROI</h3>
 
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '48px' }}>
-                            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '24px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <h4 style={{ color: '#00f3ff', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}><Clock size={16} /> Time Savings</h4>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.95rem', color: 'rgba(255,255,255,0.7)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                                    <li>Reduced feature validation cycles from <strong>8 weeks → 2 days</strong>.</li>
-                                    <li>Avoided monts of speculative engineering on low-ROI segments.</li>
-                                </ul>
+                            <div style={{ background: '#111', padding: '32px', borderRadius: '16px', border: '1px solid #222' }}>
+                                <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Time to Value</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>5 Days</div>
+                                <div style={{ color: '#22c55e', fontSize: '0.9rem' }}>vs 8 weeks projected</div>
                             </div>
 
-                            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '24px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <h4 style={{ color: '#bd00ff', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}><Zap size={16} /> Statistical Gains</h4>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.95rem', color: 'rgba(255,255,255,0.7)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                                    <li><strong>Homepage Tests:</strong> 15% variance reduction (Time-Weighted required).</li>
-                                    <li><strong>Checkout Tests:</strong> 40% variance reduction (Basic was sufficient).</li>
-                                </ul>
+                            <div style={{ background: '#111', padding: '32px', borderRadius: '16px', border: '1px solid #222' }}>
+                                <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Compute Savings</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>30%</div>
+                                <div style={{ color: '#aaa', fontSize: '0.9rem' }}>reduction in query costs</div>
                             </div>
 
-                            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '24px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <h4 style={{ color: '#22c55e', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}><Shield size={16} /> Cost Efficiency</h4>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.95rem', color: 'rgba(255,255,255,0.7)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                                    <li><strong>30% Compute Reduction</strong> by routing low-value tests away from expensive pipelines.</li>
-                                    <li>80% of infrastructure investment went to high-ROI segments only.</li>
-                                </ul>
+                            <div style={{ background: '#111', padding: '32px', borderRadius: '16px', border: '1px solid #222' }}>
+                                <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Metric Sensitivity</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>+40%</div>
+                                <div style={{ color: '#aaa', fontSize: '0.9rem' }}>gained on checkout tests</div>
                             </div>
-                        </div>
-
-                        <div style={{
-                            padding: '32px', background: 'rgba(34, 197, 94, 0.05)',
-                            borderRadius: '8px', borderLeft: '4px solid #22c55e', marginBottom: '40px'
-                        }}>
-                            <p style={{ margin: 0, fontStyle: 'italic', fontSize: '1.1rem' }}>
-                                "We didn't just reduce variance; we reduced wasted engineering effort. The Litmus Test transformed Power Calculation from a planning formality into a strategic decision gate."
-                            </p>
                         </div>
 
                         <Link to="/articles/experimentation-architecture" style={{

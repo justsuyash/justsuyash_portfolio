@@ -1,12 +1,21 @@
 export const articles = [
     {
-        title: "The 'Sandbox' Strategy: How I Turned a Jupyter Notebook into an Enterprise App",
+        title: "The \"Sandbox\" Strategy: How I Turned a Jupyter Notebook into an Enterprise App",
         description: "Why you should scale your prototype before you build your platform. A story of turning a manual analyst loop into an automated engine.",
         publication: "Strategy",
         date: "Feb 2024",
         link: "/articles/sandbox-strategy",
         tag: "Strategy",
         readTime: "6 min"
+    },
+    {
+        title: "The Litmus Test: How We Validated CUPED in 5 Days Without Engineering",
+        description: "We inverted the workflow. Instead of building an engine first, we used a 'Litmus Test' simulation to prove value and save 8 weeks of dev time.",
+        publication: "Experimentation",
+        date: "Mar 2024",
+        link: "/articles/litmus-test-protocol",
+        tag: "Protocol",
+        readTime: "7 min"
     },
     {
         title: "From Sequential To Parallel: Scaling Experimentation Inference",
