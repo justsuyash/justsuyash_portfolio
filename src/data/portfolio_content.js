@@ -1,5 +1,14 @@
 export const articles = [
     {
+        title: "The 'Litmus Test' Protocol: De-Risking Advanced Statistics",
+        description: "Why we validated CUPED in a Power Calculator before touching the Production Engine. A study in engineering precision.",
+        publication: "Experimentation Verification",
+        date: "Mar 2024",
+        link: "/articles/litmus-test-protocol",
+        tag: "Protocol",
+        readTime: "7 min"
+    },
+    {
         title: "The 'Sandbox' Strategy: How I Turned a Jupyter Notebook into an Enterprise App",
         description: "Why you should scale your prototype before you build your platform. A story of turning a manual analyst loop into an automated engine.",
         publication: "Strategy",

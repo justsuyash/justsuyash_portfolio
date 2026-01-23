@@ -11,6 +11,7 @@ const LabPage = lazy(() => import('./pages/LabPage'));
 const ExperimentationArchitecturePage = lazy(() => import('./pages/articles/ExperimentationArchitecturePage'));
 const EmploymentVerificationPage = lazy(() => import('./pages/articles/EmploymentVerificationPage'));
 const SandboxStrategyPage = lazy(() => import('./pages/articles/SandboxStrategyPage'));
+const LitmusTestProtocolPage = lazy(() => import('./pages/articles/LitmusTestProtocolPage'));
 const GenAiCopilotPage = lazy(() => import('./pages/articles/GenAiCopilotPage'));
 const DecisionTreesPage = lazy(() => import('./pages/articles/DecisionTreesPage'));
 const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
@@ -55,6 +56,7 @@ function App() {
             <Route path="/articles/decision-trees" element={<DecisionTreesPage />} />
             <Route path="/articles" element={<ArticlesPage />} />
             <Route path="/articles/sandbox-strategy" element={<SandboxStrategyPage />} />
+            <Route path="/articles/litmus-test-protocol" element={<LitmusTestProtocolPage />} />
           </Routes>
         </Suspense>
 

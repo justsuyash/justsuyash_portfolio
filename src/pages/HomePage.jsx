@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink, Clock, Sparkles } from 'lucide-react';
+import { ArrowRight, ExternalLink, Clock, Sparkles, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
@@ -183,8 +183,9 @@ const HomePage = () => {
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                                 <a
-                                    href="/SuyashResume-Brainworks.pdf"
+                                    href="/portfolio_resume.pdf"
                                     target="_blank"
+                                    download="portfolio_resume.pdf"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -200,7 +201,7 @@ const HomePage = () => {
                                         textDecoration: 'none'
                                     }}
                                 >
-                                    View Resume <ArrowRight size={18} />
+                                    Download Resume <Download size={18} />
                                 </a>
                                 <Link
                                     to="/contact"
