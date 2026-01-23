@@ -422,8 +422,8 @@ const HomePage = () => {
                             <motion.a
                                 key={idx}
                                 href={article.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                target={article.link.startsWith('http') ? "_blank" : "_self"}
+                                rel={article.link.startsWith('http') ? "noopener noreferrer" : ""}
                                 initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
