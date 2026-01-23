@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ExternalLink, Clock, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+
 // Articles/News Feed data - Update with your actual articles
-import { articles } from '../data/articles';
+import { articles } from '../data/portfolio_content';
 
 
 const HomePage = () => {

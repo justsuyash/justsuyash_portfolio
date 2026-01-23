@@ -10,11 +10,11 @@ suyashkumarthakur@gmail.com ❖ +1(469) 428-6430 ❖ Dallas, Texas, USA
 *Data Scientist IV* — Pleasanton, CA  
 *Feb 2024 – Present*
 
-*   **Boosted testing velocity from 3 to 8+ experiments per week** by architecting SAFE experimentation pipeline across ingestion, processing, and visualization layers, eliminating Excel workflows.
-*   **Enabled management of 17+ new metrics** (non-zero e-commerce, account health KPIs) by orchestrating integration into SAFE pipeline, expanding measurement capabilities.
-*   **Migrated 70% of experimentation codebase from Snowflake to GCP BigQuery** while ensuring data integrity through comprehensive QA protocols, supporting increased scale.
-*   **Reduced abandonment rate by 8+%** by enhancing opportunity sizing framework with predictive forecasting models and business metrics, enabling prioritization toward high-impact tests.
-*   **Doubled annual testing capacity** by pioneering **Bayesian experimentation framework** with **sequential testing**, reducing test duration from 8 to 3 weeks through **early stopping rules** and **posterior credible intervals**.
+*   **Architected the 'SAFE' Experimentation Platform**, scaling velocity from 3 to 8+ experiments/week. Re-engineered ingestion and visualization layers to eliminate Excel dependency, creating a unified source of truth for 50+ stakeholders.
+*   **Orchestrated integration of 17+ strategic metrics** (e.g., non-zero e-commerce, account health) into the pipeline, expanding business intelligence capabilities and enabling leadership to track holistic product health.
+*   **Led 70% migration of legacy codebase to GCP BigQuery**, implementing rigorous QA protocols that reduced query costs and improved data availability for the 50% increase in test volume.
+*   **Reduced cart abandonment rate by 8+%** by deploying a predictive sizing framework. Shifted strategy from "gut-feel" to impact-prioritized testing, focusing resources on high-probability conversion levers.
+*   **Doubled experimentation capacity** by pioneering a **Bayesian Framework** with **Sequential Testing**. Reduced average test duration from 8 to 3 weeks using **early stopping rules** and posterior credible intervals, unlocking faster iteration cycles.
 *   **Data Scientist III**
 *   **Drove 40% increase in testing velocity** by designing and executing CUPED on A/B tests across Digital and In-Store categories. Reduced test variance, enabling faster time to statistical power and quicker decision cycles.
 *   **Accelerated ad-hoc analysis by 90+%** by implementing AI-powered querying via GeminiAPI, enabling natural language data exploration.
@@ -52,13 +52,15 @@ suyashkumarthakur@gmail.com ❖ +1(469) 428-6430 ❖ Dallas, Texas, USA
 **From Sequential to Parallel: Experimentation Inference Engine**  
 *   **Challenge:** Legacy system ran 15+ sequential queries per experiment (~15 min runtime). As metrics increased, latency scaled linearly toward 25-30 minutes, preventing scale to 8+ concurrent tests.
 *   **Solution:** Re-architected multiple sequential queries into **parallel metric bundles** (Transaction, Engagement, Specialized), reducing runtime to ~4 minutes (75% reduction) via O(1) table scans.
+*   **Strategy:** Prototyped a **"Notebook-as-App" (The Sandbox)** engine to validate parallel execution logic immediately, bypassing a 6-month engineering queue and enabling value delivery while the full platform was being built.
 *   **Variance Reduction:** Implemented **CUPED methodology** using pre-experiment user behavior as covariates, achieving 20-40% variance reduction and 30% lower MDE.
 *   **Impact:** Unlocked **$150M+ in attributed revenue** decisions through higher velocity (3→8/week) and ability to detect smaller 0.5% lifts.
 
 **The $114M Friction Fix: Employment Verification Optimization**  
-*   **Discovery:** Applied **causal inference** via XGBoost feature importance + correlation analysis to discover that Employment Verification (EV) status had zero correlation with default rates for FICO >720 (p > 0.05).
-*   **Solution:** Designed a **stratified randomization A/B test** using presplit methodology to isolate treatment effect on high-quality applicants.
-*   **Impact:** Captured **300+ additional customers monthly** ($50M realized volume) by removing friction for low-risk users; projected **$114M annualized impact**.
+*   **Challenge:** The bank assumed EV reduced risk, but it caused massive drop-offs for high-FICO applicants. We faced a "Friction vs. Fraud" trade-off: every 2FA challenge was a cost paid in user churn.
+*   **Discovery:** Applied causal inference via XGBoost to prove that for FICO >720, EV status had **zero correlation** with default rates. The "shield" was actually a "leak."
+*   **Solution:** Designed a **stratified randomization A/B test** to surgically remove EV for safe segments ("Passive Auth"). Leveraged **RuleFit** to refine risk policies, combining tree-based non-linearity with lasso regression for interpretability.
+*   **Impact:** Captured **300+ additional customers monthly**, realizing **$50M+ in loan volume** with a projected **$114M annualized impact**, proving that reducing friction *is* risk management.
 
 **GenAI Experimentation Copilot**  
 *   **Challenge:** Data Science team spent 8+ hours/week on manual SQL generation, QA checks, and narrative summarization for stakeholders.

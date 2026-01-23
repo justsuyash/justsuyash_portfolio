@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ExternalLink, Clock, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { articles } from '../data/articles';
+import { articles } from '../data/portfolio_content';
 
 const ArticlesPage = () => {
     return (

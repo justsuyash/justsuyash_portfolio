@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User, Tag, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Force refresh
+
 const ExperimentationArchitecturePage = () => {
     return (
         <main style={{ paddingTop: '120px', paddingBottom: '100px', backgroundColor: '#050505' }}>
@@ -57,6 +59,10 @@ const ExperimentationArchitecturePage = () => {
                             lineHeight: 1.7, fontFamily: 'Georgia, serif'
                         }}>
                             A technical retrospective on re-architecting a data pipeline to reduce runtime by 75% and unlock $150M+ in revenue attribution through variance reduction.
+                            <br />
+                            <Link to="/articles/sandbox-strategy" style={{ color: '#bd00ff', fontSize: '1rem', marginTop: '16px', display: 'inline-block' }}>
+                                Read the strategy behind this architecture →
+                            </Link>
                         </p>
                     </header>
 
@@ -134,6 +140,37 @@ Runtime: ~4 mins / experiment
                         <p style={{ marginBottom: '32px' }}>
                             Implemented CUPED (Controlled-Experiment Using Pre-Experiment Data) using pre-experiment user behavior as covariates to reduce noise. This resulted in a <strong>30% lower Minimum Detectable Effect (MDE)</strong>, allowing us to shorten test duration from 6-8 weeks to 3-4 weeks.
                         </p>
+
+                        <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00f3ff', marginBottom: '12px', fontFamily: 'system-ui, sans-serif' }}>The "Shadow" Implementation</h4>
+                        <p style={{ marginBottom: '32px' }}>
+                            While this architectural shift drove the performance gains, we didn't wait for a full-stack engineering team to build the platform before we started reaping the rewards. I needed a way to execute these parallel bundles <em>now</em>, not in six months.
+                            <br /><br />
+                            To do that, I built a "shadow" application using nothing but Jupyter Notebooks, Excel config files, and a driver script. It was the scrappy prototype that validated the architecture.
+                        </p>
+
+                        <Link to="/articles/sandbox-strategy" style={{
+                            display: 'flex', alignItems: 'center', gap: '16px',
+                            background: 'rgba(255,255,255,0.05)', padding: '24px',
+                            borderRadius: '8px', textDecoration: 'none',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            marginBottom: '48px', transition: 'border-color 0.2s'
+                        }}>
+                            <div style={{ flex: 1 }}>
+                                <span style={{
+                                    display: 'block', fontSize: '0.875rem',
+                                    color: '#bd00ff', marginBottom: '8px', fontFamily: 'monospace'
+                                }}>
+                                    READ THE IMPLEMENTATION STORY
+                                </span>
+                                <h4 style={{
+                                    fontSize: '1.25rem', fontWeight: 600,
+                                    color: '#fff', margin: 0
+                                }}>
+                                    The "Sandbox" Strategy: How I Turned a Jupyter Notebook into an Enterprise App
+                                </h4>
+                            </div>
+                            <ArrowRight color="rgba(255,255,255,0.6)" />
+                        </Link>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Results</h3>
                         <ul style={{ listStyle: 'none', padding: 0, marginBottom: '40px' }}>
