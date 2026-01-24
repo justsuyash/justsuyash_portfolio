@@ -56,7 +56,7 @@ const GenAiCopilotPage = () => {
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)',
                             lineHeight: 1.7, fontFamily: 'Georgia, serif'
                         }}>
-                            Eliminating 8+ hours/week of manual SQL toil by building an internal LLM agent that turns product questions into verified experiment analysis.
+                            Bridging the gap between complex business vernacular ("How did the easy-eating segment perform at Tom Thumb?") and executable, anonymized analysis code.
                         </p>
                     </header>
 
@@ -69,13 +69,9 @@ const GenAiCopilotPage = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Problem</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            Data Scientists were spending <strong>8+ hours per week</strong> on repetitive tasks:
-                            <ul style={{ marginTop: '12px' }}>
-                                <li>Writing boilerplate SQL for standard metric sets.</li>
-                                <li>Running manual QA checks (e.g., sample ratio mismatch).</li>
-                                <li>Summarizing results into narratives for Product Managers.</li>
-                            </ul>
-                            Non-technical PMs couldn't run their own analyses, creating a dependency loop.
+                            Business stakeholders don't ask about p-values; they ask complex, linguistically messy questions: <em>"How many customers availed this offer from the easy-eating segment that shopped at SoCal division Tom Thumb?"</em>
+                            <br /><br />
+                            Translating these requests into code is slow and error-prone. We have a "Safe Engine" for the statistics, but we lacked a translation layer that could understand specific segment definitions without exposing sensitive company data (like specific division names) to an external model.
                         </p>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Solution</h3>
@@ -85,10 +81,10 @@ const GenAiCopilotPage = () => {
 
                         <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00f3ff', marginBottom: '12px', fontFamily: 'system-ui, sans-serif' }}>Technical Approach</h4>
                         <ol style={{ marginBottom: '32px', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '8px' }}><strong>Metadata Parsing:</strong> The agent reads the experiment config (JSON) to understand start dates, variant IDs, and primary metrics.</li>
-                            <li style={{ marginBottom: '8px' }}><strong>SQL Generation:</strong> Uses Jinja2 templates populated by the LLM to generate verified BigQuery SQL.</li>
-                            <li style={{ marginBottom: '8px' }}><strong>Auto-QA:</strong> Runs the query and checks for common errors (SRM, zero data) before showing results.</li>
-                            <li><strong>Narrative Draft:</strong> Interprets the resulting p-values and lifts to write a draft summary in Markdown.</li>
+                            <li style={{ marginBottom: '8px' }}><strong>Semantic Parsing:</strong> The LLM breaks down the natural language request ("easy eating," "SoCal") into standardized parameters.</li>
+                            <li style={{ marginBottom: '8px' }}><strong>Anonymization Layer:</strong> Before generating logic, specific entities are masked (e.g., "Tom Thumb" becomes <code>Division_A</code>) to keep the company anonymous in generated examples.</li>
+                            <li style={{ marginBottom: '8px' }}><strong>Template Filling:</strong> The agent populates a validated Jinja2 template with these sanitized parameters.</li>
+                            <li><strong>Execution:</strong> The filled template is passed to our deterministic "Safe Engine" which handles the actual p-value calculation and privacy checks.</li>
                         </ol>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Results</h3>
@@ -114,7 +110,7 @@ const GenAiCopilotPage = () => {
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Lessons</h3>
                         <ol style={{ paddingLeft: '20px', marginBottom: '40px' }}>
                             <li style={{ marginBottom: '12px' }}><strong>GenAI as Middleware.</strong> The most valuable use of LLMs here wasn't "chatting"—it was acting as the glue between our metadata service and our data warehouse.</li>
-                            <li style={{ marginBottom: '12px' }}><strong>Guardrails are mandatory.</strong> We don't let the LLM write raw SQL from scratch (a massive security risk). Instead, it fills validated Jinja2 templates with user parameters.</li>
+                            <li style={{ marginBottom: '12px' }}><strong>Anonymization is key.</strong> The LLM generates generic examples (masking division names) rather than specific queries, ensuring we don't leak proprietary segmentation logic.</li>
                             <li><strong>Democratization speeds up experts too.</strong> Tools built for "non-technical users" often end up being power-tools for experts to move faster.</li>
                         </ol>
 
