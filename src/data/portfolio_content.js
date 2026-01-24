@@ -53,13 +53,5 @@ export const articles = [
         tag: "Case Study",
         readTime: "5 min"
     },
-    {
-        title: "Statistical Methods That Actually Matter for A/B Tests",
-        description: "Forget p-values. Here's the Bayesian approach we use at Albertsons for experiments that ship faster.",
-        publication: "LinkedIn",
-        date: "Oct 2023",
-        link: "https://www.linkedin.com/in/justsuyash/",
-        tag: "Tutorial",
-        readTime: "6 min"
-    }
+
 ];
