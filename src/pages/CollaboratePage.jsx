@@ -69,7 +69,7 @@ const testimonials = [
     }
 ];
 
-const ServicesPage = () => {
+const CollaboratePage = () => {
     return (
         <main style={{ paddingTop: '100px' }}>
             {/* Hero Section */}
@@ -116,7 +116,7 @@ const ServicesPage = () => {
                         }}>
                             <Sparkles size={14} color="#bd00ff" />
                             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                Advisory Services
+                                Collaborate
                             </span>
                         </div>
 
@@ -358,4 +358,4 @@ const ServicesPage = () => {
     );
 };
 
-export default ServicesPage;
+export default CollaboratePage;

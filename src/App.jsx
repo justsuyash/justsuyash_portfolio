@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const VentureLabPage = lazy(() => import('./pages/VentureLabPage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const CollaboratePage = lazy(() => import('./pages/CollaboratePage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const LabPage = lazy(() => import('./pages/LabPage'));
 const ExperimentationArchitecturePage = lazy(() => import('./pages/articles/ExperimentationArchitecturePage'));
@@ -47,8 +47,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/ventures" element={<VentureLabPage />} />
             <Route path="/lab" element={<LabPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/collaborate" element={<CollaboratePage />} />
+
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/articles/experimentation-architecture" element={<ExperimentationArchitecturePage />} />
             <Route path="/articles/employment-verification" element={<EmploymentVerificationPage />} />
