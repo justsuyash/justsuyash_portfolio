@@ -114,7 +114,7 @@ const GenAiCopilotPage = () => {
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Lessons</h3>
                         <ol style={{ paddingLeft: '20px', marginBottom: '40px' }}>
                             <li style={{ marginBottom: '12px' }}><strong>GenAI as Middleware.</strong> The most valuable use of LLMs here wasn't "chatting"—it was acting as the glue between our metadata service and our data warehouse.</li>
-                            <li style={{ marginBottom: '12px' }}><strong>Guardrails are mandatory.</strong> We don't let the LLM execute arbitrary SQL. It fills validated templates.</li>
+                            <li style={{ marginBottom: '12px' }}><strong>Guardrails are mandatory.</strong> We don't let the LLM write raw SQL from scratch (a massive security risk). Instead, it fills validated Jinja2 templates with user parameters.</li>
                             <li><strong>Democratization speeds up experts too.</strong> Tools built for "non-technical users" often end up being power-tools for experts to move faster.</li>
                         </ol>
 
