@@ -30,8 +30,8 @@ const services = [
         gradient: "linear-gradient(135deg, #bd00ff 0%, #8b00ff 100%)",
         color: "#bd00ff",
         badge: "Limited Slots",
-        link: `${CALENDLY_URL}/career-advisory`,
-        extraLink: { label: "or book on Topmate", url: "https://topmate.io/justsuyash" }
+        link: "https://topmate.io/justsuyash",
+        extraLink: null
     },
 
     {
@@ -240,7 +240,7 @@ const ServicesPage = () => {
                                             fontWeight: 600,
                                             color: '#fff'
                                         }}>
-                                            Book on Calendly <ArrowRight size={16} />
+                                            {service.link.includes('calendly') ? 'Book on Calendly' : 'Book on Topmate'} <ArrowRight size={16} />
                                         </span>
                                         {service.extraLink && (
                                             <a
