@@ -54,12 +54,7 @@ const SandboxStrategyPage = () => {
                             The "Sandbox" Strategy: A Scalable Prototype of Experimentation Platform and How I Scaled a Jupyter Notebook
                         </h1>
 
-                        <p style={{
-                            fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)',
-                            lineHeight: 1.7, fontFamily: 'Georgia, serif'
-                        }}>
-                            Or: Why you should scale your prototype before you build your platform.
-                        </p>
+
                     </header>
 
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
