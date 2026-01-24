@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
     title: 'Suyash | Portfolio',
     description: 'Data Scientist & Strategist - Portfolio of Suyash.',
+    metadataBase: new URL('https://justsuyash-portfolio.vercel.app/'),
 };
 
 export default function RootLayout({ children }) {
