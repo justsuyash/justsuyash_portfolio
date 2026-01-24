@@ -39,7 +39,7 @@ const services = [
         title: "Coffee Chat",
         subtitle: "Fellow Founders",
         description: "Building something interesting? Let's brainstorm. I enjoy riffing on ideas with other founders—sometimes we land on something genuinely creative.",
-        duration: "20 min",
+        duration: "30 min",
         gradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
         color: "#f59e0b",
         badge: null,
