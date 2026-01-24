@@ -69,7 +69,7 @@ const testimonials = [
     }
 ];
 
-const CollaboratePage = () => {
+const ConnectPage = () => {
     return (
         <main style={{ paddingTop: '100px' }}>
             {/* Hero Section */}
@@ -116,7 +116,7 @@ const CollaboratePage = () => {
                         }}>
                             <Sparkles size={14} color="#bd00ff" />
                             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                Collaborate
+                                Connect
                             </span>
                         </div>
 
@@ -358,4 +358,4 @@ const CollaboratePage = () => {
     );
 };
 
-export default CollaboratePage;
+export default ConnectPage;
