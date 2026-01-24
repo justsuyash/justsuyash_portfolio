@@ -291,7 +291,7 @@ const LitmusTestProtocolContent = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>The Decision Engine</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            We didn't just validate CUPED once; we built a router. This decision tree now runs automatically before every test launch.
+                            We didn't just validate CUPED once; we built <strong>CUPED Profiles</strong>. The hypothesis was that we could more precisely adjust for variance because user behavior differs significantly across various pages and app screens. This decision tree now runs automatically before every test launch.
                         </p>
 
                         {/* Refired Decision Tree */}
