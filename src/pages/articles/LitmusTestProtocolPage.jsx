@@ -196,6 +196,21 @@ const LitmusTestProtocolPage = () => {
                             "Take what a user just did (Y), and subtract what we <strong>expected</strong> them to do based on history (X). The remainder is the true effect of your test."
                         </p>
 
+                        <div style={{ marginBottom: '64px' }}>
+                            <h4 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>
+                                The Visual Misconception: Height vs. Width
+                            </h4>
+                            <p style={{ marginBottom: '16px' }}>
+                                We often think a "taller" peak means a stronger effect, but in probability distributions, <strong>height is just a side effect of width</strong>.
+                            </p>
+                            <p style={{ marginBottom: '16px' }}>
+                                Because the total area under the curve must always equal 1 (100% probability), when you squeeze the variance (make the curve skinnier), the peak is forced to grow taller to compensate.
+                            </p>
+                            <p>
+                                CUPED doesn't inherently boost the signal; it <strong>compresses the scatter</strong>. That makes it easier to see that the distributions are different, which tells us if the lift is real.
+                            </p>
+                        </div>
+
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>The Decision Engine</h3>
                         <p style={{ marginBottom: '32px' }}>
