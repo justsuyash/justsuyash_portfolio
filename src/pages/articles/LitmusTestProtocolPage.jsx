@@ -211,6 +211,81 @@ const LitmusTestProtocolPage = () => {
                             </p>
                         </div>
 
+                        {/* Bell Curve Visualization */}
+                        <div style={{
+                            background: '#0a0a0a',
+                            borderRadius: '12px',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            marginBottom: '64px',
+                            overflow: 'hidden'
+                        }}>
+                            <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                                <h4 style={{ margin: 0, fontSize: '0.9rem', color: '#888', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'system-ui' }}>
+                                    Variance Reduction Visualized
+                                </h4>
+                            </div>
+                            <div style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                                {/* Before */}
+                                <div>
+                                    <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', marginBottom: '8px', fontFamily: 'monospace' }}>BEFORE CUPED (High Variance)</div>
+                                    <svg width="100%" height="120" viewBox="0 0 600 120" style={{ overflow: 'visible' }}>
+                                        {/* Axes */}
+                                        <line x1="0" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+
+                                        {/* Wide Bell Curve */}
+                                        <path
+                                            d="M50,120 Q150,120 200,80 Q300,0 400,80 Q450,120 550,120"
+                                            fill="rgba(239, 68, 68, 0.1)"
+                                            stroke="#ef4444"
+                                            strokeWidth="2"
+                                        />
+
+                                        {/* Overlapping Curve (Control) */}
+                                        <path
+                                            d="M70,120 Q170,120 220,85 Q320,10 420,85 Q470,120 570,120"
+                                            fill="none"
+                                            stroke="rgba(255, 255, 255, 0.3)"
+                                            strokeWidth="2"
+                                            strokeDasharray="4 4"
+                                        />
+
+                                        <text x="300" y="145" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="10">Wide Scatter = Hard to separate</text>
+                                    </svg>
+                                </div>
+
+                                {/* After */}
+                                <div>
+                                    <div style={{ fontSize: '0.8rem', color: '#22c55e', marginBottom: '8px', fontFamily: 'monospace' }}>AFTER CUPED (Low Variance)</div>
+                                    <svg width="100%" height="120" viewBox="0 0 600 120" style={{ overflow: 'visible' }}>
+                                        {/* Axes */}
+                                        <line x1="0" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+
+                                        {/* Narrow, Tall Bell Curve */}
+                                        <path
+                                            d="M150,120 Q220,120 250,60 Q300,-60 350,60 Q380,120 450,120"
+                                            fill="rgba(34, 197, 94, 0.1)"
+                                            stroke="#22c55e"
+                                            strokeWidth="2"
+                                        />
+
+                                        {/* Control Curve (Shifted) */}
+                                        <path
+                                            d="M170,120 Q240,120 270,60 Q320,-50 370,60 Q400,120 470,120"
+                                            fill="none"
+                                            stroke="rgba(255, 255, 255, 0.3)"
+                                            strokeWidth="2"
+                                            strokeDasharray="4 4"
+                                        />
+
+                                        <text x="300" y="145" textAnchor="middle" fill="#22c55e" fontSize="10">Compressed Scatter = Clear Separation</text>
+
+                                        {/* Annotation Line */}
+                                        <line x1="300" y1="0" x2="320" y2="10" stroke="#fff" strokeWidth="1" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>The Decision Engine</h3>
                         <p style={{ marginBottom: '32px' }}>
