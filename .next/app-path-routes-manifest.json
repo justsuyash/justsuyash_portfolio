@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/articles/decision-trees/page": "/articles/decision-trees",
+  "/articles/employment-verification/page": "/articles/employment-verification",
+  "/articles/experimentation-architecture/page": "/articles/experimentation-architecture",
+  "/articles/genai-copilot/page": "/articles/genai-copilot",
+  "/articles/litmus-test-protocol/page": "/articles/litmus-test-protocol",
+  "/articles/page": "/articles",
+  "/articles/sandbox-strategy/page": "/articles/sandbox-strategy",
+  "/connect/page": "/connect",
+  "/contact/page": "/contact",
+  "/lab/page": "/lab",
+  "/page": "/",
+  "/ventures/page": "/ventures"
+}

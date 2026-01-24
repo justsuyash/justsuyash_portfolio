@@ -1,12 +1,15 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const location = useLocation();
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -21,7 +24,7 @@ const Navbar = () => {
         { name: 'Contact', path: '/contact' },
     ];
 
-    const isActive = (path) => location.pathname === path;
+    const isActive = (path) => pathname === path;
 
     return (
         <nav style={{
@@ -41,7 +44,7 @@ const Navbar = () => {
                 justifyContent: 'space-between',
                 alignItems: 'center'
             }}>
-                <Link to="/" style={{
+                <Link href="/" style={{
                     fontSize: '1.25rem',
                     fontWeight: 700,
                     letterSpacing: '-0.02em',
@@ -59,7 +62,7 @@ const Navbar = () => {
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
-                            to={link.path}
+                            href={link.path}
                             style={{
                                 fontSize: '0.875rem',
                                 fontWeight: 500,
@@ -92,7 +95,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <a
-                        href="/SuyashResume-Brainworks.pdf"
+                        href="/portfolio_resume.pdf"
                         target="_blank"
                         style={{
                             display: 'flex',
@@ -160,7 +163,7 @@ const Navbar = () => {
                             padding: '1.5rem 2rem',
                             borderBottom: '1px solid rgba(255,255,255,0.05)'
                         }}>
-                            <Link to="/" onClick={() => setIsOpen(false)} style={{
+                            <Link href="/" onClick={() => setIsOpen(false)} style={{
                                 fontSize: '1.25rem',
                                 fontWeight: 700,
                                 color: '#fff'
@@ -213,7 +216,7 @@ const Navbar = () => {
                                     transition={{ delay: index * 0.08 }}
                                 >
                                     <Link
-                                        to={link.path}
+                                        href={link.path}
                                         style={{
                                             display: 'block',
                                             fontSize: '2rem',
@@ -245,7 +248,7 @@ const Navbar = () => {
                         {/* Footer CTA */}
                         <div style={{ padding: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                             <a
-                                href="/SuyashResume-Brainworks.pdf"
+                                href="/portfolio_resume.pdf"
                                 target="_blank"
                                 style={{
                                     display: 'flex',

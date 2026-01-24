@@ -1,0 +1,8 @@
+{
+  "/articles/litmus-test-protocol/page": "app/articles/litmus-test-protocol/page.js",
+  "/articles/page": "app/articles/page.js",
+  "/connect/page": "app/connect/page.js",
+  "/lab/page": "app/lab/page.js",
+  "/page": "app/page.js",
+  "/ventures/page": "app/ventures/page.js"
+}

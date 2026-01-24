@@ -1,0 +1,186 @@
+/* [project]/src/app/globals.css [app-client] (css) */
+:root {
+  --bg-deep: #08080c;
+  --bg-subtle: #0f1016;
+  --text-primary: #fff;
+  --text-secondary: #9496a1;
+  --border-glass: #ffffff14;
+  --bg-glass: #14141966;
+  --accent-cyan: #00f3ff;
+  --accent-purple: #bd00ff;
+  --accent-glow: #00f3ff26;
+  --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --container-width: 1100px;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  background-image: radial-gradient(circle at 15%, #4c1d9514, #0000 25%), radial-gradient(circle at 85% 30%, #06b6d414, #0000 25%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.glass-panel, [class*="motion"] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, :before, :after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+.glass-panel {
+  background: var(--bg-glass);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  transition: all .4s cubic-bezier(.25, .46, .45, .94);
+}
+
+.glass-panel:hover {
+  background: #1e1e2899;
+  border-color: #fff3;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -10px #00000080;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px #ffffff4d;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider:before {
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--border-glass), transparent);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #ffffff1a;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.5rem;
+  font-weight: 500;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 15px var(--accent-glow);
+  background: #fff3;
+  border-color: #ffffff4d;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-grid {
+    text-align: center;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    display: flex !important;
+  }
+
+  .hero-grid .hero-photo {
+    margin: 0 auto;
+    max-width: 280px !important;
+  }
+
+  .hero-grid .hero-text {
+    align-items: center;
+  }
+
+  .hero-grid .hero-text h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-grid .hero-text p {
+    font-size: 1rem !important;
+  }
+
+  .hero-grid .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-grid .hero-cta a {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .nav-mobile-toggle {
+    display: block !important;
+  }
+
+  .grid-responsive {
+    grid-template-columns: 1fr !important;
+  }
+
+  .glass-panel {
+    padding: 24px !important;
+  }
+}
+
+/*# sourceMappingURL=src_app_globals_css_bad6b30c._.single.css.map*/
