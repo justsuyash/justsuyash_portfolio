@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink, Clock, Sparkles, Download } from 'lucide-react';
+import { ArrowRight, ExternalLink, Clock, Sparkles, Download, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
@@ -9,6 +9,137 @@ import { articles } from '../data/portfolio_content';
 
 
 const HomePage = () => {
+    // Logic to select a featured article based on the current week
+    const { featuredArticle, recentArticles } = useMemo(() => {
+        // Calculate current week number (epoch days / 7)
+        const currentWeek = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 7));
+        const featuredIndex = currentWeek % articles.length;
+
+        const featured = articles[featuredIndex];
+        // Get next 4 articles, wrapping around if needed, but simplest is just filter out featured and take first 4
+        // To keep it stable, let's just filter out the featured one and take the top 4 remaining.
+        const others = articles.filter((_, idx) => idx !== featuredIndex).slice(0, 4);
+
+        return {
+            featuredArticle: featured,
+            recentArticles: others
+        };
+    }, []);
+
+    const ArticleCard = ({ article, delay = 0, featured = false }) => (
+        <motion.a
+            href={article.link}
+            target={article.link.startsWith('http') ? "_blank" : "_self"}
+            rel={article.link.startsWith('http') ? "noopener noreferrer" : ""}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay }}
+            className="glass-panel"
+            style={{
+                padding: featured ? '40px' : '28px',
+                display: 'flex',
+                flexDirection: 'column',
+                cursor: 'pointer',
+                textDecoration: 'none',
+                minHeight: featured ? '280px' : '180px',
+                position: 'relative',
+                background: featured ? 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(189,0,255,0.05) 100%)' : undefined,
+                border: featured ? '1px solid rgba(189,0,255,0.2)' : undefined,
+                gridColumn: featured ? '1 / -1' : undefined
+            }}
+        >
+            {featured && (
+                <div style={{
+                    position: 'absolute',
+                    top: '24px',
+                    right: '24px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    color: '#bd00ff',
+                    fontSize: '0.75rem',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    background: 'rgba(189,0,255,0.1)',
+                    padding: '6px 12px',
+                    borderRadius: '99px',
+                    border: '1px solid rgba(189,0,255,0.2)'
+                }}>
+                    <Star size={12} fill="currentColor" /> Featured
+                </div>
+            )}
+
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: featured ? '20px' : '12px'
+            }}>
+                <span style={{
+                    padding: '4px 10px',
+                    borderRadius: '6px',
+                    background: 'rgba(0, 243, 255, 0.1)',
+                    border: '1px solid rgba(0, 243, 255, 0.2)',
+                    color: '#00f3ff',
+                    fontSize: '0.65rem',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em'
+                }}>{article.tag}</span>
+                {article.link.startsWith('http') && <ExternalLink size={16} style={{ color: 'rgba(255,255,255,0.25)' }} />}
+            </div>
+
+            <h3 style={{
+                fontSize: featured ? '1.8rem' : '1.15rem',
+                fontWeight: 700,
+                marginBottom: '10px',
+                color: '#fff',
+                lineHeight: 1.3,
+                maxWidth: featured ? '90%' : '100%'
+            }}>{article.title}</h3>
+
+            <p style={{
+                color: 'rgba(255,255,255,0.5)',
+                fontSize: featured ? '1.05rem' : '0.9rem',
+                lineHeight: 1.7,
+                flex: 1,
+                marginBottom: '16px',
+                maxWidth: featured ? '800px' : '100%'
+            }}>{article.description}</p>
+
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginTop: 'auto'
+            }}>
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    fontSize: '0.8rem',
+                    color: 'rgba(255,255,255,0.35)'
+                }}>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        <Clock size={12} /> {article.readTime}
+                    </span>
+                    <span>·</span>
+                    <span>{article.date}</span>
+                </div>
+                <span style={{
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    color: featured ? '#bd00ff' : '#00f3ff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px'
+                }}>Read <ArrowRight size={14} /></span>
+            </div>
+        </motion.a>
+    );
+
     return (
         <main>
             {/* Hero Section with Photo */}
@@ -413,96 +544,19 @@ const HomePage = () => {
                         }}>How I Think</h2>
                     </motion.div>
 
+
+                    {/* Featured Article */}
+                    <div style={{ marginBottom: '32px' }}>
+                        {featuredArticle && <ArticleCard article={featuredArticle} featured={true} />}
+                    </div>
+
                     <div className="grid-responsive" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '20px'
                     }}>
-                        {articles.map((article, idx) => (
-                            <motion.a
-                                key={idx}
-                                href={article.link}
-                                target={article.link.startsWith('http') ? "_blank" : "_self"}
-                                rel={article.link.startsWith('http') ? "noopener noreferrer" : ""}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.08 }}
-                                className="glass-panel"
-                                style={{
-                                    padding: '28px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    cursor: 'pointer',
-                                    textDecoration: 'none',
-                                    minHeight: '180px'
-                                }}
-                            >
-                                <div style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-between',
-                                    marginBottom: '12px'
-                                }}>
-                                    <span style={{
-                                        padding: '4px 10px',
-                                        borderRadius: '6px',
-                                        background: 'rgba(0, 243, 255, 0.1)',
-                                        border: '1px solid rgba(0, 243, 255, 0.2)',
-                                        color: '#00f3ff',
-                                        fontSize: '0.65rem',
-                                        fontWeight: 700,
-                                        textTransform: 'uppercase',
-                                        letterSpacing: '0.05em'
-                                    }}>{article.tag}</span>
-                                    <ExternalLink size={16} style={{ color: 'rgba(255,255,255,0.25)' }} />
-                                </div>
-
-                                <h3 style={{
-                                    fontSize: '1.15rem',
-                                    fontWeight: 700,
-                                    marginBottom: '10px',
-                                    color: '#fff',
-                                    lineHeight: 1.4
-                                }}>{article.title}</h3>
-
-                                <p style={{
-                                    color: 'rgba(255,255,255,0.5)',
-                                    fontSize: '0.9rem',
-                                    lineHeight: 1.7,
-                                    flex: 1,
-                                    marginBottom: '16px'
-                                }}>{article.description}</p>
-
-                                <div style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-between',
-                                    marginTop: 'auto'
-                                }}>
-                                    <div style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '12px',
-                                        fontSize: '0.8rem',
-                                        color: 'rgba(255,255,255,0.35)'
-                                    }}>
-                                        <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                                            <Clock size={12} /> {article.readTime} read
-                                        </span>
-                                        <span>·</span>
-                                        <span>{article.date}</span>
-                                    </div>
-                                    <span style={{
-                                        fontSize: '0.85rem',
-                                        fontWeight: 600,
-                                        color: '#00f3ff',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '4px'
-                                    }}>Read <ArrowRight size={14} /></span>
-                                </div>
-                            </motion.a>
+                        {recentArticles.map((article, idx) => (
+                            <ArticleCard key={article.title} article={article} delay={idx * 0.08} />
                         ))}
                     </div>
 
