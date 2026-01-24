@@ -51,7 +51,7 @@ const SandboxStrategyPage = () => {
                             lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: '24px',
                             fontFamily: 'system-ui, -apple-system, sans-serif'
                         }}>
-                            A Scalable Prototype of Experimentation Platform and How I Scaled a Jupyter Notebook
+                            A "Sandbox" Strategy: A Scalable Prototype of Experimentation Platform and How I Scaled a Jupyter Notebook
                         </h1>
 
                         <p style={{
