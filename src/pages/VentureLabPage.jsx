@@ -304,6 +304,15 @@ const VentureLabPage = () => {
                                         )}
 
                                         {activeTab === 'lab' && (
+                                            /* 
+                                                TODO: v2.0 Feature - Venture Lab Mini Apps
+                                                
+                                                The "Interactive Lab" tab is currently a placeholder UI.
+                                                In v2.0, we need to embed the actual "mini apps" or interactive demos here.
+                                                - Mana: Voice/Bio correlation demo
+                                                - Aligned: Date logistics engine
+                                                - Quiz Beef: Recall test
+                                            */
                                             <motion.div
                                                 key="lab"
                                                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}

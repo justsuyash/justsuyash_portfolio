@@ -50,21 +50,21 @@ const services = [
 
 const testimonials = [
     {
-        name: "Priya M.",
-        role: "Data Analyst → Senior Data Scientist",
-        text: "Suyash's career advisory was instrumental in my transition. His mock interviews were realistic and I landed a role at a Fortune 500 within 6 weeks.",
+        name: "Khushwanth Vikram",
+        role: "Aspiring Data Scientist",
+        text: "Mr. Suyash provided great insight about data science and also helped me get started on my data science journey. He was very respectful and kept the conversation engaging with information.",
         rating: 5
     },
     {
-        name: "Amit S.",
-        role: "Founder, AI Startup",
-        text: "The technical mentorship helped us avoid costly architecture mistakes early. His GenAI integration advice saved us months of trial and error.",
+        name: "Sowmya",
+        role: "Mentee",
+        text: "I wanted to express my sincere gratitude for taking the time to thoroughly address my questions. Your thoughtful and detailed responses were greatly appreciated.",
         rating: 5
     },
     {
-        name: "Sneha T.",
-        role: "Product Designer → ML Engineer",
-        text: "Clear, actionable guidance. The career roadmap gave me exactly what I needed to make a successful pivot into data science.",
+        name: "Anonymous",
+        role: "Job Seeker",
+        text: "Thorough discussion on how the resume could be improved to get more interviews. Super helpful.",
         rating: 5
     }
 ];
@@ -341,74 +341,19 @@ const ServicesPage = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section style={{ padding: '80px 0' }} className="section-divider">
-                <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="glass-panel"
-                        style={{
-                            padding: '64px',
-                            textAlign: 'center',
-                            position: 'relative',
-                            overflow: 'hidden'
-                        }}
-                    >
-                        <div style={{
-                            position: 'absolute',
-                            top: '50%',
-                            left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            width: '400px',
-                            height: '400px',
-                            background: 'radial-gradient(circle, rgba(0, 243, 255, 0.1) 0%, transparent 70%)',
-                            borderRadius: '50%',
-                            filter: 'blur(60px)',
-                            pointerEvents: 'none'
-                        }} />
 
-                        <div style={{ position: 'relative', zIndex: 10 }}>
-                            <Calendar size={48} style={{ color: '#00f3ff', marginBottom: '24px' }} />
-                            <h2 style={{
-                                fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
-                                fontWeight: 700,
-                                letterSpacing: '-0.02em',
-                                marginBottom: '16px'
-                            }}>Ready to Get Started?</h2>
-                            <p style={{
-                                fontSize: '1.1rem',
-                                color: 'rgba(255,255,255,0.5)',
-                                marginBottom: '32px',
-                                maxWidth: '500px',
-                                margin: '0 auto 32px'
-                            }}>
-                                Book a session that fits your needs. Limited availability each month.
-                            </p>
-                            <a
-                                href={CALENDLY_URL}
-                                target="_blank"
-                                style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '10px',
-                                    padding: '18px 36px',
-                                    borderRadius: '12px',
-                                    background: 'linear-gradient(135deg, #00f3ff 0%, #00c8ff 100%)',
-                                    color: '#000',
-                                    fontWeight: 700,
-                                    fontSize: '1rem',
-                                    boxShadow: '0 0 40px rgba(0, 243, 255, 0.35)',
-                                    textDecoration: 'none'
-                                }}
-                            >
-                                View Availability on Calendly <ExternalLink size={18} />
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
+            {/* 
+                TODO: v2.0 Feature - "Ask Me Anything" (AI-Powered)
+                
+                Concept:
+                - Use mentorship transcripts as context for an LLM.
+                - Allow users to ask questions and get answers based on my actual advice and philosophy.
+                - Leave this blank for now, but this section is valid real estate for that feature.
+            */}
+            <section style={{ padding: '80px 0', minHeight: '200px' }} className="section-divider">
+                {/* Placeholder for future interactive AI element */}
             </section>
+
         </main>
     );
 };
