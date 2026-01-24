@@ -9,6 +9,9 @@ export const metadata = {
         type: 'article',
         authors: ['Suyash'],
         publishedTime: '2023-08-01',
+    },
+    alternates: {
+        canonical: '/articles/employment-verification',
     }
 };
 
