@@ -133,36 +133,36 @@ const LitmusTestProtocolPage = () => {
                                     {/* Grid Lines */}
                                     <line x1="0" y1="100" x2="800" y2="100" stroke="rgba(255,255,255,0.1)" strokeWidth="1" strokeDasharray="4 4" />
 
-                                    {/* Metric Wave (Red) - Noisy */}
+                                    {/* Metric Wave (Red) - Noisy & High Amplitude */}
                                     <path
-                                        d="M0,100 Q100,20 200,100 T400,100 T600,100 T800,100"
+                                        d="M0,100 Q100,0 200,100 T400,100 T600,100 T800,100"
                                         fill="none"
                                         stroke="url(#gradMetric)"
                                         strokeWidth="4"
-                                        style={{ mixBlendMode: 'screen' }}
+                                        style={{ mixBlendMode: 'screen', filter: 'drop-shadow(0 0 8px rgba(239,68,68,0.5))' }}
                                     >
                                         <animate attributeName="d"
-                                            dur="10s"
+                                            dur="8s"
                                             repeatCount="indefinite"
                                             values="
-                                            M0,100 Q100,20 200,100 T400,100 T600,100 T800,100;
-                                            M0,100 Q100,180 200,100 T400,100 T600,100 T800,100;
-                                            M0,100 Q100,20 200,100 T400,100 T600,100 T800,100"
+                                            M0,100 Q100,0 200,100 T400,100 T600,100 T800,100;
+                                            M0,100 Q100,200 200,100 T400,100 T600,100 T800,100;
+                                            M0,100 Q100,0 200,100 T400,100 T600,100 T800,100"
                                         />
                                     </path>
-                                    <text x="50" y="40" fill="#ef4444" fontSize="12" fontFamily="monospace">Raw Metric (Noisy)</text>
+                                    <text x="50" y="30" fill="#ef4444" fontSize="12" fontFamily="monospace" fontWeight="bold">Raw Metric (Noisy)</text>
 
-                                    {/* Covariate Wave (Cyan) - Correlated */}
+                                    {/* Covariate Wave (Cyan) - Correlated but visibly distinct */}
                                     <path
                                         d="M0,100 Q100,30 200,100 T400,100 T600,100 T800,100"
                                         fill="none"
                                         stroke="url(#gradCovariate)"
-                                        strokeWidth="4"
-                                        strokeDasharray="4 2"
-                                        style={{ mixBlendMode: 'screen', opacity: 0.6 }}
+                                        strokeWidth="3"
+                                        strokeDasharray="6 4"
+                                        style={{ mixBlendMode: 'screen', opacity: 0.8 }}
                                     >
                                         <animate attributeName="d"
-                                            dur="10s"
+                                            dur="8s"
                                             repeatCount="indefinite"
                                             values="
                                             M0,100 Q100,30 200,100 T400,100 T600,100 T800,100;
@@ -170,7 +170,7 @@ const LitmusTestProtocolPage = () => {
                                             M0,100 Q100,30 200,100 T400,100 T600,100 T800,100"
                                         />
                                     </path>
-                                    <text x="50" y="60" fill="#00f3ff" fontSize="12" fontFamily="monospace">Pre-Exp History</text>
+                                    <text x="50" y="50" fill="#00f3ff" fontSize="12" fontFamily="monospace">Pre-Exp History</text>
 
                                     {/* Result Wave (Green) - Flat */}
                                     <line x1="0" y1="100" x2="800" y2="100" stroke="#22c55e" strokeWidth="3" />
