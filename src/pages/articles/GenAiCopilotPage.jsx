@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Calendar, User, Tag, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar, Tag, Clock, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const GenAiCopilotPage = () => {
@@ -56,47 +56,50 @@ const GenAiCopilotPage = () => {
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)',
                             lineHeight: 1.7, fontFamily: 'Georgia, serif'
                         }}>
-                            Bridging the gap between complex business vernacular ("How did the easy-eating segment perform at Tom Thumb?") and executable, anonymized analysis code.
+                            Resolving the "Translation Gap" between business intent and executable statistical analysis.
                         </p>
                     </header>
 
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Context</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Context: Scaling Beyond Human Throughput</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            Scaling an experimentation platform isn't just about infrastructure—it's about <strong>people throughput</strong>. As we scaled to 8+ experiments a week, the Data Science team became the bottleneck for post-experiment analysis.
+                            Scaling an experimentation platform is rarely an infrastructure problem; it is an organizational one. As our velocity increased to 8+ experiments per week, the Data Science team became a critical bottleneck. We weren't constrained by compute; we were constrained by the manual overhead of post-experiment analysis.
                         </p>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Problem</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Problem: Ambiguity as a Blocker</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            Business stakeholders don't ask about p-values; they ask complex, linguistically messy questions: <em>"How many customers availed this offer from the easy-eating segment that shopped at SoCal division Tom Thumb?"</em>
-                            <br /><br />
-                            Translating these requests into code is slow and error-prone. We have a "Safe Engine" for the statistics, but we lacked a translation layer that could understand specific segment definitions without exposing sensitive company data (like specific division names) to an external model.
+                            Stakeholders operate in the language of markets, not matrix algebra. They don't ask for "p-values on a chi-square test"; they ask linguistically complex questions:
+                        </p>
+                        <div style={{ padding: '24px', background: 'rgba(255,255,255,0.05)', borderLeft: '3px solid #bd00ff', marginBottom: '32px', fontStyle: 'italic', color: 'rgba(255,255,255,0.9)' }}>
+                            "How did the 'Healthy Living' offer perform for high-frequency shoppers in the Western Region?"
+                        </div>
+                        <p style={{ marginBottom: '32px' }}>
+                            Translating this business intent into SQL and Python is a high-friction, error-prone process. While we had a robust, deterministic <strong>"Stats Engine"</strong> to handle the mathematics, we lacked a semantic layer that could reliably map specific business vernacular (segments, banners, regions) into the rigid syntax required by our code base.
                         </p>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Solution</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Solution: LLMs as the Semantic Layer</h3>
                         <p style={{ marginBottom: '24px' }}>
-                            I built an internal agent utilizing <strong>Gemini API + LangChain</strong> to act as an "Experimentation Copilot".
+                            I designed an internal agent using <strong>Gemini API + LangChain</strong> to serve as the "Experimentation Copilot." Rather than replacing the analyst, this tool acts as a translation interface.
                         </p>
 
-                        <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00f3ff', marginBottom: '12px', fontFamily: 'system-ui, sans-serif' }}>Technical Approach</h4>
-                        <ol style={{ marginBottom: '32px', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '8px' }}><strong>Semantic Parsing:</strong> The LLM breaks down the natural language request ("easy eating," "SoCal") into standardized parameters.</li>
-                            <li style={{ marginBottom: '8px' }}><strong>Anonymization Layer:</strong> Before generating logic, specific entities are masked (e.g., "Tom Thumb" becomes <code>Division_A</code>) to keep the company anonymous in generated examples.</li>
-                            <li style={{ marginBottom: '8px' }}><strong>Template Filling:</strong> The agent populates a validated Jinja2 template with these sanitized parameters.</li>
-                            <li><strong>Execution:</strong> The filled template is passed to our deterministic "Safe Engine" which handles the actual p-value calculation and privacy checks.</li>
-                        </ol>
+                        <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00f3ff', marginBottom: '12px', fontFamily: 'system-ui, sans-serif' }}>Technical Architecture</h4>
+                        <ul style={{ marginBottom: '32px', paddingLeft: '20px' }}>
+                            <li style={{ marginBottom: '12px' }}><strong>Semantic Parsing:</strong> The LLM functions as a reasoning engine, decomposing natural language requests (e.g., "Western Region," "Churn Risk Segment") into standardized configuration parameters.</li>
+                            <li style={{ marginBottom: '12px' }}><strong>Controlled Generation (Jinja2):</strong> Instead of allowing the LLM to write freeform code (which introduces risk), the agent populates a validated Jinja2 template. This ensures 100% syntax compliance while maintaining flexibility.</li>
+                            <li><strong>Deterministic Execution:</strong> The "hallucination-free" template is passed to our existing Stats Engine, ensuring that while the <em>interface</em> is probabilistic, the <em>math</em> remains deterministic and auditable.</li>
+                        </ul>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Results</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Strategic Impact</h3>
                         <ul style={{ listStyle: 'none', padding: 0, marginBottom: '40px' }}>
                             <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
-                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Toil Reduction:</strong> Eliminated 8+ hours/week of manual work per DS.</span>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>High-Leverage Work:</strong> Eliminated 8+ hours of weekly "toil" per DS, allowing senior contributors to focus on causal inference and methodology rather than SQL fetching.</span>
                             </li>
                             <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
-                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Onboarding:</strong> Reduced new hire onboarding time from 2 weeks to 3 days (agent explains the code).</span>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Accelerated Onboarding:</strong> New hires previously spent two weeks learning our internal library syntax. The Copilot now explains the code as it generates it, reducing time-to-productivity to 3 days.</span>
                             </li>
                             <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
-                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Self-Serve:</strong> Non-technical PMs can now upload a config and get a preliminary analysis draft independently.</span>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>True Self-Serve:</strong> Non-technical Product Managers can now define parameters in plain English and receive a preliminary analysis draft, effectively democratizing access to data insights.</span>
                             </li>
                         </ul>
 
@@ -107,12 +110,39 @@ const GenAiCopilotPage = () => {
                             </div>
                         </div>
 
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Lessons</h3>
-                        <ol style={{ paddingLeft: '20px', marginBottom: '40px' }}>
-                            <li style={{ marginBottom: '12px' }}><strong>GenAI as Middleware.</strong> The most valuable use of LLMs here wasn't "chatting"—it was acting as the glue between our metadata service and our data warehouse.</li>
-                            <li style={{ marginBottom: '12px' }}><strong>Anonymization is key.</strong> The LLM generates generic examples (masking division names) rather than specific queries, ensuring we don't leak proprietary segmentation logic.</li>
-                            <li><strong>Democratization speeds up experts too.</strong> Tools built for "non-technical users" often end up being power-tools for experts to move faster.</li>
-                        </ol>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Core Lessons</h3>
+                        <ul style={{ paddingLeft: '20px', marginBottom: '40px' }}>
+                            <li style={{ marginBottom: '12px' }}><strong>The Probabilistic Interface:</strong> The most powerful pattern for GenAI in analytics is not "generating insights," but "configuring engines." We use the LLM to handle the messy ambiguity of human language, then hand off to traditional code for the rigorous execution.</li>
+                            <li><strong>Tools as Documentation:</strong> By embedding the repository's best practices into the agent's system prompt, the tool effectively becomes a living, interactive documentation layer for the team.</li>
+                        </ul>
+
+                        {/* Credits Section */}
+                        <div style={{
+                            marginTop: '64px',
+                            paddingTop: '32px',
+                            borderTop: '1px solid rgba(255,255,255,0.1)',
+                            fontSize: '0.9rem',
+                            color: 'rgba(255,255,255,0.5)'
+                        }}>
+                            <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '16px', color: '#fff' }}>References & Credits</h4>
+                            <p style={{ marginBottom: '12px' }}>
+                                Inspired by the talk:
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=OZ4BUW4TmsI" target="_blank" rel="noopener noreferrer" style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                color: '#bd00ff',
+                                textDecoration: 'none',
+                                background: 'rgba(189,0,255,0.1)',
+                                padding: '8px 16px',
+                                borderRadius: '6px',
+                                border: '1px solid rgba(189,0,255,0.2)',
+                                transition: 'all 0.2s'
+                            }}>
+                                <ExternalLink size={14} /> Watch the Video Implementation
+                            </a>
+                        </div>
 
                     </div>
                 </motion.div>
