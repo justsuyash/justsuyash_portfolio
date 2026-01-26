@@ -272,7 +272,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
-                                    SENIOR DATA SCIENTIST · PRODUCT, EXPERIMENTATION & AI
+                                    Senior Data Scientist | Platform Architect
                                 </span>
                             </div>
 
@@ -301,7 +301,7 @@ const HomePage = () => {
                                 marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                I help teams learn faster. Built up an Experimentation Platform (3→8+ experiments/week), <strong style={{ color: '#00f3ff' }}>architect AI systems</strong> at Fortune 500 scale, and apply this across various domains like education, health, social and finance.
+                                <strong>Architecting AI-powered causal systems</strong> at the intersection of Experimentation, Causal Inference, and GenAI.
                             </p>
 
                             <div style={{ marginBottom: '32px' }}>
@@ -385,7 +385,7 @@ const HomePage = () => {
                             gap: '20px'
                         }}>
                             {[
-                                { metric: '3→8+', label: 'experiments/week via SAFE Platform', color: '#00f3ff' },
+                                { metric: '3→8+', label: 'experiments/week via Platform', color: '#00f3ff' },
                                 { metric: '$150M+', label: 'measurable business impact', color: '#bd00ff' },
                                 { metric: '7+', label: 'years at Fortune 500 companies', color: '#22c55e' },
                                 { metric: 'Solo', label: 'full-stack product engineering', color: '#f59e0b' }
@@ -518,7 +518,7 @@ const HomePage = () => {
             </section >
 
             {/* How I Think Section */}
-            < section id="how-i-think" style={{ padding: '120px 0' }} className="section-divider" >
+            <section id="how-i-think" style={{ padding: '120px 0' }} className="section-divider" >
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -566,11 +566,57 @@ const HomePage = () => {
                             Check out more <ArrowRight size={16} />
                         </Link>
                     </div>
-
-                    {/* Lab Funnel */}
-
                 </div>
-            </section >
+            </section>
+
+            {/* Technical Roadmap & Contact Section */}
+            <section style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                <div className="container" style={{ textAlign: 'center' }}>
+                    <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '32px' }}>
+                        Explore My Technical Roadmap
+                    </h2>
+
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        gap: '32px',
+                        flexWrap: 'wrap',
+                        marginBottom: '40px'
+                    }}>
+                        <a href="https://github.com/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
+                            <ExternalLink size={16} /> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
+                            <ExternalLink size={16} /> LinkedIn
+                        </a>
+                        <Link href="/" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
+                            <Sparkles size={16} /> Portfolio
+                        </Link>
+                    </div>
+
+                    <a
+                        href="/portfolio_resume.pdf"
+                        target="_blank"
+                        download="portfolio_resume.pdf"
+                        style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            padding: '12px 24px',
+                            borderRadius: '8px',
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                            color: '#fff',
+                            fontWeight: 600,
+                            fontSize: '0.9rem',
+                            transition: 'all 0.3s ease',
+                            textDecoration: 'none'
+                        }}
+                    >
+                        Download Technical CV <Download size={16} />
+                    </a>
+                </div>
+            </section>
         </main >
     );
 };

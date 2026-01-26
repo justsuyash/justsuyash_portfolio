@@ -27,8 +27,8 @@ export const articles = [
         readTime: "8 min"
     },
     {
-        title: "The $114M Friction Fix: Employment Verification Optimization",
-        description: "How causal inference and surgical A/B testing challenged a core risk assumption, removing friction for high-quality borrowers and unlocking $114M in annualized volume.",
+        title: "Challenging Institutional Inertia: The $114M Friction Fix",
+        description: "Proved through XGBoost + Propensity Score Matching that employment verification had zero predictive value, unlocking $114M in annualized volume.",
         publication: "Product Science",
         date: "Aug 2023",
         link: "/articles/employment-verification",
