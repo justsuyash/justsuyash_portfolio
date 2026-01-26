@@ -455,7 +455,7 @@ const HomePage = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
                                     <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Albertsons Companies</h3>
-                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist</p>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Senior Data Scientist | Architecting AI-Powered Experimentation Systems</p>
                                 </div>
                                 <span style={{
                                     padding: '4px 10px',
@@ -469,7 +469,7 @@ const HomePage = () => {
                                 }}>Active</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-                                Leading predictive modeling initiatives. Currently integrating our synthetic control platform with GenAI to build a self-serving system for enterprise analytics.
+                                Built end-to-end experimentation platform driving $150M+ in validated business decisions. Engineered two GenAI automation agents reducing analysis time from days to hours.
                             </p>
                         </motion.div>
 
@@ -485,7 +485,7 @@ const HomePage = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
                                     <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Bheed Studio</h3>
-                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Founder & Principal Product Scientist</p>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Founder & Principal Engineer | Applied AI Research Lab</p>
                                 </div>
                                 <span style={{
                                     padding: '4px 10px',
@@ -499,7 +499,7 @@ const HomePage = () => {
                                 }}>Building</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
-                                A Product Intelligence & Venture Lab building "Zero-Bloat" applications using autonomous GenAI architectures.
+                                Technical sandbox building production-grade consumer AI products. 700+ users across QuizBeef, mana-health, and Aligned.
                             </p>
                             <Link href="/ventures" style={{
                                 display: 'inline-flex',
