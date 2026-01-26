@@ -4,30 +4,22 @@ const Experience = () => {
     const roles = [
         {
             company: "Bheed Studio",
-            title: "Principal Engineer & Product Builder | Applied AI Research Lab",
-            date: "Jan 2024 — Present",
+            title: "Founder & Principal Engineer | Applied AI Research Lab",
+            date: "Jan 2023 — Present",
             location: "Dallas, TX (Remote)",
-            description: "A Product Intelligence & Venture Lab. Building a portfolio of 'Zero-Bloat' applications by combining rigorous market sentiment analysis with autonomous GenAI architectures.",
+            description: "Technical sandbox building production-grade consumer AI products. 700+ users across QuizBeef (AI quiz app), mana-health (multi-agent health platform), Aligned (dating app).",
             details: [
-                "Technical Sandbox: Building production-grade consumer AI products to validate agentic architectures before enterprise deployment.",
-                "QuizBeef: AI-powered quiz application with LLM-generated Q&A from PDFs; scaled to 700+ users.",
-                "mana-health: Multi-agent wellness platform orchestrating specialized agents (physio, nutrition) to process biometric and workout data.",
-                "Aligned: Astrology-based dating app integrating compatibility matching algorithms.",
-                "Tech Stack: Python, TypeScript, LangChain, RAG, Autonomous Agents, Vector Databases."
+                "Tech: LangChain, RAG, autonomous agents, context engineering"
             ]
         },
         {
             company: "Albertsons Companies",
-            title: "Senior Data Scientist | Platform Architect",
-            date: "2023 — Present",
+            title: "Senior Data Scientist | Architecting AI-Powered Experimentation Systems",
+            date: "Feb 2024 — Present",
             location: "Plano, TX",
-            description: "Leading predictive modeling and customer insight initiatives. Architecting scalable data pipelines for retail analytics.",
+            description: "Built end-to-end experimentation platform driving $150M+ in validated business decisions. Engineered two GenAI automation agents reducing analysis time from days to hours. Scaled testing velocity 3→8 experiments/week.",
             details: [
-                "Architected an end-to-end Causal Experimentation Engine: Replaced manual workflows with a high-velocity pipeline scaling from 3 to 8+ experiments/week.",
-                "The Pipeline: Engineered a robust system: Test Configs (Experiment ID) → Automated Exposure Tables → 31+ Metric Aggregation → CUPED Variance Reduction → Bayesian Inference Layer.",
-                "Statistical Impact: Reduced standard error by 35%, compressing 28-day test windows into 12 days.",
-                "GenAI Integration: Deployed a GenAI Analyst Agent (SQL+RAG) and an Auto-Summary Agent, reducing post-experiment analysis from days to hours while cutting hallucinations by 60%.",
-                "Business Value: Validated $150M+ in annual strategic decisions across Pharmacy, Digital, and Private Brands."
+                "Tech: Spark, CUPED (35% error reduction), Bayesian, LangChain, Gemini"
             ]
         },
         {
