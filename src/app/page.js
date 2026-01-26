@@ -385,7 +385,7 @@ const HomePage = () => {
                             gap: '20px'
                         }}>
                             {[
-                                { metric: '3→8+', label: 'experiments/week via Platform', color: '#00f3ff' },
+                                { metric: '3→8+', label: 'experiments/week via Experimentation Engine', color: '#00f3ff' },
                                 { metric: '$150M+', label: 'measurable business impact', color: '#bd00ff' },
                                 { metric: '7+', label: 'years at Fortune 500 companies', color: '#22c55e' },
                                 { metric: 'Solo', label: 'full-stack product engineering', color: '#f59e0b' }
