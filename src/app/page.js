@@ -2,7 +2,7 @@
 
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink, Clock, Sparkles, Download, Star } from 'lucide-react';
+import { ArrowRight, ExternalLink, Clock, Sparkles, Download, Star, Github, Linkedin, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 import { articles } from '../data/portfolio_content';
 
@@ -583,14 +583,14 @@ const HomePage = () => {
                         flexWrap: 'wrap',
                         marginBottom: '40px'
                     }}>
-                        <a href="https://github.com/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
-                            <ExternalLink size={16} /> GitHub
+                        <a href="https://github.com/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
+                            <Github size={18} fill="currentColor" /> GitHub
                         </a>
-                        <a href="https://linkedin.com/in/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
-                            <ExternalLink size={16} /> LinkedIn
+                        <a href="https://linkedin.com/in/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#0077b5', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
+                            <Linkedin size={18} fill="currentColor" strokeWidth={0} /> LinkedIn
                         </a>
                         <Link href="/" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
-                            <Sparkles size={16} /> Portfolio
+                            <Sparkles size={18} /> Portfolio
                         </Link>
                     </div>
 
