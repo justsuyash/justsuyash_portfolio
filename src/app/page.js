@@ -583,14 +583,14 @@ const HomePage = () => {
                         flexWrap: 'wrap',
                         marginBottom: '40px'
                     }}>
-                        <a href="https://github.com/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
-                            <Github size={18} fill="currentColor" /> GitHub
+                        <a href="https://github.com/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500, fontSize: '1.1rem' }}>
+                            <Github size={24} fill="#fff" color="#fff" /> GitHub
                         </a>
-                        <a href="https://linkedin.com/in/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#0077b5', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
-                            <Linkedin size={18} fill="currentColor" strokeWidth={0} /> LinkedIn
+                        <a href="https://linkedin.com/in/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500, fontSize: '1.1rem' }}>
+                            <Linkedin size={24} fill="#0077b5" color="#0077b5" strokeWidth={0} /> LinkedIn
                         </a>
-                        <Link href="/" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500 }}>
-                            <Sparkles size={18} /> Portfolio
+                        <Link href="/" style={{ color: '#ccc', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 500, fontSize: '1.1rem' }}>
+                            <Sparkles size={24} color="#bd00ff" /> Portfolio
                         </Link>
                     </div>
 
