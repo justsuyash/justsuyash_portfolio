@@ -330,6 +330,27 @@ const HomePage = () => {
                                 >
                                     View Resume <ArrowRight size={18} />
                                 </Link>
+                                <a
+                                    href="/portfolio_resume.pdf"
+                                    target="_blank"
+                                    download="portfolio_resume.pdf"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '10px',
+                                        padding: '16px 28px',
+                                        borderRadius: '12px',
+                                        background: 'rgba(255, 255, 255, 0.05)',
+                                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                                        color: '#fff',
+                                        fontWeight: 600,
+                                        fontSize: '0.95rem',
+                                        transition: 'all 0.3s ease',
+                                        textDecoration: 'none'
+                                    }}
+                                >
+                                    Download PDF <Download size={18} />
+                                </a>
                                 <Link
                                     href="/contact"
                                     style={{
