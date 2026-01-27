@@ -52,22 +52,38 @@ const LitmusTestProtocolContent = () => {
                             lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px',
                             fontFamily: 'system-ui, -apple-system, sans-serif'
                         }}>
-                            The Litmus Test: How We Validated CUPED in 5 Days Without Engineering
+                            The Litmus Test: How I Validated CUPED in 5 Days (Approved by Industry Leaders)
                         </h1>
 
                         <p style={{
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)',
                             lineHeight: 1.7, fontFamily: 'Georgia, serif'
                         }}>
-                            We had a choice: Spend 8 weeks building a complex statistical engine that <em>might</em> save us money, or find a way to prove it works before writing a single line of production code.
+                            I had a theory about how to save my company weeks of wasted engineering time, but I needed to know if it would hold up against the industry's best.
                         </p>
                     </header>
 
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
 
+                        <p style={{ marginBottom: '32px' }}>
+                            So, I bought a ticket to the <a href="https://ide.mit.edu/events/2025-conference-on-digital-experimentation-mit/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline', textDecorationColor: '#00f3ff' }}>MIT Conference on Digital Experimentation (Code) 2025</a> in Boston. My goal was simple: find the smartest product leaders and data scientists from companies like <strong>DataDog, OpenAI, Wayfair, and Meta</strong>, and ask them to tear my protocol apart.
+                        </p>
+                        <p style={{ marginBottom: '32px' }}>
+                            I didn't want to just "build and see." I wanted to know how the giants validate complex statistical engines before writing a single line of production code.
+                        </p>
+                        <p style={{ marginBottom: '32px' }}>
+                            After connecting with presenters and validating the approach with peers who manage some of the world's largest <Link href="/articles/experimentation-architecture" style={{ color: '#fff', textDecoration: 'underline', textDecorationColor: '#00f3ff' }}>experimentation platforms</Link>, I confirmed that my method—what I call the "Litmus Test"—wasn't just a hack. It was a necessary filter.
+                        </p>
+                        <p style={{ marginBottom: '48px' }}>
+                            Here is the exact protocol I discussed with them, and how it saved us 8 weeks of work.
+                        </p>
+
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Core Tension</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            CUPED (Controlled-experiment Using Pre-experiment Data) is the "Active Noise Cancellation" of statistics. It promises to shave weeks off experiment runtimes by mathematically removing noise.
+                            We had a choice: Spend 8 weeks building a complex statistical engine that <em>might</em> save us money, or find a way to prove it works first.
+                        </p>
+                        <p style={{ marginBottom: '32px' }}>
+                            <a href="https://exp-platform.com/Documents/2013-CUPED.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline', textDecorationColor: '#00f3ff' }}>CUPED (Controlled-experiment Using Pre-experiment Data)</a> is essentially the "Active Noise Cancellation" of statistics. It promises to shave weeks off experiment runtimes by mathematically removing noise.
                         </p>
                         <p style={{ marginBottom: '32px' }}>
                             But there's a catch: <strong>It only works if your pre-experiment data correlates strongly with your post-experiment metrics.</strong> If it doesn't, you just built a very expensive calculator that does nothing.
@@ -83,7 +99,7 @@ const LitmusTestProtocolContent = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>The Solution: Simulation &gt; Speculation</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            We inverted the workflow. Instead of treating Power Calculation as a static planning step, we turned it into a dynamic simulation environment—a "Litmus Test."
+                            We inverted the workflow. Instead of treating Power Calculation as a static planning step, we turned it into a dynamic simulation environment.
                         </p>
                         <p style={{ marginBottom: '32px' }}>
                             By implementing the CUPED logic within a lightweight notebook <em>before</em> the experiment launched, we could perform a simple check:
@@ -292,7 +308,7 @@ const LitmusTestProtocolContent = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '24px', fontFamily: 'system-ui, sans-serif' }}>The Decision Engine</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            We didn't just validate CUPED once; we built <strong>CUPED Profiles</strong>. The hypothesis was that we could more precisely adjust for variance because user behavior differs significantly across various pages and app screens. This decision tree now runs automatically before every test launch.
+                            We didn't just validate CUPED once; we built <strong>CUPED Profiles</strong>. This decision tree now runs automatically before every test launch to determine if the "Litmus Test" passes.
                         </p>
 
                         {/* Refired Decision Tree */}
@@ -368,7 +384,7 @@ const LitmusTestProtocolContent = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '32px', fontFamily: 'system-ui, sans-serif' }}>The ROI</h3>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '48px' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '32px' }}>
                             <div style={{ background: '#111', padding: '32px', borderRadius: '16px', border: '1px solid #222' }}>
                                 <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Time to Value</div>
                                 <div style={{ fontSize: '2.5rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>5 Days</div>
@@ -387,6 +403,17 @@ const LitmusTestProtocolContent = () => {
                                 <div style={{ color: '#aaa', fontSize: '0.9rem' }}>gained on checkout tests</div>
                             </div>
                         </div>
+
+                        <p style={{
+                            color: 'rgba(255,255,255,0.8)',
+                            fontSize: '1.2rem',
+                            fontStyle: 'italic',
+                            marginBottom: '48px',
+                            borderLeft: '4px solid #bd00ff',
+                            paddingLeft: '24px'
+                        }}>
+                            "This was the story I shared at MIT. It wasn't about the complexity of the math, but the audacity to simulate it first."
+                        </p>
 
                         {/* MIT CODE Validation Callout */}
                         <div style={{
