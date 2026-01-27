@@ -424,7 +424,7 @@ const LitmusTestProtocolContent = () => {
                                 marginBottom: '20px',
                                 fontFamily: 'Georgia, serif'
                             }}>
-                                This CUPED validation methodology was presented at the{' '}
+                                This methodology was presented at the{' '}
                                 <a
                                     href="https://ide.mit.edu/events/2025-conference-on-digital-experimentation-mit/"
                                     target="_blank"
@@ -433,7 +433,7 @@ const LitmusTestProtocolContent = () => {
                                 >
                                     MIT Conference on Digital Experimentation 2025
                                 </a>
-                                {' '}in Boston, where leading researchers and practitioners convene to advance the science of experimentation.
+                                {' '}in Boston. I got the chance to meet Product Leaders and highly experienced Data Scientists from companies like <strong>DataDog, OpenAI, Wayfair, and Meta</strong>, and connected with presenters working on similar validation ideas. There was so much to learn.
                             </p>
                             <Link
                                 href="/articles/mit-code-experience"
