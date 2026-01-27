@@ -388,6 +388,69 @@ const LitmusTestProtocolContent = () => {
                             </div>
                         </div>
 
+                        {/* MIT CODE Validation Callout */}
+                        <div style={{
+                            background: 'linear-gradient(145deg, rgba(0, 243, 255, 0.08) 0%, rgba(189, 0, 255, 0.05) 100%)',
+                            border: '1px solid rgba(0, 243, 255, 0.2)',
+                            borderRadius: '16px',
+                            padding: '32px',
+                            marginBottom: '48px',
+                            position: 'relative',
+                            overflow: 'hidden'
+                        }}>
+                            <div style={{
+                                position: 'absolute',
+                                top: '-50px',
+                                right: '-50px',
+                                width: '150px',
+                                height: '150px',
+                                background: 'radial-gradient(circle, rgba(0, 243, 255, 0.15) 0%, transparent 70%)',
+                                borderRadius: '50%',
+                                pointerEvents: 'none'
+                            }} />
+                            <h4 style={{
+                                fontSize: '1.1rem',
+                                fontWeight: 700,
+                                color: '#00f3ff',
+                                marginBottom: '12px',
+                                fontFamily: 'system-ui, sans-serif'
+                            }}>
+                                ✦ Validated at MIT CODE 2025
+                            </h4>
+                            <p style={{
+                                color: 'rgba(255,255,255,0.7)',
+                                fontSize: '1rem',
+                                lineHeight: 1.7,
+                                marginBottom: '20px',
+                                fontFamily: 'Georgia, serif'
+                            }}>
+                                This CUPED validation methodology was presented at the{' '}
+                                <a
+                                    href="https://ide.mit.edu/events/2025-conference-on-digital-experimentation-mit/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ color: '#00f3ff', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+                                >
+                                    MIT Conference on Digital Experimentation 2025
+                                </a>
+                                {' '}in Boston, where leading researchers and practitioners convene to advance the science of experimentation.
+                            </p>
+                            <Link
+                                href="/articles/mit-code-experience"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    color: '#bd00ff',
+                                    fontWeight: 600,
+                                    fontSize: '0.95rem',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                Read about my full MIT CODE experience →
+                            </Link>
+                        </div>
+
                         {/* Newsletter Signup */}
                         <NewsletterSignup />
 
