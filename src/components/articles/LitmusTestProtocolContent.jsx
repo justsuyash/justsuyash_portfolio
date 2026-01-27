@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Zap } from 'lucide-react';
 import Link from 'next/link';
+import NewsletterSignup from '../NewsletterSignup';
 
 const LitmusTestProtocolContent = () => {
     return (
@@ -387,12 +388,15 @@ const LitmusTestProtocolContent = () => {
                             </div>
                         </div>
 
+                        {/* Newsletter Signup */}
+                        <NewsletterSignup />
+
                         <Link href="/articles/experimentation-architecture" style={{
                             display: 'flex', alignItems: 'center', gap: '16px',
                             background: 'rgba(255,255,255,0.05)', padding: '24px',
                             borderRadius: '8px', textDecoration: 'none',
                             border: '1px solid rgba(255,255,255,0.1)',
-                            marginTop: '64px', transition: 'border-color 0.2s'
+                            marginTop: '32px', transition: 'border-color 0.2s'
                         }}>
                             <div style={{ flex: 1 }}>
                                 <span style={{

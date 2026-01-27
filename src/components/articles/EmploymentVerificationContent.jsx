@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, Clock } from 'lucide-react';
 import Link from 'next/link';
+import NewsletterSignup from '../NewsletterSignup';
 
 const EmploymentVerificationContent = () => {
     return (
@@ -123,6 +124,9 @@ const EmploymentVerificationContent = () => {
                             <li style={{ marginBottom: '12px' }}><strong>Stratified randomization is surgical.</strong> It allowed us to innovate in a high-risk environment without exposing the entire portfolio.</li>
                             <li><strong>Translate statistics into operations.</strong> The XGBoost insight wasn't just a chart; it became a decision tree rule that automatically routed users.</li>
                         </ol>
+
+                        {/* Newsletter Signup */}
+                        <NewsletterSignup />
                     </div>
                 </motion.div>
             </article>

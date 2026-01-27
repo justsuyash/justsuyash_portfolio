@@ -310,7 +310,7 @@ const HomePage = () => {
                                 </Link>
                             </div>
 
-                            <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                            <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
                                 <Link
                                     href="/resume"
                                     style={{
@@ -332,8 +332,7 @@ const HomePage = () => {
                                 </Link>
                                 <a
                                     href="/portfolio_resume.pdf"
-                                    target="_blank"
-                                    download="portfolio_resume.pdf"
+                                    download="Suyash_Resume.pdf"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -351,24 +350,48 @@ const HomePage = () => {
                                 >
                                     Download PDF <Download size={18} />
                                 </a>
-                                <Link
-                                    href="/contact"
-                                    style={{
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        gap: '8px',
-                                        padding: '16px 28px',
-                                        borderRadius: '12px',
-                                        background: 'transparent',
-                                        border: '1px solid rgba(255,255,255,0.15)',
-                                        color: '#fff',
-                                        fontWeight: 600,
-                                        fontSize: '0.95rem',
-                                        transition: 'all 0.3s ease'
-                                    }}
-                                >
-                                    Get in Touch
-                                </Link>
+                                <div style={{ display: 'flex', gap: '12px', marginLeft: '8px' }}>
+                                    <a
+                                        href="https://github.com/justsuyash"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            width: '48px',
+                                            height: '48px',
+                                            borderRadius: '12px',
+                                            background: 'rgba(255, 255, 255, 0.05)',
+                                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                                            color: '#fff',
+                                            transition: 'all 0.3s ease',
+                                            textDecoration: 'none'
+                                        }}
+                                    >
+                                        <Github size={20} />
+                                    </a>
+                                    <a
+                                        href="https://linkedin.com/in/justsuyash"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            width: '48px',
+                                            height: '48px',
+                                            borderRadius: '12px',
+                                            background: 'rgba(255, 255, 255, 0.05)',
+                                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                                            color: '#0077b5',
+                                            transition: 'all 0.3s ease',
+                                            textDecoration: 'none'
+                                        }}
+                                    >
+                                        <Linkedin size={20} />
+                                    </a>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
