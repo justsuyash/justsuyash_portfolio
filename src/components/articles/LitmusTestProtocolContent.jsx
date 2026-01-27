@@ -52,7 +52,7 @@ const LitmusTestProtocolContent = () => {
                             lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px',
                             fontFamily: 'system-ui, -apple-system, sans-serif'
                         }}>
-                            The Litmus Test: How I Validated CUPED in 5 Days (Approved by Industry Leaders)
+                            The Litmus Test: How We Validated CUPED in 5 Days Without Engineering
                         </h1>
 
                         <p style={{
