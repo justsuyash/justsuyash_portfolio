@@ -613,8 +613,9 @@ const HomePage = () => {
                         </Link>
                     </div>
 
-                    <Link
-                        href="/resume"
+                    <a
+                        href="/portfolio_resume.pdf"
+                        download="Suyash_Resume.pdf"
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',
@@ -630,8 +631,8 @@ const HomePage = () => {
                             textDecoration: 'none'
                         }}
                     >
-                        View Technical CV <ArrowRight size={16} />
-                    </Link>
+                        Download Resume <Download size={16} />
+                    </a>
                 </div>
             </section>
         </main >
