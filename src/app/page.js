@@ -311,10 +311,8 @@ const HomePage = () => {
                             </div>
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                                <a
-                                    href="/portfolio_resume.pdf"
-                                    target="_blank"
-                                    download="portfolio_resume.pdf"
+                                <Link
+                                    href="/resume"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -330,8 +328,8 @@ const HomePage = () => {
                                         textDecoration: 'none'
                                     }}
                                 >
-                                    Download Resume <Download size={18} />
-                                </a>
+                                    View Resume <ArrowRight size={18} />
+                                </Link>
                                 <Link
                                     href="/contact"
                                     style={{
@@ -594,10 +592,8 @@ const HomePage = () => {
                         </Link>
                     </div>
 
-                    <a
-                        href="/portfolio_resume.pdf"
-                        target="_blank"
-                        download="portfolio_resume.pdf"
+                    <Link
+                        href="/resume"
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',
@@ -613,8 +609,8 @@ const HomePage = () => {
                             textDecoration: 'none'
                         }}
                     >
-                        Download Technical CV <Download size={16} />
-                    </a>
+                        View Technical CV <ArrowRight size={16} />
+                    </Link>
                 </div>
             </section>
         </main >

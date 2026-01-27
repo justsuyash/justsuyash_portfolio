@@ -94,9 +94,8 @@ const Navbar = () => {
                             )}
                         </Link>
                     ))}
-                    <a
-                        href="/portfolio_resume.pdf"
-                        target="_blank"
+                    <Link
+                        href="/resume"
                         style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -119,8 +118,8 @@ const Navbar = () => {
                             e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
                         }}
                     >
-                        Resume <ArrowUpRight size={14} />
-                    </a>
+                        View Resume <ArrowUpRight size={14} />
+                    </Link>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -247,9 +246,8 @@ const Navbar = () => {
 
                         {/* Footer CTA */}
                         <div style={{ padding: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                            <a
-                                href="/portfolio_resume.pdf"
-                                target="_blank"
+                            <Link
+                                href="/resume"
                                 style={{
                                     display: 'flex',
                                     alignItems: 'center',
@@ -266,8 +264,8 @@ const Navbar = () => {
                                     boxShadow: '0 0 30px rgba(189, 0, 255, 0.3)'
                                 }}
                             >
-                                Download Resume <ArrowUpRight size={18} />
-                            </a>
+                                View Resume <ArrowUpRight size={18} />
+                            </Link>
                         </div>
                     </motion.div>
                 )}
