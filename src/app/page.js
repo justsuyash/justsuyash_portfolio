@@ -311,8 +311,9 @@ const HomePage = () => {
                             </div>
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
-                                <Link
-                                    href="/resume"
+                                <a
+                                    href="/portfolio_resume.pdf"
+                                    download="Suyash_Resume.pdf"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -328,27 +329,7 @@ const HomePage = () => {
                                         textDecoration: 'none'
                                     }}
                                 >
-                                    View Resume <ArrowRight size={18} />
-                                </Link>
-                                <a
-                                    href="/portfolio_resume.pdf"
-                                    download="Suyash_Resume.pdf"
-                                    style={{
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        gap: '10px',
-                                        padding: '16px 28px',
-                                        borderRadius: '12px',
-                                        background: 'rgba(255, 255, 255, 0.05)',
-                                        border: '1px solid rgba(255, 255, 255, 0.1)',
-                                        color: '#fff',
-                                        fontWeight: 600,
-                                        fontSize: '0.95rem',
-                                        transition: 'all 0.3s ease',
-                                        textDecoration: 'none'
-                                    }}
-                                >
-                                    Download PDF <Download size={18} />
+                                    Download Resume <Download size={18} />
                                 </a>
                                 <div style={{ display: 'flex', gap: '12px', marginLeft: '8px' }}>
                                     <a
