@@ -1,5 +1,14 @@
 export const articles = [
     {
+        title: "MIT CODE 2025: From Dallas to Cambridge",
+        description: "Validating intuition and the future of experimentation at the MIT Conference on Digital Experimentation.",
+        publication: "Thought Leadership",
+        date: "Nov 2024",
+        link: "/articles/mit-code-experience",
+        tag: "Reflection",
+        readTime: "6 min"
+    },
+    {
         title: "The 'Litmus Test' Protocol: De-Risking Advanced Statistics",
         description: "Why we validated CUPED in a Power Calculator before touching the Production Engine. A study in engineering precision.",
         publication: "Experimentation Verification",
