@@ -91,7 +91,7 @@ const MitCodeExperienceContent = () => {
 
                         <h2 style={h2Style}>✅ The "Aha!" Moment: Validating 2 Key Ideas</h2>
                         <p style={{ marginBottom: '32px' }}>
-                            The biggest win of the conference wasn't a lecture—it was the confirmation that I was on the right track. I had been wrestling with two major technical initiatives at Albertsons, and through hallway conversations and session takeaways, I found the "permission" I needed to move forward.
+                            The biggest win of the conference wasn&apos;t a lecture—it was the confirmation that I was on the right track. I had been wrestling with two major technical initiatives at Albertsons, and through hallway conversations and session takeaways, I found the "permission" I needed to move forward.
                         </p>
 
                         <div style={cardStyle}>
@@ -114,7 +114,7 @@ const MitCodeExperienceContent = () => {
                         <div style={cardStyle}>
                             <h3 style={h3Style}>2. Implementing CUPED for Variance Reduction</h3>
                             <p style={{ marginBottom: '16px' }}>
-                                I was also pushing to implement <strong>CUPED</strong> (Controlled-Experiment Using Pre-Experiment Data) to speed up our tests.
+                                I was also pushing to implement <Link href="/articles/litmus-test-protocol" style={{ color: '#fff', textDecoration: 'underline', textDecorationColor: '#bd00ff' }}>CUPED</Link> (Controlled-Experiment Using Pre-Experiment Data) to speed up our tests.
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0 }}>
                                 <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
@@ -123,7 +123,7 @@ const MitCodeExperienceContent = () => {
                                 </li>
                                 <li style={{ display: 'flex', gap: '12px' }}>
                                     <span style={{ color: '#bd00ff' }}>✦</span>
-                                    <span><strong>The Result:</strong> I didn't just propose it; I was able to directly complete the implementation of CUPED (or "Cupid" as we jokingly call it in the hallway tracks) into our pipeline. This has been a game-changer for our experiment velocity.</span>
+                                    <span><strong>The Result:</strong> I didn&apos;t just propose it; I was able to directly complete the implementation of CUPED (or "Cupid" as we jokingly call it in the hallway tracks) into our pipeline. This has been a game-changer for our experiment velocity.</span>
                                 </li>
                             </ul>
                         </div>
@@ -135,7 +135,7 @@ const MitCodeExperienceContent = () => {
 
                         <h3 style={subHeaderStyle}>The Productivity Paradox</h3>
                         <p style={{ marginBottom: '24px' }}>
-                            There was a fascinating discussion during the Fireside Chat about why AI helps us code faster but doesn't necessarily make us <em>feel</em> more productive.
+                            There was a fascinating discussion during the Fireside Chat about why AI helps us code faster but doesn&apos;t necessarily make us <em>feel</em> more productive.
                         </p>
                         <blockquote style={quoteStyle}>
                             <strong>Lane 1 vs. Lane 2:</strong> We are currently in "Lane 1" (task automation). The real breakthrough will be "Lane 2"—redesigning entire workflows. The bottleneck has shifted from "doing" to "sense-making".
