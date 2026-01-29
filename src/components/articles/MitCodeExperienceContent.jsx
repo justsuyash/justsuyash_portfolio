@@ -142,8 +142,8 @@ const MitCodeExperienceContent = () => {
                         </blockquote>
 
                         <h3 style={subHeaderStyle}>Interference in Marketplaces</h3>
-                        <p style={{ marginBottom: '24px' }}>
-                            <a href="https://profiles.stanford.edu/ramesh-johari" target="_blank" rel="noopener noreferrer" style={linkStyle}>Ramesh Johari</a> from <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Stanford</a> gave a plenary talk that changed how I view two-sided markets. He explained that "interference"—where one user's treatment affects another—is a massive source of bias.
+                        <p style={{ marginBottom: '32px' }}>
+                            <a href="https://profiles.stanford.edu/ramesh-johari" target="_blank" rel="noopener noreferrer" style={linkStyle}>Ramesh Johari</a> from <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Stanford</a> gave a plenary talk that changed how I view two-sided markets. He explained that "interference"—where one user&apos;s treatment affects another—is a massive source of bias.
                         </p>
                         <p style={{ marginBottom: '32px', paddingLeft: '20px', borderLeft: '3px solid #00f3ff' }}>
                             <strong>The Fix:</strong> His advice was practical: <strong>Randomize on the short side of the market</strong> (the supply-constrained side) to minimize this bias.
@@ -151,12 +151,12 @@ const MitCodeExperienceContent = () => {
 
                         <h3 style={subHeaderStyle}>Welfare &gt; P-Values</h3>
                         <p style={{ marginBottom: '48px' }}>
-                            <a href="https://www.linkedin.com/in/timsodejono" target="_blank" rel="noopener noreferrer" style={linkStyle}>Tim Sodejono</a> presented a framework that hit home: "Welfare Maximization." Instead of obsessing over p-values (p &lt; 0.05), we should focus on the economic return of an intervention minus its costs. It’s a compound decision problem, not just a statistics test.
+                            <a href="https://www.linkedin.com/in/timsodejono" target="_blank" rel="noopener noreferrer" style={linkStyle}>Tim Sodejono</a> presented a framework that hit home: "Welfare Maximization." Instead of obsessing over p-values (p &lt; 0.05), we should focus on the economic return of an intervention minus its costs. It&apos;s a compound decision problem, not just a statistics test.
                         </p>
 
                         <h2 style={h2Style}>🎤 Fun Facts & The Human Touch</h2>
                         <p style={{ marginBottom: '32px' }}>
-                            It wasn't all algorithms and p-values. The human side of MIT CODE was just as impactful.
+                            It wasn&apos;t all algorithms and p-values. The human side of MIT CODE was just as impactful.
                         </p>
 
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '48px' }}>
@@ -185,10 +185,10 @@ const MitCodeExperienceContent = () => {
 
                         <h2 style={h2Style}>🚀 The Bottom Line</h2>
                         <p style={{ marginBottom: '32px', fontSize: '1.2rem' }}>
-                            MIT CODE 2025 was a reminder that you don't need a massive tech stack to do world-class data science. You need curiosity, rigor, and the courage to question the "standard" way of doing things.
+                            MIT CODE 2025 was a reminder that you don&apos;t need a massive tech stack to do world-class data science. You need curiosity, rigor, and the courage to question the "standard" way of doing things.
                         </p>
                         <p style={{ marginBottom: '48px' }}>
-                            I came back to Dallas not just with "learnings," but with <strong>completed upgrades</strong> to our experimentation stack. Randomization is fixed. CUPED is live. And I’m just getting started.
+                            I came back to Dallas not just with "learnings," but with <strong>completed upgrades</strong> to our experimentation stack. Randomization is fixed. CUPED is live. And I&apos;m just getting started.
                         </p>
 
                         <div style={{ padding: '32px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
