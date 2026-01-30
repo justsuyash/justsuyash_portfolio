@@ -1,5 +1,5 @@
 import React from 'react';
-import MitCodeExperienceContent from '@/components/articles/MitCodeExperienceContent';
+import MitCodeExperienceContent from '../../../components/articles/MitCodeExperienceContent';
 
 export const metadata = {
     title: 'MIT CODE 2025: From Dallas to Cambridge | JustSuyash',
