@@ -301,7 +301,7 @@ const HomePage = () => {
                                 marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                <strong>Architecting Agentic Causal Platform at scale</strong> at the intersection of Experimentation, Causal Inference, and GenAI.
+                                <strong>Architecting Agentic Causal Platforms at scale</strong> — bridging Experimentation, Causal Inference, and GenAI.
                             </p>
 
                             <div style={{ marginBottom: '32px' }}>
