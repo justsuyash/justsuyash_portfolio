@@ -51,7 +51,7 @@ const MitCodeExperienceContent = () => {
                             lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px',
                             fontFamily: 'system-ui, -apple-system, sans-serif'
                         }}>
-                            MIT CODE 2025: From Dallas to Cambridge — Validating Intuition & The Future of Experimentation
+                            MIT CODE 2025: From Dallas to Cambridge &mdash; Validating Intuition &amp; The Future of Experimentation
                         </h1>
 
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px' }}>
@@ -128,7 +128,7 @@ const MitCodeExperienceContent = () => {
                             </ul>
                         </div>
 
-                        <h2 style={h2Style}>🧠 What I Learned: The "Productivity Paradox" & Market Mechanics</h2>
+                        <h2 style={h2Style}>🧠 What I Learned: The "Productivity Paradox" &amp; Market Mechanics</h2>
                         <p style={{ marginBottom: '32px' }}>
                             Beyond my own projects, the sessions were a goldmine of forward-thinking concepts.
                         </p>
@@ -138,12 +138,12 @@ const MitCodeExperienceContent = () => {
                             There was a fascinating discussion during the Fireside Chat about why AI helps us code faster but doesn&apos;t necessarily make us <em>feel</em> more productive.
                         </p>
                         <blockquote style={quoteStyle}>
-                            <strong>Lane 1 vs. Lane 2:</strong> We are currently in "Lane 1" (task automation). The real breakthrough will be "Lane 2"—redesigning entire workflows. The bottleneck has shifted from "doing" to "sense-making".
+                            <strong>Lane 1 vs. Lane 2:</strong> We are currently in "Lane 1" (task automation). The real breakthrough will be "Lane 2"&mdash;redesigning entire workflows. The bottleneck has shifted from "doing" to "sense-making".
                         </blockquote>
 
                         <h3 style={subHeaderStyle}>Interference in Marketplaces</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            <a href="https://profiles.stanford.edu/ramesh-johari" target="_blank" rel="noopener noreferrer" style={linkStyle}>Ramesh Johari</a> from <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Stanford</a> gave a plenary talk that changed how I view two-sided markets. He explained that "interference"—where one user&apos;s treatment affects another—is a massive source of bias.
+                            <a href="https://profiles.stanford.edu/ramesh-johari" target="_blank" rel="noopener noreferrer" style={linkStyle}>Ramesh Johari</a> from <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Stanford</a> gave a plenary talk that changed how I view two-sided markets. He explained that "interference"&mdash;where one user&apos;s treatment affects another&mdash;is a massive source of bias.
                         </p>
                         <p style={{ marginBottom: '32px', paddingLeft: '20px', borderLeft: '3px solid #00f3ff' }}>
                             <strong>The Fix:</strong> His advice was practical: <strong>Randomize on the short side of the market</strong> (the supply-constrained side) to minimize this bias.
