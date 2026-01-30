@@ -1,6 +1,6 @@
 export const articles = [
     {
-        title: "MIT CODE 2025: From Dallas to Cambridge",
+        title: "MIT CODE 2025: Validating Intuition & The Future of Experimentation",
         description: "Validating intuition and the future of experimentation at the MIT Conference on Digital Experimentation.",
         publication: "Thought Leadership",
         date: "Nov 2024",

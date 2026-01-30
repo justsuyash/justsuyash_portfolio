@@ -51,7 +51,7 @@ const MitCodeExperienceContent = () => {
                             lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px',
                             fontFamily: 'system-ui, -apple-system, sans-serif'
                         }}>
-                            MIT CODE 2025: From Dallas to Cambridge &mdash; Validating Intuition &amp; The Future of Experimentation
+                            MIT CODE 2025: Validating Intuition &amp; The Future of Experimentation
                         </h1>
 
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px' }}>
