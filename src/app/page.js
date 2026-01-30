@@ -301,7 +301,7 @@ const HomePage = () => {
                                 marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                <strong>Architecting AI-powered causal systems</strong> at the intersection of Experimentation, Causal Inference, and GenAI.
+                                <strong>Architecting Agentic Systems</strong> at the intersection of Experimentation, Causal Inference, and GenAI.
                             </p>
 
                             <div style={{ marginBottom: '32px' }}>
