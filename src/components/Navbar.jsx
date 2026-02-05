@@ -45,12 +45,17 @@ const Navbar = () => {
                 alignItems: 'center'
             }}>
                 <Link href="/" style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 700,
-                    letterSpacing: '-0.02em',
-                    color: '#fff'
+                    display: 'flex',
+                    alignItems: 'center'
                 }}>
-                    SUYASH<span style={{ color: '#00f3ff' }}>.</span>
+                    <img
+                        src="/images/bheed_logo_full.png"
+                        alt="Bheed Studios"
+                        style={{
+                            height: '40px',
+                            objectFit: 'contain'
+                        }}
+                    />
                 </Link>
 
                 {/* Desktop Menu */}
@@ -163,11 +168,17 @@ const Navbar = () => {
                             borderBottom: '1px solid rgba(255,255,255,0.05)'
                         }}>
                             <Link href="/" onClick={() => setIsOpen(false)} style={{
-                                fontSize: '1.25rem',
-                                fontWeight: 700,
-                                color: '#fff'
+                                display: 'flex',
+                                alignItems: 'center'
                             }}>
-                                SUYASH<span style={{ color: '#00f3ff' }}>.</span>
+                                <img
+                                    src="/images/bheed_logo_full.png"
+                                    alt="Bheed Studios"
+                                    style={{
+                                        height: '32px',
+                                        objectFit: 'contain'
+                                    }}
+                                />
                             </Link>
                             <button
                                 onClick={() => setIsOpen(false)}

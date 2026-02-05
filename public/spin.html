@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bheed Logo Spin Simulator</title>
+    <link rel="icon" href="/icon.png" sizes="any" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            transition: background 0.5s ease;
+        }
+
+        .main-layout {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .loader-container {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Scanline effect for container */
+        .loader-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 2px 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        #logo-img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            animation: spin 2s linear infinite;
+            filter: drop-shadow(0 0 30px rgba(189, 0, 255, 0.2));
+            will-change: transform;
+        }
+
+        .controls {
+            background: rgba(20, 20, 25, 0.9);
+            backdrop-filter: blur(16px);
+            padding: 32px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .value-display {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00f3ff;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+            -webkit-appearance: none;
+            background: rgba(255, 255, 255, 0.1);
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            margin-top: -6px;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px;
+            border-radius: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        button.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .shape-scanner {
+            margin-top: 10px;
+            padding: 16px;
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        .scanner-header {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: #00f3ff;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blinking-dot {
+            width: 6px;
+            height: 6px;
+            background: #00f3ff;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        .shape-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .bg-selector {
+            display: flex;
+            gap: 12px;
+        }
+
+        .color-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .color-dot.selected {
+            border-color: #fff;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .file-upload-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+            transition: all 0.2s;
+        }
+
+        .file-upload-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* Animation Keyframes */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-layout">
+        <div class="loader-container">
+            <img id="logo-img" src="/images/bheed_spin_logo.png" alt="Bheed Logo">
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>
+                    Speed Control
+                    <span class="value-display" id="speed-val">2.00s</span>
+                </label>
+                <!-- Extended Range: 0 (Fastest) to 100 (Slowest) -->
+                <input type="range" id="speed-slider" min="0" max="100" value="40" step="0.1">
+
+                <div class="preset-grid"
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
+                    <button class="preset-btn" onclick="setLogoSpeed(10.0)">Frozen</button>
+                    <button class="preset-btn" onclick="setLogoSpeed(3.0)">Cinematic</button>
+                    <button class="preset-btn" onclick="setLogoSpeed(1.0)">Standard</button>
+                    <button class="preset-btn" onclick="setLogoSpeed(0.1)">Rapid</button>
+                    <button class="preset-btn" onclick="setLogoSpeed(0.01)">Hyper</button>
+                    <button class="preset-btn" onclick="setLogoSpeed(0.001)"
+                        style="color: #ff5722; border-color: #ff5722;">PLANCK</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Rotation Direction</label>
+                <div class="toggle-group">
+                    <button id="btn-cw" class="active" onclick="setDirection('normal')">Clockwise</button>
+                    <button id="btn-ccw" onclick="setDirection('reverse')">Counter-Clockwise</button>
+                </div>
+            </div>
+
+            <div class="shape-scanner">
+                <div class="scanner-header">
+                    <div class="blinking-dot"></div>
+                    GEOMETRY & SYMBOLOGY
+                </div>
+                <div id="shape-output" class="shape-list">
+                    Initializing scanner...
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Theme</label>
+                <div class="bg-selector">
+                    <div class="color-dot selected" style="background: #08080c;" onclick="setBg('#08080c', this)"></div>
+                    <div class="color-dot" style="background: linear-gradient(135deg, #1a0b2e, #4a1259);"
+                        onclick="setBg('linear-gradient(135deg, #1a0b2e, #4a1259)', this)"></div>
+                    <div class="color-dot" style="background: #ffffff;" onclick="setBg('#ffffff', this)"></div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Custom Asset</label>
+                <label for="file-input" class="file-upload-btn">
+                    Upload .PNG or .SVG Logo
+                </label>
+                <input type="file" id="file-input" accept="image/*" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const logo = document.getElementById('logo-img');
+        const speedSlider = document.getElementById('speed-slider');
+        const speedVal = document.getElementById('speed-val');
+        const shapeOutput = document.getElementById('shape-output');
+        const fileInput = document.getElementById('file-input');
+        const btnCw = document.getElementById('btn-cw');
+        const btnCcw = document.getElementById('btn-ccw');
+
+        // Shapes DB
+        const shapes = [
+            { maxSpeed: 0.005, name: "Event Horizon", desc: "Physics breakdown imminent." },
+            { maxSpeed: 0.05, name: "Singularity Torus", desc: "Spacetime tearing detected." },
+            { maxSpeed: 0.1, name: "Quantum Helix", desc: "Superposition in effect." },
+            { maxSpeed: 0.3, name: "Euclidean Blur", desc: "Edges undefined." },
+            { maxSpeed: 0.8, name: "Kinetic Rhombus", desc: "Standard stabilization." },
+            { maxSpeed: 2.0, name: "Inertial Square", desc: "Low energy state." },
+            { maxSpeed: 10.0, name: "Static Monolith", desc: "Awaiting input." }
+        ];
+
+        // Mapping: Slider 0 (Fast, 0.001s) -> 100 (Slow, 10.0s)
+        // Logarithmic scale for better control
+        function updateSpeed(sliderValue) {
+            // Invert logic: 100 is SLOW, 0 is FAST
+            // Let's use a power curve
+            const percent = sliderValue / 100;
+            // Map 0 -> 0.001, 100 -> 10.0
+            const duration = 0.001 * Math.pow(10000, percent);
+            setLogoSpeed(duration);
+        }
+
+        function setLogoSpeed(durationSec) {
+            const clamped = Math.max(0.001, Math.min(durationSec, 20.0));
+            logo.style.animationDuration = clamped + 's';
+
+            // Value display
+            if (clamped < 0.01) speedVal.innerText = clamped.toFixed(4) + 's';
+            else if (clamped < 0.1) speedVal.innerText = clamped.toFixed(3) + 's';
+            else speedVal.innerText = clamped.toFixed(2) + 's';
+
+            // Sync Slider (reverse math of updateSpeed)
+            // duration = 0.001 * 10000^p
+            // duration / 0.001 = 10000^p
+            // log(duration/0.001) = p * log(10000)
+            // p = log(duration/0.001) / 4 (since log10(10000)=4)
+            let p = Math.log10(clamped / 0.001) / 4;
+            if (p < 0) p = 0;
+            if (p > 1) p = 1;
+            speedSlider.value = p * 100;
+
+            updateShapeAnalysis(clamped);
+        }
+
+        function updateShapeAnalysis(duration) {
+            let detected = shapes.find(s => duration <= s.maxSpeed);
+            if (!detected) detected = shapes[shapes.length - 1];
+
+            const rpm = Math.round(60 / duration);
+
+            // Safety Check Logic
+            let safetyStatus = "<span style='color: #22c55e'>PASSED</span>";
+            let hazardMsg = "No semantic hazards detected.";
+            let iconCheck = "<span style='color: #22c55e'>CLEARED</span>";
+
+            if (duration < 0.05) {
+                safetyStatus = "<span style='color: #f59e0b'>CAUTION</span>";
+                hazardMsg = "Stroboscopic risk. Photosensitivity warning.";
+            }
+
+            // Simulated Check for specific symbols
+            // Randomly "scan" 
+            const checks = [
+                "National Flags: NONE",
+                "Religious Icons: NONE",
+                "Hate Symbols: NONE",
+                "Mandala Patterns: NONE"
+            ];
+
+            shapeOutput.innerHTML = `
+                <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">${detected.name}</div>
+                <div style="opacity: 0.7; margin-bottom: 8px;">${detected.desc}</div>
+                
+                <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px; margin-top: 8px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;">
+                        <span style="color: rgba(255,255,255,0.5)">SYMBOL SCAN:</span>
+                        ${iconCheck}
+                    </div>
+                    <div style="font-size: 10px; color: rgba(255,255,255,0.4); display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                        ${checks.map(c => `<span>✓ ${c}</span>`).join('')}
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; font-size: 11px; margin-top: 8px; margin-bottom: 2px;">
+                        <span style="color: rgba(255,255,255,0.5)">SAFETY PROTOCOL:</span>
+                        ${safetyStatus}
+                    </div>
+                    <div style="font-size: 10px; color: rgba(255,255,255,0.4);">${hazardMsg}</div>
+                </div>
+
+                <div style="margin-top: 12px; font-family: 'JetBrains Mono'; font-size: 10px; color: #00f3ff;">
+                    ANGULAR VELOCITY: ${rpm.toLocaleString()} RPM
+                </div>
+            `;
+        }
+
+        // Initialize
+        updateSpeed(speedSlider.value);
+
+        // Listeners
+        speedSlider.addEventListener('input', function () {
+            updateSpeed(this.value);
+        });
+
+        fileInput.addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    logo.src = event.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function setDirection(dir) {
+            logo.style.animationDirection = dir;
+            if (dir === 'normal') {
+                btnCw.classList.add('active');
+                btnCcw.classList.remove('active');
+            } else {
+                btnCcw.classList.add('active');
+                btnCw.classList.remove('active');
+            }
+        }
+
+        function setBg(color, elem) {
+            document.body.style.background = color;
+            const isLight = color === '#ffffff';
+            document.body.style.color = isLight ? '#000' : '#fff';
+
+            // Adjust contrast for light mode
+            if (isLight) {
+                document.querySelector('.controls').style.background = 'rgba(255,255,255,0.8)';
+                document.querySelector('.controls').style.borderColor = 'rgba(0,0,0,0.1)';
+                document.querySelectorAll('label').forEach(l => l.style.color = '#555');
+                document.querySelectorAll('button').forEach(b => b.style.color = '#333');
+            } else {
+                document.querySelector('.controls').style.background = 'rgba(20, 20, 25, 0.9)';
+                document.querySelector('.controls').style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                document.querySelectorAll('label').forEach(l => l.style.color = 'rgba(255, 255, 255, 0.5)');
+                document.querySelectorAll('button:not(.active)').forEach(b => b.style.color = 'rgba(255, 255, 255, 0.5)');
+            }
+
+            document.querySelectorAll('.color-dot').forEach(dot => dot.classList.remove('selected'));
+            elem.classList.add('selected');
+        }
+    </script>
+</body>
+
+</html>
