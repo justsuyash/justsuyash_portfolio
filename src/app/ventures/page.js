@@ -32,39 +32,6 @@ const ventures = [
         color: "#bfff00"
     },
     {
-        name: "Mana",
-        tagline: "Health Intelligence",
-        description: "Correlation engine for biological data. Mana unifies unstructured voice journaling with biometric APIs.",
-        thesis: "Biological data is currently siloed. Your ring tracks sleep, your phone tracks movement, but nothing tracks *context*. Mana is the correlation layer. It uses local LLMs to parse voice journals ('I feel stressed') and maps them against physiological spikes (HRV drops), revealing the hidden variables driving human performance.",
-        stack: ["React Native", "Whisper", "RAG", "Pinecone"],
-        image: "/assets/mana.png",
-        visuals: [
-            { type: 'icon', icon: <Zap size={32} />, label: "Biometric Sync" },
-            { type: 'icon', icon: <Beaker size={32} />, label: "Context Engine" }
-        ],
-        link: "/lab",
-        labCta: "Launch Alpha Protocol",
-        status: "Alpha Live",
-        color: "#22c55e"
-    },
-    {
-        name: "Aligned",
-        tagline: "Social Protocol",
-        description: "Hybrid Protocol combining traditional algorithms with astrological signals.",
-        thesis: "We identified a massive data arbitrage: 'What's your sign?' was the highest-frequency query in dating apps. Aligned formalizes this into a Hybrid Protocol, but goes further: It acts as an autonomous Concierge. The engine learns dietary preferences to book restaurants, calculates optimal meeting points based on real-time user proximity, and detects 'interaction fatigue' to suggest high-energy date contexts when users need a change.",
-        stack: ["Python", "Astro-Algo", "GenAI", "React"],
-        image: "/assets/aligned.png",
-        visuals: [
-            { type: 'icon', icon: <Target size={32} />, label: "Astro Hash" },
-            { type: 'icon', icon: <Layout size={32} />, label: "Logistics Engine" },
-            { type: 'icon', icon: <Zap size={32} />, label: "Auto-Date" }
-        ],
-        link: "#",
-        labCta: "View Match Logic",
-        status: "Beta",
-        color: "#f59e0b"
-    },
-    {
         name: "Quiz Beef",
         tagline: "Knowledge Protocol",
         description: "Gamified active recall engine transforming static content into competitive protocols.",
@@ -79,6 +46,22 @@ const ventures = [
         labCta: "Test Recall Engine",
         status: "Live",
         color: "#00f3ff"
+    },
+    {
+        name: "Mana",
+        tagline: "Health Intelligence",
+        description: "Correlation engine for biological data. Mana unifies unstructured voice journaling with biometric APIs.",
+        thesis: "Biological data is currently siloed. Your ring tracks sleep, your phone tracks movement, but nothing tracks *context*. Mana is the correlation layer. It uses local LLMs to parse voice journals ('I feel stressed') and maps them against physiological spikes (HRV drops), revealing the hidden variables driving human performance.",
+        stack: ["React Native", "Whisper", "RAG", "Pinecone"],
+        image: "/assets/mana.png",
+        visuals: [
+            { type: 'icon', icon: <Zap size={32} />, label: "Biometric Sync" },
+            { type: 'icon', icon: <Beaker size={32} />, label: "Context Engine" }
+        ],
+        link: "/lab",
+        labCta: "Launch Alpha Protocol",
+        status: "Alpha Live",
+        color: "#22c55e"
     }
 ];
 
