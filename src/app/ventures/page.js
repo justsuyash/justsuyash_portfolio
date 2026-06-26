@@ -14,8 +14,13 @@ const ventures = [
         stack: ["Next.js 14", "Neon Postgres", "Prisma", "WebSockets"],
         image: "/images/clinicos/prescriptionGeneration.png",
         visuals: [
-            { type: 'image', src: "/images/clinicos/prescriptionGeneration.png", alt: "Prescription Engine" },
-            { type: 'image', src: "/images/clinicos/appointments.png", alt: "Drag & Drop Scheduler" }
+            { type: 'image', src: "/images/clinicos/prescriptionGeneration.png", alt: "Prescription Workspace" },
+            { type: 'image', src: "/images/clinicos/appointments.png", alt: "Patient Queue & Drag-and-Drop UI" },
+            { type: 'image', src: "/images/clinicos/OverviewDashboard.png", alt: "Clinic Dashboard" },
+            { type: 'image', src: "/images/clinicos/FinancialsDashboard.png", alt: "Financials Overview" },
+            { type: 'image', src: "/images/clinicos/universalpatientDirectory.png", alt: "Patient Directory" },
+            { type: 'image', src: "/images/clinicos/inventory.png", alt: "Inventory Management" },
+            { type: 'image', src: "/images/clinicos/liveTranscription.png", alt: "Live Transcription" }
         ],
         articleLink: {
             url: "/articles/clinicos-performance",
@@ -80,20 +85,32 @@ const ventures = [
 const ImageSlider = ({ images, color }) => {
     const [index, setIndex] = useState(0);
     return (
-        <div style={{ position: 'relative', width: '100%', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-            <img src={images[index].src} alt={images[index].alt} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
+        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 600 }}>{images[index].alt}</h3>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>{index + 1} / {images.length}</div>
+            </div>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                {images.length > 1 && (
+                    <button onClick={() => setIndex((index - 1 + images.length) % images.length)} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', padding: '12px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'} onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}><ArrowLeft size={20} /></button>
+                )}
+                
+                <div style={{ flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#0a0a0a' }}>
+                    <img src={images[index].src} alt={images[index].alt} style={{ width: '100%', display: 'block', objectFit: 'contain', maxHeight: '600px' }} />
+                </div>
+
+                {images.length > 1 && (
+                    <button onClick={() => setIndex((index + 1) % images.length)} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', padding: '12px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'} onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}><ArrowRight size={20} /></button>
+                )}
+            </div>
+
             {images.length > 1 && (
-                <div style={{ position: 'absolute', bottom: '16px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px', background: 'rgba(0,0,0,0.5)', padding: '8px 16px', borderRadius: '24px', backdropFilter: 'blur(8px)' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '8px' }}>
                     {images.map((_, i) => (
                         <button key={i} onClick={() => setIndex(i)} style={{ width: '8px', height: '8px', borderRadius: '50%', border: 'none', background: i === index ? color : 'rgba(255,255,255,0.3)', cursor: 'pointer', padding: 0 }} />
                     ))}
                 </div>
-            )}
-            {images.length > 1 && (
-                <>
-                    <button onClick={() => setIndex((index - 1 + images.length) % images.length)} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', padding: '8px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><ArrowLeft size={20} /></button>
-                    <button onClick={() => setIndex((index + 1) % images.length)} style={{ position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', padding: '8px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><ArrowRight size={20} /></button>
-                </>
             )}
         </div>
     );
