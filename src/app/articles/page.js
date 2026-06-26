@@ -167,16 +167,16 @@ const ArticlesPage = () => {
                         fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700,
                         lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px'
                     }}>
-                        Writing & <br />
+                        My{' '}
                         <span style={{
                             background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
                             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'
                         }}>
-                            Technical Thought
+                            2¢
                         </span>
                     </h1>
                     <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, maxWidth: '600px' }}>
-                        Deep dives into system architecture, experimentation, and product engineering.
+                        2 cents is just too low. My opinions are worth slightly more in this inflation — in my opinion.
                     </p>
                 </motion.div>
 
