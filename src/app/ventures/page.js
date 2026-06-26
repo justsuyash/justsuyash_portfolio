@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ExternalLink, Target, Zap, Shield, Layout, Beaker, FileText } from 'lucide-react';
 import Link from 'next/link';
+import ClinicOSMockup from './clinicos/ClinicOSMockup';
 
 const ventures = [
     {
@@ -327,43 +328,56 @@ const VentureLabPage = () => {
                                         )}
 
                                         {activeTab === 'lab' && (
-                                            /* 
-                                                TODO: v2.0 Feature - Venture Lab Mini Apps
-                                                
-                                                The "Interactive Lab" tab is currently a placeholder UI.
-                                                In v2.0, we need to embed the actual "mini apps" or interactive demos here.
-                                                - Mana: Voice/Bio correlation demo
-                                                - Aligned: Date logistics engine
-                                                - Quiz Beef: Recall test
-                                            */
                                             <motion.div
                                                 key="lab"
                                                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
                                                 style={{ textAlign: 'center', paddingTop: '40px', paddingBottom: '20px' }}
                                             >
-                                                <div style={{
-                                                    width: '80px', height: '80px', background: selectedVenture.color + '20',
-                                                    borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                    margin: '0 auto 24px auto'
-                                                }}>
-                                                    <Beaker size={40} color={selectedVenture.color} />
-                                                </div>
-                                                <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '16px' }}>Interactive Lab</h3>
-                                                <p style={{ maxWidth: '400px', margin: '0 auto 32px auto', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
-                                                    Try out a feature from our product. Access the live Alpha environment to test the {selectedVenture.name} engine logic with your own data.
-                                                </p>
-                                                <a
-                                                    href={selectedVenture.link}
-                                                    style={{
-                                                        display: 'inline-flex', alignItems: 'center', gap: '10px',
-                                                        background: selectedVenture.color, color: '#000',
-                                                        padding: '16px 32px', borderRadius: '12px', fontWeight: 700,
-                                                        fontSize: '1.1rem', textDecoration: 'none',
-                                                        boxShadow: `0 10px 30px ${selectedVenture.color}40`
-                                                    }}
-                                                >
-                                                    {selectedVenture.labCta} <ExternalLink size={20} />
-                                                </a>
+                                                {selectedVenture.name === 'ClinicOS' ? (
+                                                    <div style={{ textAlign: 'left' }}>
+                                                        <ClinicOSMockup />
+                                                        <div style={{ marginTop: '40px', textAlign: 'center' }}>
+                                                            <Link
+                                                                href={selectedVenture.link}
+                                                                style={{
+                                                                    display: 'inline-flex', alignItems: 'center', gap: '10px',
+                                                                    background: selectedVenture.color, color: '#000',
+                                                                    padding: '16px 32px', borderRadius: '12px', fontWeight: 700,
+                                                                    fontSize: '1.1rem', textDecoration: 'none',
+                                                                    boxShadow: `0 10px 30px ${selectedVenture.color}40`
+                                                                }}
+                                                            >
+                                                                View Full Showcase <ExternalLink size={20} />
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    <>
+                                                        <div style={{
+                                                            width: '80px', height: '80px', background: selectedVenture.color + '20',
+                                                            borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                            margin: '0 auto 24px auto'
+                                                        }}>
+                                                            <Beaker size={40} color={selectedVenture.color} />
+                                                        </div>
+                                                        <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '16px' }}>Interactive Lab</h3>
+                                                        <p style={{ maxWidth: '400px', margin: '0 auto 32px auto', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
+                                                            Try out a feature from our product. Access the live Alpha environment to test the {selectedVenture.name} engine logic with your own data.
+                                                        </p>
+                                                        <a
+                                                            href={selectedVenture.link}
+                                                            style={{
+                                                                display: 'inline-flex', alignItems: 'center', gap: '10px',
+                                                                background: selectedVenture.color, color: '#000',
+                                                                padding: '16px 32px', borderRadius: '12px', fontWeight: 700,
+                                                                fontSize: '1.1rem', textDecoration: 'none',
+                                                                boxShadow: `0 10px 30px ${selectedVenture.color}40`
+                                                            }}
+                                                        >
+                                                            {selectedVenture.labCta} <ExternalLink size={20} />
+                                                        </a>
+                                                    </>
+                                                )}
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
