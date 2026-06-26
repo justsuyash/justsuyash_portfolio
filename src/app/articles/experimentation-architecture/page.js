@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User, Tag, Clock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import ArticleAuthorBio from '../../../components/ArticleAuthorBio';
 
 const ExperimentationArchitecturePage = () => {
     return (
@@ -202,6 +203,7 @@ Runtime: ~4 mins / experiment
                             <li><strong>Infrastructure quality enables organizational velocity.</strong> You can't change culture if the tools are slow.</li>
                         </ol>
 
+                        <ArticleAuthorBio />
                     </div>
                 </motion.div>
             </article>

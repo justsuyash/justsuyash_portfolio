@@ -320,7 +320,7 @@ const HomePage = () => {
 
                             <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
                                 <a
-                                    href="/portfolio_resume.pdf"
+                                    href="/Resume_Suyash_DataScience2026.pdf"
                                     download="Suyash_Resume.pdf"
                                     style={{
                                         display: 'inline-flex',
@@ -626,7 +626,7 @@ const HomePage = () => {
                     </div>
 
                     <a
-                        href="/portfolio_resume.pdf"
+                        href="/Resume_Suyash_DataScience2026.pdf"
                         download="Suyash_Resume.pdf"
                         style={{
                             display: 'inline-flex',

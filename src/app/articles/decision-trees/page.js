@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User, Tag, Clock } from 'lucide-react';
 import Link from 'next/link';
+import ArticleAuthorBio from '../../../components/ArticleAuthorBio';
 
 const DecisionTreesPage = () => {
     return (
@@ -155,6 +156,7 @@ GRANULAR SEGMENTATION
                             </p>
                         </div>
 
+                        <ArticleAuthorBio />
                     </div>
                 </motion.div>
             </article>

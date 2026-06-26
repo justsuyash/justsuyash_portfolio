@@ -430,7 +430,7 @@ const ResumePage = () => {
                 {/* Download Button */}
                 <div style={{ marginTop: '32px', textAlign: 'center' }}>
                     <a
-                        href="/portfolio_resume.pdf"
+                        href="/Resume_Suyash_DataScience2026.pdf"
                         download="Suyash_Resume.pdf"
                         style={{
                             display: 'inline-flex',

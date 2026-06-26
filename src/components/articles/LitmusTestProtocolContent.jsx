@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Zap } from 'lucide-react';
 import Link from 'next/link';
 import NewsletterSignup from '../NewsletterSignup';
+import ArticleAuthorBio from '../ArticleAuthorBio';
 
 const LitmusTestProtocolContent = () => {
     return (
@@ -504,6 +505,8 @@ const LitmusTestProtocolContent = () => {
                             </div>
                             <ArrowRight color="rgba(255,255,255,0.6)" />
                         </Link>
+
+                        <ArticleAuthorBio />
 
                     </div>
                 </motion.div>

@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Zap, MapPin, Users, Lightbulb, Mic } from 'lucide-react';
 import Link from 'next/link';
+import ArticleAuthorBio from '../ArticleAuthorBio';
 
 const MitCodeExperienceContent = () => {
     return (
@@ -221,6 +222,7 @@ const MitCodeExperienceContent = () => {
                             </div>
                             <ArrowRight color="rgba(255,255,255,0.6)" />
                         </Link>
+                        <ArticleAuthorBio />
 
                     </div>
                 </motion.div>

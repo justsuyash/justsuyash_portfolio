@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, Clock } from 'lucide-react';
 import Link from 'next/link';
 import NewsletterSignup from '../NewsletterSignup';
+import ArticleAuthorBio from '../ArticleAuthorBio';
 
 const EmploymentVerificationContent = () => {
     return (
@@ -127,6 +128,7 @@ const EmploymentVerificationContent = () => {
 
                         {/* Newsletter Signup */}
                         <NewsletterSignup />
+                        <ArticleAuthorBio />
                     </div>
                 </motion.div>
             </article>

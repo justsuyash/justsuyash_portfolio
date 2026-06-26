@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, Clock, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import ArticleAuthorBio from '../../../components/ArticleAuthorBio';
 
 const GenAiCopilotPage = () => {
     return (
@@ -146,6 +147,7 @@ const GenAiCopilotPage = () => {
                             </a>
                         </div>
 
+                        <ArticleAuthorBio />
                     </div>
                 </motion.div>
             </article>

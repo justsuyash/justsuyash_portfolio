@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, Clock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import ArticleAuthorBio from '../../../components/ArticleAuthorBio';
 
 const SandboxStrategyPage = () => {
     return (
@@ -165,6 +166,7 @@ const SandboxStrategyPage = () => {
                             <ArrowRight color="rgba(255,255,255,0.6)" />
                         </Link>
 
+                        <ArticleAuthorBio />
                     </div>
                 </motion.div>
             </article>

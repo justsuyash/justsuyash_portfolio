@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, Clock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import ArticleAuthorBio from '../../../components/ArticleAuthorBio';
 
 const ClinicosPerformancePage = () => {
     return (
@@ -528,11 +529,7 @@ async function fetchAppointments() {
                             </Link>
                         </div>
 
-                        <div style={{ marginTop: '64px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-                            <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: 'rgba(255,255,255,0.6)' }}>
-                                I'm Suyash — I build ClinicOS, write about software engineering, and teach. When I'm not writing Next.js, I'm a landscape photographer, martial artist, mace instructor, and yoga teacher. If you enjoyed this, <a href="https://x.com/justsuyash" target="_blank" rel="noopener noreferrer" style={{ color: '#bd00ff', textDecoration: 'none' }}>follow me on X/Twitter</a> for tech, or find me on Instagram for the holistic side of things. All my work lives at <a href="https://justsuyash.com" target="_blank" rel="noopener noreferrer" style={{ color: '#bd00ff', textDecoration: 'none' }}>justsuyash.com</a>.
-                            </p>
-                        </div>
+                        <ArticleAuthorBio />
                     </div>
                 </motion.div>
             </article>
