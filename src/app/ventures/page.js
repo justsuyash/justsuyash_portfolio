@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ExternalLink, Target, Zap, Shield, Layout, Beaker, FileText } from 'lucide-react';
 import Link from 'next/link';
-import ClinicOSMockup from './clinicos/ClinicOSMockup';
 
 const ventures = [
     {
@@ -78,7 +77,27 @@ const ventures = [
     }
 ];
 
-
+const ImageSlider = ({ images, color }) => {
+    const [index, setIndex] = useState(0);
+    return (
+        <div style={{ position: 'relative', width: '100%', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <img src={images[index].src} alt={images[index].alt} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
+            {images.length > 1 && (
+                <div style={{ position: 'absolute', bottom: '16px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px', background: 'rgba(0,0,0,0.5)', padding: '8px 16px', borderRadius: '24px', backdropFilter: 'blur(8px)' }}>
+                    {images.map((_, i) => (
+                        <button key={i} onClick={() => setIndex(i)} style={{ width: '8px', height: '8px', borderRadius: '50%', border: 'none', background: i === index ? color : 'rgba(255,255,255,0.3)', cursor: 'pointer', padding: 0 }} />
+                    ))}
+                </div>
+            )}
+            {images.length > 1 && (
+                <>
+                    <button onClick={() => setIndex((index - 1 + images.length) % images.length)} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', padding: '8px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><ArrowLeft size={20} /></button>
+                    <button onClick={() => setIndex((index + 1) % images.length)} style={{ position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', padding: '8px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><ArrowRight size={20} /></button>
+                </>
+            )}
+        </div>
+    );
+};
 
 const VentureLabPage = () => {
     const [selectedVenture, setSelectedVenture] = useState(null);
@@ -301,29 +320,29 @@ const VentureLabPage = () => {
                                             <motion.div
                                                 key="visuals"
                                                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
-                                                style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', paddingTop: '20px' }}
+                                                style={{ paddingTop: '20px' }}
                                             >
-                                                {selectedVenture.visuals.map((vis, i) => (
-                                                    vis.type === 'image' ? (
-                                                        <div key={i} style={{ flex: '1 1 300px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                                            <img src={vis.src} alt={vis.alt} style={{ width: '100%', display: 'block', height: '100%', objectFit: 'cover' }} />
-                                                        </div>
-                                                    ) : (
-                                                        <div key={i} style={{
-                                                            flex: '1 1 200px',
-                                                            padding: '32px',
-                                                            background: 'rgba(255,255,255,0.02)',
-                                                            borderRadius: '16px',
-                                                            border: '1px solid rgba(255,255,255,0.05)',
-                                                            textAlign: 'center'
-                                                        }}>
-                                                            <div style={{ marginBottom: '16px', color: selectedVenture.color }}>
-                                                                {vis.icon}
+                                                {selectedVenture.visuals.every(v => v.type === 'image') ? (
+                                                    <ImageSlider images={selectedVenture.visuals} color={selectedVenture.color} />
+                                                ) : (
+                                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px' }}>
+                                                        {selectedVenture.visuals.map((vis, i) => (
+                                                            <div key={i} style={{
+                                                                flex: '1 1 200px',
+                                                                padding: '32px',
+                                                                background: 'rgba(255,255,255,0.02)',
+                                                                borderRadius: '16px',
+                                                                border: '1px solid rgba(255,255,255,0.05)',
+                                                                textAlign: 'center'
+                                                            }}>
+                                                                <div style={{ marginBottom: '16px', color: selectedVenture.color }}>
+                                                                    {vis.icon}
+                                                                </div>
+                                                                <div style={{ fontSize: '1rem', fontWeight: 600 }}>{vis.label}</div>
                                                             </div>
-                                                            <div style={{ fontSize: '1rem', fontWeight: 600 }}>{vis.label}</div>
-                                                        </div>
-                                                    )
-                                                ))}
+                                                        ))}
+                                                    </div>
+                                                )}
                                             </motion.div>
                                         )}
 
@@ -334,22 +353,38 @@ const VentureLabPage = () => {
                                                 style={{ textAlign: 'center', paddingTop: '40px', paddingBottom: '20px' }}
                                             >
                                                 {selectedVenture.name === 'ClinicOS' ? (
-                                                    <div style={{ textAlign: 'left' }}>
-                                                        <ClinicOSMockup />
-                                                        <div style={{ marginTop: '40px', textAlign: 'center' }}>
-                                                            <Link
-                                                                href={selectedVenture.link}
-                                                                style={{
-                                                                    display: 'inline-flex', alignItems: 'center', gap: '10px',
-                                                                    background: selectedVenture.color, color: '#000',
-                                                                    padding: '16px 32px', borderRadius: '12px', fontWeight: 700,
-                                                                    fontSize: '1.1rem', textDecoration: 'none',
-                                                                    boxShadow: `0 10px 30px ${selectedVenture.color}40`
-                                                                }}
-                                                            >
-                                                                View Full Showcase <ExternalLink size={20} />
-                                                            </Link>
+                                                    <div style={{ textAlign: 'left', maxWidth: '600px', margin: '0 auto', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '40px' }}>
+                                                        <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '16px' }}>Live Test Environment</h3>
+                                                        <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '32px', lineHeight: 1.6 }}>
+                                                            Experience the sub-350ms response times and AI transcription firsthand. We've set up a seeded test environment with dummy patient data for you to explore.
+                                                        </p>
+                                                        
+                                                        <div style={{ background: '#000', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '12px', padding: '24px', marginBottom: '32px' }}>
+                                                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
+                                                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>Email:</span>
+                                                                <span style={{ color: selectedVenture.color, fontFamily: 'monospace', fontWeight: 600 }}>demo@clinicos.com</span>
+                                                            </div>
+                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>Password:</span>
+                                                                <span style={{ color: selectedVenture.color, fontFamily: 'monospace', fontWeight: 600 }}>demo123</span>
+                                                            </div>
                                                         </div>
+
+                                                        <a
+                                                            href="https://demo.clinicos.com"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            style={{
+                                                                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                                                                background: selectedVenture.color, color: '#000',
+                                                                padding: '16px', borderRadius: '12px', fontWeight: 700,
+                                                                fontSize: '1.1rem', textDecoration: 'none',
+                                                                boxShadow: `0 10px 30px ${selectedVenture.color}40`,
+                                                                width: '100%'
+                                                            }}
+                                                        >
+                                                            Launch Live Protocol <ExternalLink size={20} />
+                                                        </a>
                                                     </div>
                                                 ) : (
                                                     <>
