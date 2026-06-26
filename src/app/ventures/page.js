@@ -371,7 +371,7 @@ const VentureLabPage = () => {
                                                         </div>
 
                                                         <a
-                                                            href="https://demo.clinicos.com"
+                                                            href="https://clinicos-neon.vercel.app/"
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             style={{
