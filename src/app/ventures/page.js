@@ -239,7 +239,7 @@ const VentureLabPage = () => {
                                     marginBottom: '32px', fontSize: '0.9rem', fontWeight: 600
                                 }}
                             >
-                                <ArrowLeft size={18} /> Back to Protocols
+                                <ArrowLeft size={18} /> Back to Applied Labs
                             </button>
 
                             <motion.div
