@@ -80,17 +80,23 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Navbar$
 ;
 const metadata = {
     title: 'Suyash | Portfolio',
-    description: 'Data Scientist & Strategist - Portfolio of Suyash.'
+    description: 'Data Scientist & Strategist - Portfolio of Suyash.',
+    metadataBase: new URL('https://justsuyash.com'),
+    icons: {
+        icon: '/images/bheed_favicon_white.png',
+        apple: '/images/bheed_favicon_white.png'
+    }
 };
 function RootLayout({ children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
         lang: "en",
+        suppressHydrationWarning: true,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
             className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_396b12ce$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].className,
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Navbar$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/layout.js",
-                    lineNumber: 16,
+                    lineNumber: 21,
                     columnNumber: 17
                 }, this),
                 children,
@@ -111,23 +117,23 @@ function RootLayout({ children }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/layout.js",
-                        lineNumber: 26,
+                        lineNumber: 31,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/layout.js",
-                    lineNumber: 18,
+                    lineNumber: 23,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/layout.js",
-            lineNumber: 15,
+            lineNumber: 20,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/layout.js",
-        lineNumber: 14,
+        lineNumber: 19,
         columnNumber: 9
     }, this);
 }

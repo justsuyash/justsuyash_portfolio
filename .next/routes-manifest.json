@@ -47,6 +47,12 @@
       "namedRegex": "^/articles(?:/)?$"
     },
     {
+      "page": "/articles/clinicos-performance",
+      "regex": "^/articles/clinicos\\-performance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/articles/clinicos\\-performance(?:/)?$"
+    },
+    {
       "page": "/articles/decision-trees",
       "regex": "^/articles/decision\\-trees(?:/)?$",
       "routeKeys": {},
@@ -77,6 +83,12 @@
       "namedRegex": "^/articles/litmus\\-test\\-protocol(?:/)?$"
     },
     {
+      "page": "/articles/mit-code-experience",
+      "regex": "^/articles/mit\\-code\\-experience(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/articles/mit\\-code\\-experience(?:/)?$"
+    },
+    {
       "page": "/articles/sandbox-strategy",
       "regex": "^/articles/sandbox\\-strategy(?:/)?$",
       "routeKeys": {},
@@ -95,16 +107,46 @@
       "namedRegex": "^/contact(?:/)?$"
     },
     {
+      "page": "/icon.png",
+      "regex": "^/icon\\.png(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon\\.png(?:/)?$"
+    },
+    {
       "page": "/lab",
       "regex": "^/lab(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/lab(?:/)?$"
     },
     {
+      "page": "/resume",
+      "regex": "^/resume(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resume(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
       "page": "/ventures",
       "regex": "^/ventures(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/ventures(?:/)?$"
+    },
+    {
+      "page": "/ventures/clinicos",
+      "regex": "^/ventures/clinicos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ventures/clinicos(?:/)?$"
     }
   ],
   "dataRoutes": [],

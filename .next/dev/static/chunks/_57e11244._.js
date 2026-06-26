@@ -36,7 +36,7 @@ const services = [
         title: "Technical Mentorship",
         subtitle: "For Indie Builders",
         description: "Architecture reviews, project guidance, and technical strategy for developers and designers building their own products. From MVP to scale.",
-        duration: "60 min",
+        duration: "45 min",
         gradient: "linear-gradient(135deg, #22c55e 0%, #10b981 100%)",
         color: "#22c55e",
         badge: "By Application",
@@ -76,7 +76,7 @@ const services = [
         gradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
         color: "#f59e0b",
         badge: null,
-        link: "https://calendly.com/justsuyash/dsc-interview",
+        link: "https://calendly.com/justsuyash/coffee",
         extraLink: null
     }
 ];

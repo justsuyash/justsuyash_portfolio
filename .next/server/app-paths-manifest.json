@@ -1,16 +1,23 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/articles/clinicos-performance/page": "app/articles/clinicos-performance/page.js",
   "/articles/decision-trees/page": "app/articles/decision-trees/page.js",
   "/articles/employment-verification/page": "app/articles/employment-verification/page.js",
   "/articles/experimentation-architecture/page": "app/articles/experimentation-architecture/page.js",
   "/articles/genai-copilot/page": "app/articles/genai-copilot/page.js",
   "/articles/litmus-test-protocol/page": "app/articles/litmus-test-protocol/page.js",
+  "/articles/mit-code-experience/page": "app/articles/mit-code-experience/page.js",
   "/articles/page": "app/articles/page.js",
   "/articles/sandbox-strategy/page": "app/articles/sandbox-strategy/page.js",
   "/connect/page": "app/connect/page.js",
   "/contact/page": "app/contact/page.js",
+  "/icon.png/route": "app/icon.png/route.js",
   "/lab/page": "app/lab/page.js",
   "/page": "app/page.js",
+  "/resume/page": "app/resume/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/ventures/clinicos/page": "app/ventures/clinicos/page.js",
   "/ventures/page": "app/ventures/page.js"
 }

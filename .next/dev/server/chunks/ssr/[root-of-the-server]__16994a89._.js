@@ -99,25 +99,26 @@ const Navbar = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: "/",
                         style: {
-                            fontSize: '1.25rem',
-                            fontWeight: 700,
-                            letterSpacing: '-0.02em',
-                            color: '#fff'
+                            display: 'flex',
+                            alignItems: 'center'
                         },
-                        children: [
-                            "SUYASH",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                style: {
-                                    color: '#00f3ff'
-                                },
-                                children: "."
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Navbar.jsx",
-                                lineNumber: 53,
-                                columnNumber: 27
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: "/images/bheed_logo_white.png",
+                            alt: "Bheed Studios",
+                            style: {
+                                height: '40px',
+                                objectFit: 'contain',
+                                opacity: 0.9,
+                                transition: 'opacity 0.3s ease'
+                            },
+                            onMouseEnter: (e)=>e.currentTarget.style.opacity = '1',
+                            onMouseLeave: (e)=>e.currentTarget.style.opacity = '0.9'
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/Navbar.jsx",
+                            lineNumber: 51,
+                            columnNumber: 21
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
                         fileName: "[project]/src/components/Navbar.jsx",
                         lineNumber: 47,
                         columnNumber: 17
@@ -159,18 +160,17 @@ const Navbar = ()=>{
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Navbar.jsx",
-                                            lineNumber: 82,
+                                            lineNumber: 91,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, link.name, true, {
                                     fileName: "[project]/src/components/Navbar.jsx",
-                                    lineNumber: 63,
+                                    lineNumber: 72,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "/portfolio_resume.pdf",
-                                target: "_blank",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/resume",
                                 style: {
                                     display: 'flex',
                                     alignItems: 'center',
@@ -193,24 +193,24 @@ const Navbar = ()=>{
                                     e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
                                 },
                                 children: [
-                                    "Resume ",
+                                    "View Resume ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$up$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowUpRight$3e$__["ArrowUpRight"], {
                                         size: 14
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.jsx",
-                                        lineNumber: 122,
-                                        columnNumber: 32
+                                        lineNumber: 130,
+                                        columnNumber: 37
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Navbar.jsx",
-                                lineNumber: 97,
+                                lineNumber: 106,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Navbar.jsx",
-                        lineNumber: 57,
+                        lineNumber: 66,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -227,18 +227,18 @@ const Navbar = ()=>{
                             size: 24
                         }, void 0, false, {
                             fileName: "[project]/src/components/Navbar.jsx",
-                            lineNumber: 138,
+                            lineNumber: 146,
                             columnNumber: 31
                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                             size: 24
                         }, void 0, false, {
                             fileName: "[project]/src/components/Navbar.jsx",
-                            lineNumber: 138,
+                            lineNumber: 146,
                             columnNumber: 49
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/Navbar.jsx",
-                        lineNumber: 127,
+                        lineNumber: 135,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -280,26 +280,25 @@ const Navbar = ()=>{
                                     href: "/",
                                     onClick: ()=>setIsOpen(false),
                                     style: {
-                                        fontSize: '1.25rem',
-                                        fontWeight: 700,
-                                        color: '#fff'
+                                        display: 'flex',
+                                        alignItems: 'center'
                                     },
-                                    children: [
-                                        "SUYASH",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            style: {
-                                                color: '#00f3ff'
-                                            },
-                                            children: "."
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Navbar.jsx",
-                                            lineNumber: 171,
-                                            columnNumber: 39
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, void 0, true, {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: "/images/bheed_logo_white.png",
+                                        alt: "Bheed Studios",
+                                        style: {
+                                            height: '32px',
+                                            objectFit: 'contain',
+                                            opacity: 0.9
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Navbar.jsx",
+                                        lineNumber: 178,
+                                        columnNumber: 33
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
                                     fileName: "[project]/src/components/Navbar.jsx",
-                                    lineNumber: 166,
+                                    lineNumber: 174,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -316,18 +315,18 @@ const Navbar = ()=>{
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.jsx",
-                                        lineNumber: 184,
+                                        lineNumber: 199,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Navbar.jsx",
-                                    lineNumber: 173,
+                                    lineNumber: 188,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Navbar.jsx",
-                            lineNumber: 159,
+                            lineNumber: 167,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -345,7 +344,7 @@ const Navbar = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "[project]/src/components/Navbar.jsx",
-                            lineNumber: 189,
+                            lineNumber: 204,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -395,23 +394,23 @@ const Navbar = ()=>{
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Navbar.jsx",
-                                                lineNumber: 233,
+                                                lineNumber: 248,
                                                 columnNumber: 45
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Navbar.jsx",
-                                        lineNumber: 218,
+                                        lineNumber: 233,
                                         columnNumber: 37
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, link.name, false, {
                                     fileName: "[project]/src/components/Navbar.jsx",
-                                    lineNumber: 212,
+                                    lineNumber: 227,
                                     columnNumber: 33
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Navbar.jsx",
-                            lineNumber: 203,
+                            lineNumber: 218,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -419,9 +418,8 @@ const Navbar = ()=>{
                                 padding: '2rem',
                                 borderTop: '1px solid rgba(255,255,255,0.05)'
                             },
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "/portfolio_resume.pdf",
-                                target: "_blank",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/resume",
                                 style: {
                                     display: 'flex',
                                     alignItems: 'center',
@@ -438,34 +436,34 @@ const Navbar = ()=>{
                                     boxShadow: '0 0 30px rgba(189, 0, 255, 0.3)'
                                 },
                                 children: [
-                                    "Download Resume ",
+                                    "View Resume ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$up$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowUpRight$3e$__["ArrowUpRight"], {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.jsx",
-                                        lineNumber: 269,
-                                        columnNumber: 49
+                                        lineNumber: 283,
+                                        columnNumber: 45
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Navbar.jsx",
-                                lineNumber: 250,
+                                lineNumber: 265,
                                 columnNumber: 29
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Navbar.jsx",
-                            lineNumber: 249,
+                            lineNumber: 264,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Navbar.jsx",
-                    lineNumber: 145,
+                    lineNumber: 153,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.jsx",
-                lineNumber: 143,
+                lineNumber: 151,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]

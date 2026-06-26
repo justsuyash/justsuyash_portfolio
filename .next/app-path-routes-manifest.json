@@ -1,16 +1,23 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/articles/clinicos-performance/page": "/articles/clinicos-performance",
   "/articles/decision-trees/page": "/articles/decision-trees",
   "/articles/employment-verification/page": "/articles/employment-verification",
   "/articles/experimentation-architecture/page": "/articles/experimentation-architecture",
   "/articles/genai-copilot/page": "/articles/genai-copilot",
   "/articles/litmus-test-protocol/page": "/articles/litmus-test-protocol",
+  "/articles/mit-code-experience/page": "/articles/mit-code-experience",
   "/articles/page": "/articles",
   "/articles/sandbox-strategy/page": "/articles/sandbox-strategy",
   "/connect/page": "/connect",
   "/contact/page": "/contact",
+  "/icon.png/route": "/icon.png",
   "/lab/page": "/lab",
   "/page": "/",
+  "/resume/page": "/resume",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/ventures/clinicos/page": "/ventures/clinicos",
   "/ventures/page": "/ventures"
 }
