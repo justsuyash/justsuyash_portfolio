@@ -7,9 +7,19 @@ import Link from 'next/link';
 import { articles } from '../../data/articles';
 
 const ArticlesPage = () => {
-    // Logic to select a featured article based on the current week
+    // Logic to select a featured article based on manual flag or current week
     const { featuredArticle, otherArticles } = useMemo(() => {
-        // Calculate current week number (epoch days / 7)
+        // 1. Check if any article is manually pinned
+        const manualFeaturedIndex = articles.findIndex(a => a.featured === true);
+        
+        if (manualFeaturedIndex !== -1) {
+            return {
+                featuredArticle: articles[manualFeaturedIndex],
+                otherArticles: articles.filter((_, idx) => idx !== manualFeaturedIndex)
+            };
+        }
+
+        // 2. Fallback: Calculate current week number (epoch days / 7)
         const currentWeek = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 7));
         // Use modulo to rotate through articles
         const featuredIndex = currentWeek % articles.length;

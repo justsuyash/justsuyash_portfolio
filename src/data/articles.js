@@ -6,7 +6,8 @@ export const articles = [
         date: "Jun 2026",
         link: "/articles/clinicos-performance",
         tag: "Deep Dive",
-        readTime: "8 min"
+        readTime: "8 min",
+        featured: true
     },
     {
         title: "MIT CODE 2025: Validating Intuition & The Future of Experimentation",
