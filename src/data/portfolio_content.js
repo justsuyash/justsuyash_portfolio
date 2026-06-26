@@ -1,5 +1,14 @@
 export const articles = [
     {
+        title: "How I Cut ClinicOS Page Load Times by 14× — A Solo Dev's Performance Deep Dive",
+        description: "A real-world walkthrough of diagnosing and fixing 5–9 second page loads in a Next.js + Neon PostgreSQL healthcare SaaS — from TCP handshakes to optimistic UI.",
+        publication: "Deep Dive",
+        date: "Jun 2026",
+        link: "/articles/clinicos-performance",
+        tag: "Deep Dive",
+        readTime: "8 min"
+    },
+    {
         title: "MIT CODE 2025: Validating Intuition & The Future of Experimentation",
         description: "Validating intuition and the future of experimentation at the MIT Conference on Digital Experimentation.",
         publication: "Thought Leadership",
