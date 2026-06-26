@@ -9,22 +9,31 @@ export const articles = [
         readTime: "8 min"
     },
     {
-        title: "The \"Sandbox\" Strategy: How I Turned a Jupyter Notebook into an Enterprise App",
+        title: "MIT CODE 2025: Validating Intuition & The Future of Experimentation",
+        description: "Validating intuition and the future of experimentation at the MIT Conference on Digital Experimentation.",
+        publication: "Thought Leadership",
+        date: "Nov 2024",
+        link: "/articles/mit-code-experience",
+        tag: "Reflection",
+        readTime: "6 min"
+    },
+    {
+        title: "The 'Litmus Test' Protocol: De-Risking Advanced Statistics",
+        description: "Why we validated CUPED in a Power Calculator before touching the Production Engine. A study in engineering precision.",
+        publication: "Experimentation Verification",
+        date: "Mar 2024",
+        link: "/articles/litmus-test-protocol",
+        tag: "Protocol",
+        readTime: "7 min"
+    },
+    {
+        title: "The 'Sandbox' Strategy: How I Turned a Jupyter Notebook into an Enterprise App",
         description: "Why you should scale your prototype before you build your platform. A story of turning a manual analyst loop into an automated engine.",
         publication: "Strategy",
         date: "Feb 2024",
         link: "/articles/sandbox-strategy",
         tag: "Strategy",
         readTime: "6 min"
-    },
-    {
-        title: "The Litmus Test: How We Validated CUPED in 5 Days Without Engineering",
-        description: "We inverted the workflow. Instead of building an engine first, we used a 'Litmus Test' simulation to prove value and save 8 weeks of dev time.",
-        publication: "Experimentation",
-        date: "Mar 2024",
-        link: "/articles/litmus-test-protocol",
-        tag: "Protocol",
-        readTime: "7 min"
     },
     {
         title: "From Sequential To Parallel: Scaling Experimentation Inference",
@@ -36,8 +45,8 @@ export const articles = [
         readTime: "8 min"
     },
     {
-        title: "The $114M Friction Fix: Employment Verification Optimization",
-        description: "How causal inference and surgical A/B testing challenged a core risk assumption, removing friction for high-quality borrowers and unlocking $114M in annualized volume.",
+        title: "Challenging Institutional Inertia: The $114M Friction Fix",
+        description: "Proved through XGBoost + Propensity Score Matching that employment verification had zero predictive value, unlocking $114M in annualized volume.",
         publication: "Product Science",
         date: "Aug 2023",
         link: "/articles/employment-verification",
@@ -62,13 +71,5 @@ export const articles = [
         tag: "Case Study",
         readTime: "5 min"
     },
-    {
-        title: "Statistical Methods That Actually Matter for A/B Tests",
-        description: "Forget p-values. Here's the Bayesian approach we use at Albertsons for experiments that ship faster.",
-        publication: "LinkedIn",
-        date: "Oct 2023",
-        link: "https://www.linkedin.com/in/justsuyash/",
-        tag: "Tutorial",
-        readTime: "6 min"
-    }
+
 ];

@@ -1,4 +1,4 @@
-import { articles } from '../data/portfolio_content';
+import { articles } from '../data/articles';
 
 export default function sitemap() {
     const baseUrl = 'https://justsuyash.com';

@@ -4,7 +4,7 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ExternalLink, Clock, Sparkles, Download, Star, Github, Linkedin, Briefcase } from 'lucide-react';
 import Link from 'next/link';
-import { articles } from '../data/portfolio_content';
+import { articles } from '../data/articles';
 
 const HomePage = () => {
     // Logic to select a featured article based on the current week
