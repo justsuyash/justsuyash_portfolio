@@ -76,7 +76,7 @@ const ArticleAuthorBio = () => {
                             { label: 'Builder', color: '#bfff00' },
                             { label: 'Writer', color: '#00f3ff' },
                             { label: 'Photographer', color: '#bd00ff' },
-                            { label: 'Martial Artist', color: '#ff6b35' },
+                            { label: 'Working a Bag', color: '#ff6b35' },
                             { label: 'Mace Instructor', color: '#ffcc00' },
                             { label: 'Yoga Teacher', color: '#22c55e' },
                         ].map(({ label, color }) => (
@@ -110,7 +110,7 @@ const ArticleAuthorBio = () => {
                         </Link>
                         , a clinic management system I designed sitting in my brother's clinic, watching him work.
                         When I'm not writing code, I'm behind a camera shooting landscapes,
-                        training in martial arts, swinging a steel mace, or on a yoga mat.
+                        working a bag, swinging a steel mace, or on a yoga mat.
                         The through-line across all of it: discipline, craft, and an obsession with doing things right.
                     </p>
 
