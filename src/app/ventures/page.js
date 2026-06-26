@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ExternalLink, Target, Zap, Shield, Layout, Beaker, FileText } from 'lucide-react';
+import Link from 'next/link';
 
 const ventures = [
     {
@@ -13,9 +14,13 @@ const ventures = [
         stack: ["Next.js 14", "Neon Postgres", "Prisma", "WebSockets"],
         image: "/images/clinicos/prescriptionGeneration.png",
         visuals: [
-            { type: 'icon', icon: <Zap size={32} />, label: "Sub-350ms Loads" },
-            { type: 'icon', icon: <FileText size={32} />, label: "AI Transcription" }
+            { type: 'image', src: "/images/clinicos/prescriptionGeneration.png", alt: "Prescription Engine" },
+            { type: 'image', src: "/images/clinicos/appointments.png", alt: "Drag & Drop Scheduler" }
         ],
+        articleLink: {
+            url: "/articles/clinicos-performance",
+            title: "Read the Performance Deep Dive (Sub-350ms Loads)"
+        },
         link: "/ventures/clinicos",
         labCta: "View Interactive Demo",
         status: "Production",
@@ -72,26 +77,7 @@ const ventures = [
     }
 ];
 
-const objectives = [
-    {
-        icon: <Target size={28} />,
-        title: "Signal-Only Design",
-        description: "Analyze user sentiment on mass-market apps to isolate high-retention features. Rebuild them without engagement traps.",
-        gradient: "linear-gradient(135deg, #00f3ff 0%, #00a8ff 100%)"
-    },
-    {
-        icon: <Zap size={28} />,
-        title: "Autonomous Execution",
-        description: "Architecting a proprietary '5-Mind' GenAI workflow to handle full-stack development, marketing, and legal ops.",
-        gradient: "linear-gradient(135deg, #bd00ff 0%, #8b00ff 100%)"
-    },
-    {
-        icon: <Shield size={28} />,
-        title: "Old Concepts, Leaner Design",
-        description: "Revisiting timeless needs with the precision of a micro-studio. By eliminating bureaucratic bloat, we ship products that are faster, simpler, and respect the user.",
-        gradient: "linear-gradient(135deg, #22c55e 0%, #10b981 100%)"
-    }
-];
+
 
 const VentureLabPage = () => {
     const [selectedVenture, setSelectedVenture] = useState(null);
@@ -106,7 +92,8 @@ const VentureLabPage = () => {
                     style={{ marginBottom: '80px', maxWidth: '800px' }}
                 >
                     <span style={{
-                        color: typeof objectives[1].gradient === 'string' ? '#bd00ff' : '#00f3ff', // Fallback color
+                        color: '#00f3ff',
+
                         fontSize: '0.875rem',
                         fontWeight: 700,
                         letterSpacing: '0.1em',
@@ -280,6 +267,18 @@ const VentureLabPage = () => {
                                                     {selectedVenture.thesis}
                                                 </p>
 
+                                                {selectedVenture.articleLink && (
+                                                    <div style={{ marginBottom: '40px' }}>
+                                                        <Link href={selectedVenture.articleLink.url} style={{
+                                                            display: 'inline-flex', alignItems: 'center', gap: '8px',
+                                                            color: selectedVenture.color, textDecoration: 'underline', textUnderlineOffset: '4px',
+                                                            fontWeight: 600, fontSize: '1.1rem'
+                                                        }}>
+                                                            <FileText size={18} /> {selectedVenture.articleLink.title}
+                                                        </Link>
+                                                    </div>
+                                                )}
+
                                                 <div style={{ padding: '24px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px' }}>
                                                     <h4 style={{ fontSize: '0.8rem', marginBottom: '16px', fontWeight: 700, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>Engineering Stack</h4>
                                                     <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -304,19 +303,25 @@ const VentureLabPage = () => {
                                                 style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', paddingTop: '20px' }}
                                             >
                                                 {selectedVenture.visuals.map((vis, i) => (
-                                                    <div key={i} style={{
-                                                        flex: '1 1 200px',
-                                                        padding: '32px',
-                                                        background: 'rgba(255,255,255,0.02)',
-                                                        borderRadius: '16px',
-                                                        border: '1px solid rgba(255,255,255,0.05)',
-                                                        textAlign: 'center'
-                                                    }}>
-                                                        <div style={{ marginBottom: '16px', color: selectedVenture.color }}>
-                                                            {vis.icon}
+                                                    vis.type === 'image' ? (
+                                                        <div key={i} style={{ flex: '1 1 300px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                                            <img src={vis.src} alt={vis.alt} style={{ width: '100%', display: 'block', height: '100%', objectFit: 'cover' }} />
                                                         </div>
-                                                        <div style={{ fontSize: '1rem', fontWeight: 600 }}>{vis.label}</div>
-                                                    </div>
+                                                    ) : (
+                                                        <div key={i} style={{
+                                                            flex: '1 1 200px',
+                                                            padding: '32px',
+                                                            background: 'rgba(255,255,255,0.02)',
+                                                            borderRadius: '16px',
+                                                            border: '1px solid rgba(255,255,255,0.05)',
+                                                            textAlign: 'center'
+                                                        }}>
+                                                            <div style={{ marginBottom: '16px', color: selectedVenture.color }}>
+                                                                {vis.icon}
+                                                            </div>
+                                                            <div style={{ fontSize: '1rem', fontWeight: 600 }}>{vis.label}</div>
+                                                        </div>
+                                                    )
                                                 ))}
                                             </motion.div>
                                         )}
@@ -368,22 +373,7 @@ const VentureLabPage = () => {
                     )}
                 </AnimatePresence>
 
-                {/* Objectives Section */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px', marginTop: '80px' }}>
-                    {objectives.map((obj, i) => (
-                        <div key={i}>
-                            <div style={{
-                                width: '48px', height: '48px', borderRadius: '12px',
-                                background: obj.gradient, display: 'flex', alignItems: 'center',
-                                justifyContent: 'center', marginBottom: '24px', color: '#000'
-                            }}>
-                                {obj.icon}
-                            </div>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '12px' }}>{obj.title}</h3>
-                            <p style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>{obj.description}</p>
-                        </div>
-                    ))}
-                </div>
+                {/* Objectives Section removed */}
             </div>
         </main >
     );
