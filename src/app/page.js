@@ -280,7 +280,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
-                                    Senior Data Scientist | Platform Architect
+                                    Senior Data Scientist | AI Architect
                                 </span>
                             </div>
 
