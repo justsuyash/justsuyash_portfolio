@@ -73,11 +73,9 @@ const ArticleAuthorBio = () => {
                         marginBottom: '16px',
                     }}>
                         {[
-                            { label: 'Builder', color: '#bfff00' },
-                            { label: 'Writer', color: '#00f3ff' },
-                            { label: 'Photographer', color: '#bd00ff' },
-                            { label: 'Working a Bag', color: '#ff6b35' },
-                            { label: 'Mace Instructor', color: '#ffcc00' },
+                            { label: 'Engineer', color: '#bfff00' },
+                            { label: 'Landscape Photographer (maybe your wedding if you ask nicely)', color: '#bd00ff' },
+                            { label: 'Martial Artist', color: '#ff6b35' },
                             { label: 'Yoga Teacher', color: '#22c55e' },
                         ].map(({ label, color }) => (
                             <span key={label} style={{
