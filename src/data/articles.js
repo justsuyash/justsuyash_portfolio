@@ -1,5 +1,14 @@
 export const articles = [
     {
+        title: "How I Cut ClinicOS Page Load Times by 14× — A Solo Dev's Performance Deep Dive",
+        description: "A real-world walkthrough of diagnosing and fixing 5–9 second page loads in a Next.js + Neon PostgreSQL healthcare SaaS — from TCP handshakes to optimistic UI.",
+        publication: "Deep Dive",
+        date: "Jun 2026",
+        link: "/articles/clinicos-performance",
+        tag: "Deep Dive",
+        readTime: "8 min"
+    },
+    {
         title: "The \"Sandbox\" Strategy: How I Turned a Jupyter Notebook into an Enterprise App",
         description: "Why you should scale your prototype before you build your platform. A story of turning a manual analyst loop into an automated engine.",
         publication: "Strategy",

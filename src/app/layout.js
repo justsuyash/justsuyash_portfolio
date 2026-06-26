@@ -8,6 +8,10 @@ export const metadata = {
     title: 'Suyash | Portfolio',
     description: 'Data Scientist & Strategist - Portfolio of Suyash.',
     metadataBase: new URL('https://justsuyash.com'),
+    icons: {
+        icon: '/images/bheed_favicon_white.png',
+        apple: '/images/bheed_favicon_white.png',
+    },
 };
 
 export default function RootLayout({ children }) {

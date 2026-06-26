@@ -49,12 +49,16 @@ const Navbar = () => {
                     alignItems: 'center'
                 }}>
                     <img
-                        src="/images/bheed_logo_full.png"
+                        src="/images/bheed_logo_white.png"
                         alt="Bheed Studios"
                         style={{
                             height: '40px',
-                            objectFit: 'contain'
+                            objectFit: 'contain',
+                            opacity: 0.9,
+                            transition: 'opacity 0.3s ease'
                         }}
+                        onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                        onMouseLeave={(e) => e.currentTarget.style.opacity = '0.9'}
                     />
                 </Link>
 
@@ -172,11 +176,12 @@ const Navbar = () => {
                                 alignItems: 'center'
                             }}>
                                 <img
-                                    src="/images/bheed_logo_full.png"
+                                    src="/images/bheed_logo_white.png"
                                     alt="Bheed Studios"
                                     style={{
                                         height: '32px',
-                                        objectFit: 'contain'
+                                        objectFit: 'contain',
+                                        opacity: 0.9
                                     }}
                                 />
                             </Link>

@@ -6,6 +6,22 @@ import { ArrowLeft, ArrowRight, ExternalLink, Target, Zap, Shield, Layout, Beake
 
 const ventures = [
     {
+        name: "ClinicOS",
+        tagline: "Bheed Studios",
+        description: "Advanced Clinic Management System. Optimizing clinical workflows from transcription to prescription.",
+        thesis: "Doctors lose hours every day to administrative overhead and poorly designed software. ClinicOS is built to fundamentally fix this. With sub-350ms response times, real-time AI transcription, and intuitive drag-and-drop mechanics, we're returning time and focus to where it belongs: the patient.",
+        stack: ["Next.js 14", "Neon Postgres", "Prisma", "WebSockets"],
+        image: "/images/clinicos/prescriptionGeneration.png",
+        visuals: [
+            { type: 'icon', icon: <Zap size={32} />, label: "Sub-350ms Loads" },
+            { type: 'icon', icon: <FileText size={32} />, label: "AI Transcription" }
+        ],
+        link: "/ventures/clinicos",
+        labCta: "View Interactive Demo",
+        status: "Production",
+        color: "#bfff00"
+    },
+    {
         name: "Mana",
         tagline: "Health Intelligence",
         description: "Correlation engine for biological data. Mana unifies unstructured voice journaling with biometric APIs.",
