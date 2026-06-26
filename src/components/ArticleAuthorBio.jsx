@@ -109,8 +109,7 @@ const ArticleAuthorBio = () => {
                             ClinicOS
                         </Link>
                         , a clinic management system I designed sitting in my brother's clinic, watching him work.
-                        When I'm not writing code, I'm behind a camera shooting landscapes,
-                        working a bag, swinging a steel mace, or on a yoga mat.
+                        When I'm not writing code, I'm behind a camera shooting landscapes, working a bag, swinging a steel mace, or on a yoga mat.
                         The through-line across all of it: discipline, craft, and an obsession with doing things right.
                     </p>
 
