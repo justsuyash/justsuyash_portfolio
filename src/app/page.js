@@ -472,7 +472,7 @@ const HomePage = () => {
 
                     <div className="grid-responsive" style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '24px'
                     }}>
                         {/* Albertsons Card */}
@@ -481,7 +481,7 @@ const HomePage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="glass-panel"
-                            style={{ padding: '32px' }}
+                            style={{ padding: '32px', borderRadius: '8px' }}
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
@@ -511,7 +511,7 @@ const HomePage = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
                             className="glass-panel"
-                            style={{ padding: '32px' }}
+                            style={{ padding: '32px', borderRadius: '8px' }}
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
@@ -530,7 +530,7 @@ const HomePage = () => {
                                 }}>Building</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
-                                Technical sandbox building production-grade consumer AI products. 700+ users across QuizBeef, mana-health, and Aligned.
+                                Technical sandbox building production-grade consumer AI products. 700+ users across QuizBeef and mana-health.
                             </p>
                             <Link href="/ventures" style={{
                                 display: 'inline-flex',
@@ -544,15 +544,17 @@ const HomePage = () => {
                                 Explore the Lab <ArrowRight size={14} />
                             </Link>
                         </motion.div>
+                    </div>
 
-                        {/* ClinicOS Card */}
+                    {/* ClinicOS Card — centered below */}
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
                             className="glass-panel"
-                            style={{ padding: '32px' }}
+                            style={{ padding: '32px', borderRadius: '8px', width: '50%', minWidth: '280px' }}
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
