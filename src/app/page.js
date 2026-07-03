@@ -280,7 +280,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
-                                    Data Scientist IV | Lead Platform Architect
+                                    Data Scientist | Lead Platform Architect
                                 </span>
                             </div>
 
@@ -486,7 +486,7 @@ const HomePage = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
                                     <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Albertsons Companies</h3>
-                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist IV | Lead Platform Architect</p>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist | Lead Platform Architect</p>
                                 </div>
                                 <span style={{
                                     padding: '4px 10px',
