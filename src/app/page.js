@@ -521,16 +521,16 @@ const HomePage = () => {
                                 <span style={{
                                     padding: '4px 10px',
                                     borderRadius: '6px',
-                                    background: 'rgba(189, 0, 255, 0.15)',
-                                    color: '#bd00ff',
+                                    background: 'rgba(0, 200, 200, 0.15)',
+                                    color: '#00c8c8',
                                     fontSize: '0.65rem',
                                     fontWeight: 700,
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.05em'
-                                }}>Building</span>
+                                }}>Live</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
-                                Technical sandbox building production-grade consumer AI products. 700+ users across QuizBeef and mana-health.
+                                Technical sandbox building production-grade consumer AI products. 700+ users across QuizBeef, mana-health, and ClinicOS.
                             </p>
                             <Link href="/ventures" style={{
                                 display: 'inline-flex',
