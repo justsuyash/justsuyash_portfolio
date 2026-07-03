@@ -472,7 +472,7 @@ const HomePage = () => {
 
                     <div className="grid-responsive" style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                         gap: '24px'
                     }}>
                         {/* Albertsons Card */}
@@ -504,7 +504,7 @@ const HomePage = () => {
                             </p>
                         </motion.div>
 
-                        {/* Bheed Studio Card */}
+                        {/* Applied AI Research Lab Card */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -515,7 +515,7 @@ const HomePage = () => {
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
-                                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Bheed Studio</h3>
+                                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Applied AI Research Lab</h3>
                                     <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Founder & Principal Engineer | Applied AI Research Lab</p>
                                 </div>
                                 <span style={{
@@ -542,6 +542,47 @@ const HomePage = () => {
                                 transition: 'color 0.3s'
                             }}>
                                 Explore the Lab <ArrowRight size={14} />
+                            </Link>
+                        </motion.div>
+
+                        {/* ClinicOS Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="glass-panel"
+                            style={{ padding: '32px' }}
+                        >
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>ClinicOS</h3>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Founder & Solo Engineer | Healthcare AI</p>
+                                </div>
+                                <span style={{
+                                    padding: '4px 10px',
+                                    borderRadius: '6px',
+                                    background: 'rgba(0, 200, 200, 0.15)',
+                                    color: '#00c8c8',
+                                    fontSize: '0.65rem',
+                                    fontWeight: 700,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.05em'
+                                }}>Live</span>
+                            </div>
+                            <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
+                                AI-powered clinic management SaaS. Real-time consultation transcription, auto-prescriptions, and appointment queuing. Live in 8 clinics across rural India.
+                            </p>
+                            <Link href="/articles/clinicos-performance" style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                fontSize: '0.875rem',
+                                fontWeight: 600,
+                                color: '#fff',
+                                transition: 'color 0.3s'
+                            }}>
+                                View Case Study <ArrowRight size={14} />
                             </Link>
                         </motion.div>
                     </div>
