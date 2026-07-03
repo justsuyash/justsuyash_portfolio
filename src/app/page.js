@@ -309,7 +309,7 @@ const HomePage = () => {
                                 marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                <strong>Architecting Agentic Causal Platforms at scale</strong> — bridging Experimentation, Causal Inference, and GenAI.
+                                I explore uncharted territory — generating novel AI architectures and rapidly prototyping them into production systems. Specializing in Experimentation, Causal Inference, and GenAI at Fortune 100 scale.
                             </p>
 
                             <div style={{ marginBottom: '32px' }}>
