@@ -419,7 +419,7 @@ const HomePage = () => {
                                 { metric: '3→8+', label: 'experiments/week via Experimentation Engine', color: '#00f3ff' },
                                 { metric: '$150M+', label: 'measurable business impact', color: '#bd00ff' },
                                 { metric: '$250M+', label: 'validated business impact', color: '#22c55e' },
-                                { metric: 'Solo', label: 'full-stack product engineering', color: '#f59e0b' }
+                                { metric: 'End-to-End', label: 'full-stack product engineering', color: '#f59e0b' }
                             ].map((item, idx) => (
                                 <div key={idx} style={{
                                     padding: '20px',
@@ -486,7 +486,7 @@ const HomePage = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
                                     <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Albertsons Companies</h3>
-                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist | Lead Platform Architect</p>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist IV | Founding Architect of AI-Powered Experimentation Systems</p>
                                 </div>
                                 <span style={{
                                     padding: '4px 10px',
@@ -500,7 +500,7 @@ const HomePage = () => {
                                 }}>Active</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-                                Built end-to-end experimentation platform driving $150M+ in validated business decisions. Engineered two GenAI automation agents reducing analysis time from days to hours.
+                                Pioneered the end-to-end AI experimentation platform driving $150M+ in validated business decisions. Rapidly prototyped and deployed two GenAI automation agents, compressing analysis time from days to hours.
                             </p>
                         </motion.div>
 
