@@ -9,7 +9,7 @@ const ResumePage = () => {
     const experiences = [
         {
             company: 'Albertsons Companies',
-            role: 'Senior Data Scientist | Architecting AI-Powered Experimentation Systems',
+            role: 'Data Scientist IV | Lead Platform Architect',
             period: 'Feb 2024 – Present',
             color: '#00f3ff',
             status: 'Active',

@@ -14,7 +14,7 @@ const Experience = () => {
         },
         {
             company: "Albertsons Companies",
-            title: "Senior Data Scientist | Architecting AI-Powered Experimentation Systems",
+            title: "Data Scientist IV | Lead Platform Architect",
             date: "Feb 2024 — Present",
             location: "Plano, TX",
             description: "Built end-to-end experimentation platform driving $150M+ in validated business decisions. Engineered two GenAI automation agents reducing analysis time from days to hours. Scaled testing velocity 3→8 experiments/week.",

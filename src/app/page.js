@@ -280,7 +280,7 @@ const HomePage = () => {
                             }}>
                                 <Sparkles size={14} color="#bd00ff" />
                                 <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#bd00ff', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
-                                    Senior Data Scientist | AI Architect
+                                    Data Scientist IV | Lead Platform Architect
                                 </span>
                             </div>
 
@@ -418,7 +418,7 @@ const HomePage = () => {
                             {[
                                 { metric: '3→8+', label: 'experiments/week via Experimentation Engine', color: '#00f3ff' },
                                 { metric: '$150M+', label: 'measurable business impact', color: '#bd00ff' },
-                                { metric: '7+', label: 'years at Fortune 500 companies', color: '#22c55e' },
+                                { metric: '$250M+', label: 'validated business impact', color: '#22c55e' },
                                 { metric: 'Solo', label: 'full-stack product engineering', color: '#f59e0b' }
                             ].map((item, idx) => (
                                 <div key={idx} style={{
@@ -486,7 +486,7 @@ const HomePage = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
                                     <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Albertsons Companies</h3>
-                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Senior Data Scientist | Architecting AI-Powered Experimentation Systems</p>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist IV | Lead Platform Architect</p>
                                 </div>
                                 <span style={{
                                     padding: '4px 10px',
