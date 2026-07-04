@@ -575,7 +575,7 @@ const HomePage = () => {
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
                                 AI-powered clinic management SaaS. Real-time consultation transcription, auto-prescriptions, and appointment queuing. Built to enable better treatment facilitation for independent doctors across South Asia — powering healthcare for underserved communities. Live in 8 clinics.
                             </p>
-                            <Link href="/ventures/clinicos" style={{
+                            <Link href="/ventures" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '8px',
