@@ -573,7 +573,7 @@ const HomePage = () => {
                                 }}>Live</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
-                                AI-powered clinic management SaaS. Real-time consultation transcription, auto-prescriptions, and appointment queuing. Live in 8 clinics across rural India.
+                                AI-powered clinic management SaaS. Real-time consultation transcription, auto-prescriptions, and appointment queuing. Built to enable better treatment facilitation for independent doctors across South Asia — powering healthcare for underserved communities. Live in 8 clinics.
                             </p>
                             <Link href="/articles/clinicos-performance" style={{
                                 display: 'inline-flex',
