@@ -584,7 +584,7 @@ const HomePage = () => {
                                 color: '#fff',
                                 transition: 'color 0.3s'
                             }}>
-                                Try ClinicOS <ArrowRight size={14} />
+                                Read more <ArrowRight size={14} />
                             </Link>
                         </motion.div>
                     </div>

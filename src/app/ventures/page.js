@@ -296,21 +296,10 @@ const VentureLabPage = () => {
                                             >
                                                 {selectedVenture.name === 'ClinicOS' ? (
                                                     <div style={{ textAlign: 'left', maxWidth: '600px', margin: '0 auto', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '40px' }}>
-                                                        <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '16px' }}>Live Test Environment</h3>
+                                                        <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '16px' }}>Try ClinicOS Live</h3>
                                                         <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '32px', lineHeight: 1.6 }}>
-                                                            Experience the sub-350ms response times and AI transcription firsthand. We've set up a seeded test environment with dummy patient data for you to explore.
+                                                            Experience the sub-350ms response times and AI transcription firsthand. Sign up in under a minute and start a consultation with pre-loaded patient data.
                                                         </p>
-                                                        
-                                                        <div style={{ background: '#000', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '12px', padding: '24px', marginBottom: '32px' }}>
-                                                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-                                                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>Email:</span>
-                                                                <span style={{ color: selectedVenture.color, fontFamily: 'monospace', fontWeight: 600 }}>demo@clinicos.com</span>
-                                                            </div>
-                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>Password:</span>
-                                                                <span style={{ color: selectedVenture.color, fontFamily: 'monospace', fontWeight: 600 }}>demo123</span>
-                                                            </div>
-                                                        </div>
 
                                                         <a
                                                             href="https://clinicos-neon.vercel.app/"
@@ -325,7 +314,7 @@ const VentureLabPage = () => {
                                                                 width: '100%'
                                                             }}
                                                         >
-                                                            Launch Live Protocol <ExternalLink size={20} />
+                                                            Launch ClinicOS <ExternalLink size={20} />
                                                         </a>
                                                     </div>
                                                 ) : (
