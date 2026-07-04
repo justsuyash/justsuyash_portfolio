@@ -575,7 +575,7 @@ const HomePage = () => {
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '16px' }}>
                                 AI-powered clinic management SaaS. Real-time consultation transcription, auto-prescriptions, and appointment queuing. Built to enable better treatment facilitation for independent doctors across South Asia — powering healthcare for underserved communities. Live in 8 clinics.
                             </p>
-                            <Link href="/articles/clinicos-performance" style={{
+                            <Link href="/ventures/clinicos" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '8px',
@@ -584,7 +584,7 @@ const HomePage = () => {
                                 color: '#fff',
                                 transition: 'color 0.3s'
                             }}>
-                                View Case Study <ArrowRight size={14} />
+                                Try ClinicOS <ArrowRight size={14} />
                             </Link>
                         </motion.div>
                     </div>
