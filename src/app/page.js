@@ -309,7 +309,7 @@ const HomePage = () => {
                                 marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                I explore uncharted territory — generating novel AI architectures and rapidly prototyping them into production systems. Specializing in Experimentation, Causal Inference, and GenAI at Fortune 100 scale.
+                                I specialize in developing novel data science solutions—taking concepts from 0 to 1. I rapidly prototype using emerging tech, align cross-functional teams, and productionalize the solution at scale. Currently Architecting the AI Experimentation Platform @ Albertsons | $250M+ Business Impact.
                             </p>
 
                             <div style={{ marginBottom: '32px' }}>
