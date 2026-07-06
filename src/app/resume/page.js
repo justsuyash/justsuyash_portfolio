@@ -8,53 +8,41 @@ import Link from 'next/link';
 const ResumePage = () => {
     const experiences = [
         {
-            company: 'Albertsons Companies',
-            role: 'Data Scientist IV | Founding Architect of AI-Powered Experimentation Systems',
+            company: 'Safeway (Albertsons)',
+            role: 'Data Scientist IV — Principal Platform Architect',
             period: 'Feb 2024 – Present',
             color: '#00f3ff',
             status: 'Active',
             highlights: [
-                { bold: 'Architected an end-to-end Causal Experimentation Engine:', text: ' Replaced manual workflows with a high-velocity pipeline scaling from 3 to 8+ experiments/week.' },
-                { bold: 'The Pipeline:', text: ' Engineered a robust system: Test Configs (Experiment ID) → Automated Exposure Tables → 31+ Metric Aggregation → CUPED Variance Reduction → Bayesian Inference Layer.' },
-                { bold: 'Statistical Impact:', text: ' Reduced standard error by 35%, compressing 28-day test windows into 12 days.' },
-                { bold: 'GenAI Integration:', text: ' Deployed a GenAI Analyst Agent (SQL+RAG) and an Auto-Summary Agent, reducing post-experiment analysis from days to hours while cutting hallucinations by 60%.' },
-                { bold: 'Business Value:', text: ' Validated $150M+ in annual strategic decisions across Pharmacy, Digital, and Private Brands.' }
+                { bold: 'Enterprise Platform Adoption:', text: ' Democratized causal data science by pioneering an enterprise-wide experimentation infrastructure across 4 distinct business units (In-Store, Pharmacy, Digital, and Private Brands); scaled cross-functional testing capacity from 3 to 8+ concurrent experiments/week, driving $150M+ in decentralized annual business decisions.' },
+                { bold: 'Statistical Standardization:', text: ' Operationalized an automated distributed Spark and CUPED variance reduction pipeline enterprise-wide to achieve a 35% error reduction; compressed experimental cycle times by 40% (from 28 to 12 days) for all cross-functional product and analytics teams.' },
+                { bold: 'Data Democratization:', text: ' Designed and deployed a custom GenAI Analyst Agent (SQL+RAG via LangChain and Gemini) over a 50TB+ enterprise dataset; empowered non-technical stakeholders to translate natural language queries into verified SQL, reducing post-experiment analysis latency from days to hours.' },
+                { bold: 'Operational Velocity & Scaling:', text: ' Built an Auto-Summary Agent in partnership with business leadership to autonomously capture experiment telemetry and benchmark results; unlocked 240–400 hours/week of collective organizational bandwidth by automating executive stakeholder reporting loops.' },
+                { bold: 'Algorithmic Optimization:', text: ' Redesigned the core assignment algorithm from the ground up to deliver 100% reliable, 30x faster randomization by minimizing Mahalanobis distance as the loss function.' }
             ]
         },
         {
             company: 'Applied AI Research Lab',
-            role: 'Principal Engineer & Product Builder',
+            role: 'Principal Engineer & Product Architect',
             period: 'Jan 2023 – Present',
             color: '#bd00ff',
             status: 'Building',
-            description: 'Founded an applied research lab to validate emerging Agentic and RAG architectures before enterprise deployment.',
+            description: 'Founded an applied AI research and development lab to proactively build and stress-test emerging technologies and extract proven architectures to de-risk enterprise deployments.',
             highlights: [
-                { bold: 'QuizBeef (700+ Users):', text: ' Architected an AI quiz app utilizing LLM semantic parsing and FAISS vector retrieval for document comprehension; insights informed Albertsons\' GenAI Copilot patterns.' },
-                { bold: 'mana-health:', text: ' Developed a multi-agent health platform orchestrating specialized agents (physio, nutritionist) to process biometric and workout data.' },
-                { bold: 'Aligned:', text: ' Built a dating app integrating astrology compatibility after market analysis revealed an underserved segment; demonstrates product-market fit analysis and consumer behavior insights.' }
+                { bold: 'ClinicOS (SaaS Deployment):', text: ' Engineered an AI-powered healthcare management SaaS platform currently live in 8 clinics across rural India; conducted structured workflow mapping with physicians to implement real-time consultation transcription, automated prescription generation, and automated inventory pipelines.' },
+                { bold: 'QuizBeef (RAG Production):', text: ' Architected an AI-native document comprehension platform scaling to 700+ users; synthesized learning science literature to deploy LLM semantic parsing and FAISS-powered vector retrieval for adaptive multi-source question generation.' },
+                { bold: 'mana-health (Agentic Systems):', text: ' Developed an advanced multi-agent biometric orchestration platform implementing Critic-Reflexion loops; enabled autonomous agent self-correction and output verification across specialized physiotherapy and nutrition nodes.' }
             ]
         },
         {
             company: 'Discover Financial Services',
-            role: 'Senior Data Scientist',
+            role: 'Senior Data Science Analyst',
             period: 'Aug 2022 – Oct 2023',
             color: '#f59e0b',
             highlights: [
-                { bold: '$114M in annual loan volume', text: ' by leveraging XGBoost analysis to prove employment verification added no predictive value, then executing an A/B test on low-risk segments that increased conversions by 300+ customers monthly.' },
-                { bold: '$1.8M in loan approvals', text: ' by identifying and resolving critical iOS bugs through funnel analysis on the Automated Loan Approval platform.' },
-                'Improved customer segmentation model accuracy by 12% by integrating GCP TensorFlow and collaborating with ML engineering team.',
-                'Reduced infrastructure costs by 12+% by migrating legacy SAS workflows to modular SQL queries.'
-            ]
-        },
-        {
-            company: 'Kaizen',
-            role: 'Data Science Engineering Intern',
-            period: 'Jun 2021 – Dec 2021',
-            color: '#22c55e',
-            highlights: [
-                'Informed 3+ marketing campaigns by analyzing user clustering patterns to uncover distinct customer journey types.',
-                'Reduced authentication false positives by 13% by building ETL pipelines and deploying an anomaly detection model on AWS SageMaker.',
-                'Improved forecasting accuracy by 8.5% by designing a hybrid time-series model (Prophet + LSTM) for sales prediction.'
+                { bold: 'Overturned decade-old risk policy:', text: ' Used XGBoost + Propensity Score Matching to prove employment verification had zero predictive value for high-FICO borrowers (R² < 0.01), then designed a surgical A/B test that unlocked $114M annualized volume and 300+ incremental customers/month through friction reduction.' },
+                { bold: 'Enabled $1.8M in loan approvals:', text: ' Identified and resolved critical iOS bugs through funnel analysis on the Automated Loan Approval platform, collaborating with engineering and UI/UX teams to restore conversion flow.' },
+                'Infrastructure Modernization: Migrated legacy SAS workflows to GCP BigQuery, reducing infrastructure costs by 12% and improving decision speed by 10+ hours/week.'
             ]
         },
         {
@@ -63,9 +51,19 @@ const ResumePage = () => {
             period: 'Jun 2016 – Feb 2019',
             color: '#ef4444',
             highlights: [
-                { bold: '$11.2M marketing revenue increase', text: ' and improved CTR by 28% by orchestrating email personalization using logistic regression.' },
-                'Enhanced customer lifetime value by 5% by developing Linear Regression models to optimize subscription pricing.',
-                'Reduced Priority 2 production issues by 60+% by developing Tableau dashboards with time series forecasting alerts.'
+                { bold: 'Global Campaign Optimization:', text: ' Orchestrated data-driven email personalization strategies for a 45M+ user base in Vodafone Germany; designed an advanced predictive logistic regression and A/B testing framework that expanded CTR by 28% (from 1.4% to 1.8%) and generated $11.2M in incremental revenue.' },
+                { bold: 'Customer Lifetime Value Expansion:', text: ' Developed complex linear regression models to predict multi-tier retention curves across varying subscription price points; strategically redirected marketing spend to optimize customer lifetime value (CLV) by 5%.' },
+                'Production System Reliability: Engineered an automated time-series anomaly detection system (Prophet) to monitor model error rates across core infrastructure; reduced Priority-2 production incidents by 60%+ and reclaimed ~20 hours/week of core engineering bandwidth.'
+            ]
+        },
+        {
+            company: 'Kaizen',
+            role: 'Data Science Engineering Intern',
+            period: 'Jun 2021 – Dec 2021',
+            color: '#22c55e',
+            highlights: [
+                { bold: 'Hybrid Predictive Modeling:', text: ' Outperformed the existing production baseline by improving forecasting accuracy by 8.5% for Toyota vehicle sales; architected a hybrid time-series model combining Prophet and LSTM deep learning networks to isolate complex residual seasonality.' },
+                { bold: 'Security Risk Mitigation:', text: ' Mitigated authentication friction by constructing an automated anomaly detection pipeline on AWS SageMaker; engineered a dynamic risk-based thresholding system that slashed 2FA false positives by 13% without degrading user sign-up flows.' }
             ]
         }
     ];
@@ -85,9 +83,10 @@ const ResumePage = () => {
     ];
 
     const skills = [
-        { category: 'Programming & Data', items: 'Python, SQL, PySpark, BigQuery, Airflow, Pandas, NumPy, Scikit-learn, TensorFlow, LangChain' },
-        { category: 'Machine Learning & Product', items: 'A/B Testing, Bayesian Methods, Causal Inference, Uplift Modeling, Prompt Engineering' },
-        { category: 'Infrastructure', items: 'GCP (BigQuery, Vertex AI), AWS (S3, SageMaker), Azure, Docker, Streamlit' },
+        { category: 'GenAI & Agentic Systems', items: 'LangChain, RAG (Retrieval-Augmented Generation), Context Engineering, LLMs, Prompt Engineering, Autonomous Agents, SQL+RAG, dbt, Snowflake' },
+        { category: 'Causal Inference & Experimentation', items: 'Causal Inference, CUPED, Bayesian Methods (PyMC), Propensity Score Matching, Synthetic Controls, Heterogeneous Treatment Effects (HTE), Uplift Modeling, A/B Testing, SRM Detection' },
+        { category: 'Data & Infrastructure', items: 'Python, SQL, PySpark, BigQuery, Airflow, Spark, GCP (Vertex AI), AWS (S3, SageMaker), Docker, Pandas, NumPy, Scikit-learn, TensorFlow' },
+        { category: 'Visualization & Tools', items: 'Tableau, Streamlit, Git, Azure' },
         { category: 'Certifications', items: 'Google Analytics' }
     ];
 
@@ -209,7 +208,7 @@ const ResumePage = () => {
                             lineHeight: 1.8,
                             maxWidth: '800px'
                         }}>
-                            <strong style={{ color: '#fff' }}>Experimentation Platform Architect</strong> specializing in causal inference and high-velocity testing infrastructure at Fortune 100 scale. Led platform re-architecture that scaled test velocity 3→8/week and enabled $150M+ in revenue decisions through variance reduction (CUPED) and Bayesian experimentation.
+                            <strong style={{ color: '#fff' }}>Data Scientist & AI Architect</strong> with 8+ years delivering $250M+ in validated business impact. Specializing in developing novel data science solutions—taking concepts from 0 to 1. Rapidly prototype using emerging tech, align cross-functional teams, and productionalize solutions at scale.
                         </p>
                     </header>
 
