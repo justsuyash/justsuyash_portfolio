@@ -8,7 +8,7 @@ import Link from 'next/link';
 const ResumePage = () => {
     const experiences = [
         {
-            company: 'Safeway (Albertsons)',
+            company: 'Albertsons',
             role: 'Data Scientist IV — Principal Platform Architect',
             period: 'Feb 2024 – Present',
             color: '#00f3ff',
@@ -52,8 +52,12 @@ const ResumePage = () => {
             color: '#ef4444',
             highlights: [
                 { bold: 'Global Campaign Optimization:', text: ' Orchestrated data-driven email personalization strategies for a 45M+ user base in Vodafone Germany; designed an advanced predictive logistic regression and A/B testing framework that expanded CTR by 28% (from 1.4% to 1.8%) and generated $11.2M in incremental revenue.' },
-                { bold: 'Customer Lifetime Value Expansion:', text: ' Developed complex linear regression models to predict multi-tier retention curves across varying subscription price points; strategically redirected marketing spend to optimize customer lifetime value (CLV) by 5%.' },
-                'Production System Reliability: Engineered an automated time-series anomaly detection system (Prophet) to monitor model error rates across core infrastructure; reduced Priority-2 production incidents by 60%+ and reclaimed ~20 hours/week of core engineering bandwidth.'
+                { bold: 'Customer Lifetime Value Expansion:', text: ' Developed complex linear regression models to predict multi-tier retention curves across varying subscription price points; strategically redirected marketing spend to optimize customer lifetime value (CLV) by 5%.' }
+            ],
+            subRole: 'Senior Executive, Data Science',
+            subHighlights: [
+                { bold: 'Enterprise Metrics Governance:', text: ' Partnered with executive product leadership to instrument 15+ custom performance metrics; engineered automated SQL pipelines feeding core Tableau dashboards to stabilize long-term feature evaluation and model health tracking.' },
+                { bold: 'Production System Reliability:', text: ' Engineered an automated time-series anomaly detection system (Prophet) to monitor model error rates across core infrastructure; reduced Priority-2 production incidents by 60%+ and reclaimed ~20 hours/week of core engineering bandwidth.' }
             ]
         },
         {
@@ -72,8 +76,8 @@ const ResumePage = () => {
         {
             school: 'The University of Texas at Dallas',
             degree: 'MS, Business Analytics',
-            year: 'Jun 2022',
-            note: "Dean's Scholar (Top 20%); President, Data Science Club."
+            year: 'Jan 2021 – Jun 2022',
+            note: "Dean's Scholar; President, Data Science Club — led workshops and speaker series. Top Student Mentor for Data Science track: answered 800+ questions and coached 70+ students."
         },
         {
             school: 'Pune University',
@@ -314,6 +318,40 @@ const ResumePage = () => {
                                             </li>
                                         ))}
                                     </ul>
+
+                                    {exp.subRole && (
+                                        <div style={{ marginTop: '20px' }}>
+                                            <p style={{
+                                                color: exp.color,
+                                                fontWeight: 600,
+                                                fontSize: '0.9rem',
+                                                marginBottom: '10px',
+                                                opacity: 0.8
+                                            }}>{exp.subRole}</p>
+                                            <ul style={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '10px',
+                                                paddingLeft: '16px'
+                                            }}>
+                                                {exp.subHighlights.map((highlight, hIdx) => (
+                                                    <li key={hIdx} style={{
+                                                        color: 'rgba(255,255,255,0.5)',
+                                                        fontSize: '0.88rem',
+                                                        lineHeight: 1.6,
+                                                        listStyle: 'disc'
+                                                    }}>
+                                                        {typeof highlight === 'object' ? (
+                                                            <>
+                                                                <strong style={{ color: 'rgba(255,255,255,0.8)' }}>{highlight.bold}</strong>
+                                                                {highlight.text}
+                                                            </>
+                                                        ) : highlight}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
                                 </motion.div>
                             ))}
                         </div>
