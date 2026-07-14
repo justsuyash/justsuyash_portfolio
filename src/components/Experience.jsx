@@ -17,9 +17,9 @@ const Experience = () => {
             title: "Data Scientist IV | Founding Architect of AI-Powered Experimentation Systems",
             date: "Feb 2024 — Present",
             location: "Plano, TX",
-            description: "Pioneered the end-to-end AI experimentation platform driving $150M+ in validated business decisions. Rapidly prototyped and deployed two GenAI automation agents, compressing analysis time from days to hours. Scaled testing velocity 3→8 experiments/week.",
+            description: "Engineered an enterprise-wide experimentation infrastructure, scaled testing capacity from 3 to 10+ concurrent experiments/week, driving $200M+ in annual business decisions. Built foundational Bayesian MMM and deployed GenAI automation agents, compressing analysis time from days to minutes.",
             details: [
-                "Tech: Spark, CUPED (35% error reduction), Bayesian, LangChain, Gemini"
+                "Tech: Spark, CUPED (35% error reduction), Bayesian MMM, LangChain, Claude"
             ]
         },
         {

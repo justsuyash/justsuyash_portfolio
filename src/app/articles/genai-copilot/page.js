@@ -83,7 +83,7 @@ const GenAiCopilotPage = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Solution: LLMs as the Semantic Layer</h3>
                         <p style={{ marginBottom: '24px' }}>
-                            I designed an internal agent using <strong>Gemini API + LangChain</strong> to serve as the "Experimentation Copilot." Rather than replacing the analyst, this tool acts as a translation interface.
+                            I designed an internal agent using <strong>Claude API + LangChain</strong> to serve as the "Experimentation Copilot." Rather than replacing the analyst, this tool acts as a translation interface.
                         </p>
 
                         <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00f3ff', marginBottom: '12px', fontFamily: 'system-ui, sans-serif' }}>Technical Architecture</h4>
@@ -109,7 +109,7 @@ const GenAiCopilotPage = () => {
                         <div style={{ padding: '24px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', marginBottom: '40px' }}>
                             <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Technologies</h3>
                             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', fontFamily: 'monospace', fontSize: '0.9rem', color: '#bd00ff' }}>
-                                <span>LangChain</span> <span>•</span> <span>Gemini API</span> <span>•</span> <span>Python</span> <span>•</span> <span>SQL</span> <span>•</span> <span>BigQuery</span>
+                                <span>LangChain</span> <span>•</span> <span>Claude API</span> <span>•</span> <span>Python</span> <span>•</span> <span>SQL</span> <span>•</span> <span>BigQuery</span>
                             </div>
                         </div>
 

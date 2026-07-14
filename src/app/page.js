@@ -291,7 +291,7 @@ const HomePage = () => {
                                 letterSpacing: '-0.03em',
                                 marginBottom: '20px'
                             }}>
-                                $150+ Million Impact Through
+                                $500+ Million Impact Through
                                 <br />
                                 <span style={{
                                     background: 'linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%)',
@@ -309,7 +309,7 @@ const HomePage = () => {
                                 marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                I specialize in developing novel data science solutions—taking concepts from 0 to 1. I rapidly prototype using emerging tech, align cross-functional teams, and productionalize the solution at scale. Currently Architecting the AI Experimentation Platform @ Albertsons | $250M+ Business Impact.
+                                I specialize in developing novel data science solutions—taking concepts from 0 to 1. I rapidly prototype using emerging tech, align cross-functional teams, and productionize the solution at scale. Currently Architecting the AI Experimentation Platform @ Albertsons | $500M+ Business Impact.
                             </p>
 
                             <div style={{ marginBottom: '32px' }}>
@@ -416,9 +416,9 @@ const HomePage = () => {
                             gap: '20px'
                         }}>
                             {[
-                                { metric: '3→8+', label: 'experiments/week via Experimentation Engine', color: '#00f3ff' },
-                                { metric: '$150M+', label: 'measurable business impact', color: '#bd00ff' },
-                                { metric: '$250M+', label: 'validated business impact', color: '#22c55e' },
+                                { metric: '3→10+', label: 'experiments/week via Experimentation Engine', color: '#00f3ff' },
+                                { metric: '$200M+', label: 'measurable business impact', color: '#bd00ff' },
+                                { metric: '$500M+', label: 'validated business impact', color: '#22c55e' },
                                 { metric: 'End-to-End', label: 'full-stack product engineering', color: '#f59e0b' }
                             ].map((item, idx) => (
                                 <div key={idx} style={{
@@ -486,7 +486,7 @@ const HomePage = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
                                 <div>
                                     <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '4px' }}>Albertsons Companies</h3>
-                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist IV | Founding Architect of AI-Powered Experimentation Systems</p>
+                                    <p style={{ color: '#00f3ff', fontWeight: 600, fontSize: '0.9rem' }}>Data Scientist IV | Principal Platform Architect</p>
                                 </div>
                                 <span style={{
                                     padding: '4px 10px',
@@ -500,7 +500,7 @@ const HomePage = () => {
                                 }}>Active</span>
                             </div>
                             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-                                Pioneered the end-to-end AI experimentation platform driving $150M+ in validated business decisions. Rapidly prototyped and deployed two GenAI automation agents, compressing analysis time from days to hours.
+                                Engineered an enterprise-wide experimentation infrastructure, scaled testing capacity from 3 to 10+ concurrent experiments/week, driving $200M+ in annual business decisions. Built foundational Bayesian MMM and deployed GenAI automation agents, compressing analysis time from days to minutes.
                             </p>
                         </motion.div>
 

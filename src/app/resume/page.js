@@ -9,16 +9,17 @@ const ResumePage = () => {
     const experiences = [
         {
             company: 'Albertsons',
-            role: 'Data Scientist IV — Principal Platform Architect',
+            role: 'Senior Data Scientist (Principal Platform Architect)',
             period: 'Feb 2024 – Present',
             color: '#00f3ff',
             status: 'Active',
             highlights: [
-                { bold: 'Enterprise Platform Adoption:', text: ' Democratized causal data science by pioneering an enterprise-wide experimentation infrastructure across 4 distinct business units (In-Store, Pharmacy, Digital, and Private Brands); scaled cross-functional testing capacity from 3 to 8+ concurrent experiments/week, driving $150M+ in decentralized annual business decisions.' },
-                { bold: 'Statistical Standardization:', text: ' Operationalized an automated distributed Spark and CUPED variance reduction pipeline enterprise-wide to achieve a 35% error reduction; compressed experimental cycle times by 40% (from 28 to 12 days) for all cross-functional product and analytics teams.' },
-                { bold: 'Data Democratization:', text: ' Designed and deployed a custom GenAI Analyst Agent (SQL+RAG via LangChain and Gemini) over a 50TB+ enterprise dataset; empowered non-technical stakeholders to translate natural language queries into verified SQL, reducing post-experiment analysis latency from days to hours.' },
-                { bold: 'Operational Velocity & Scaling:', text: ' Built an Auto-Summary Agent in partnership with business leadership to autonomously capture experiment telemetry and benchmark results; unlocked 240–400 hours/week of collective organizational bandwidth by automating executive stakeholder reporting loops.' },
-                { bold: 'Algorithmic Optimization:', text: ' Redesigned the core assignment algorithm from the ground up to deliver 100% reliable, 30x faster randomization by minimizing Mahalanobis distance as the loss function.' }
+                { bold: 'Enterprise Platform:', text: ' Architected enterprise experimentation infrastructure across In-Store, Pharmacy, Digital, and Private Brands, scaling testing capacity from 3 to 10+ experiments per week and supporting $200M+ in annual business decisions.' },
+                { bold: 'Statistical Standardization:', text: ' Cut experiment cycle times 40%, from 28 to 12 days, by operationalizing CUPED variance reduction across cross-functional business units.' },
+                { bold: 'Bayesian Evaluation Layer:', text: ' Designing a Bayesian evaluation layer (Monte Carlo simulation) on top of CUPED to enable live monitoring and early-stopping of high-impact experiments, further reducing cycle time.' },
+                { bold: 'Data Democratization:', text: ' Deployed a text-to-SQL RAG agent (LangChain, Claude) over a 50TB+ enterprise dataset, making embedded PMs self-serve and reducing post-experiment turnaround from days to minutes for partner teams.' },
+                { bold: 'Algorithmic Optimization:', text: ' Rebuilt the pre-split randomization algorithm from the ground up for 30x faster, balanced assignment by minimizing Mahalanobis distance, and quantified the imbalance-versus-power tradeoff so teams can see the statistical power lost at any level of covariate imbalance.' },
+                { bold: 'Technical Leadership:', text: ' Designed a human-in-the-loop pipeline where junior data scientists review AI-generated queries and feed corrections back into the RAG layer, improving first-pass validation accuracy 30% and accelerating onboarding.' }
             ]
         },
         {
@@ -29,9 +30,9 @@ const ResumePage = () => {
             status: 'Building',
             description: 'Founded an applied AI research and development lab to proactively build and stress-test emerging technologies and extract proven architectures to de-risk enterprise deployments.',
             highlights: [
-                { bold: 'ClinicOS (SaaS Deployment):', text: ' Engineered an AI-powered healthcare management SaaS platform currently live in 8 clinics across rural India; conducted structured workflow mapping with physicians to implement real-time consultation transcription, automated prescription generation, and automated inventory pipelines.' },
-                { bold: 'QuizBeef (RAG Production):', text: ' Architected an AI-native document comprehension platform scaling to 700+ users; synthesized learning science literature to deploy LLM semantic parsing and FAISS-powered vector retrieval for adaptive multi-source question generation.' },
-                { bold: 'mana-health (Agentic Systems):', text: ' Developed an advanced multi-agent biometric orchestration platform implementing Critic-Reflexion loops; enabled autonomous agent self-correction and output verification across specialized physiotherapy and nutrition nodes.' }
+                { bold: 'ClinicOS:', text: ' Built an AI-powered healthcare operations SaaS live in 8 rural Indian clinics, with real-time consultation transcription, prescription generation, appointment workflows, and inventory management.' },
+                { bold: 'QuizBeef:', text: ' Launched an LLM-powered learning platform (700+ users) that stores questions in Open Knowledge Format (OKF) and generates personalized lessons on the fly, using semantic parsing and FAISS vector retrieval for grounded, adaptive question generation.' },
+                { bold: 'mana-health:', text: ' Architected a multi-agent wellness platform coordinating daily guidance, food analysis, and biomarker interpretation workflows (LangGraph, CrewAI, DSPy), enforcing typed outputs with PydanticAI and running LangSmith/Braintrust tracing and regression evals via a FastAPI and Next.js product surface.' }
             ]
         },
         {
@@ -40,24 +41,20 @@ const ResumePage = () => {
             period: 'Aug 2022 – Oct 2023',
             color: '#f59e0b',
             highlights: [
-                { bold: 'Overturned decade-old risk policy:', text: ' Used XGBoost + Propensity Score Matching to prove employment verification had zero predictive value for high-FICO borrowers (R² < 0.01), then designed a surgical A/B test that unlocked $114M annualized volume and 300+ incremental customers/month through friction reduction.' },
-                { bold: 'Enabled $1.8M in loan approvals:', text: ' Identified and resolved critical iOS bugs through funnel analysis on the Automated Loan Approval platform, collaborating with engineering and UI/UX teams to restore conversion flow.' },
-                'Infrastructure Modernization: Migrated legacy SAS workflows to GCP BigQuery, reducing infrastructure costs by 12% and improving decision speed by 10+ hours/week.'
+                { bold: 'Unlocked $114M in annualized volume:', text: ' Disproved a decade-old employment-verification policy using XGBoost and propensity score matching, then designed an A/B test that drove a permanent policy change.' },
+                { bold: 'Recovered $1.8M in loan approvals:', text: ' Diagnosed iOS funnel defects in the Automated Loan Approval platform and partnered with Engineering and UX to restore conversion flow.' },
+                { bold: 'Infrastructure Modernization:', text: ' Migrated legacy SAS workflows to GCP and BigQuery, reducing infrastructure cost 12% and improving decision speed by 10+ hours per week.' }
             ]
         },
         {
             company: 'Vodafone',
-            role: 'Assistant Manager, Data Science',
+            role: 'Data Scientist',
             period: 'Jun 2016 – Feb 2019',
             color: '#ef4444',
             highlights: [
-                { bold: 'Global Campaign Optimization:', text: ' Orchestrated data-driven email personalization strategies for a 45M+ user base in Vodafone Germany; designed an advanced predictive logistic regression and A/B testing framework that expanded CTR by 28% (from 1.4% to 1.8%) and generated $11.2M in incremental revenue.' },
-                { bold: 'Customer Lifetime Value Expansion:', text: ' Developed complex linear regression models to predict multi-tier retention curves across varying subscription price points; strategically redirected marketing spend to optimize customer lifetime value (CLV) by 5%.' }
-            ],
-            subRole: 'Senior Executive, Data Science',
-            subHighlights: [
-                { bold: 'Enterprise Metrics Governance:', text: ' Partnered with executive product leadership to instrument 15+ custom performance metrics; engineered automated SQL pipelines feeding core Tableau dashboards to stabilize long-term feature evaluation and model health tracking.' },
-                { bold: 'Production System Reliability:', text: ' Engineered an automated time-series anomaly detection system (Prophet) to monitor model error rates across core infrastructure; reduced Priority-2 production incidents by 60%+ and reclaimed ~20 hours/week of core engineering bandwidth.' }
+                { bold: 'Global Campaign Optimization:', text: ' Generated $11.2M in incremental revenue for Vodafone Germany\'s 45M+ user base through customer segmentation and A/B-tested email personalization, increasing click-through rate 28%, from 1.4% to 1.8%.' },
+                { bold: 'Customer Lifetime Value Expansion:', text: ' Developed retention and pricing models that improved customer lifetime value 5% and informed retention-based product strategy.' },
+                { bold: 'Production System Reliability:', text: ' Reduced Priority-2 production incidents 60%+ by deploying Prophet-based anomaly monitoring across core models, saving approximately 20 engineering hours per week.' }
             ]
         },
         {
@@ -66,8 +63,7 @@ const ResumePage = () => {
             period: 'Jun 2021 – Dec 2021',
             color: '#22c55e',
             highlights: [
-                { bold: 'Hybrid Predictive Modeling:', text: ' Outperformed the existing production baseline by improving forecasting accuracy by 8.5% for Toyota vehicle sales; architected a hybrid time-series model combining Prophet and LSTM deep learning networks to isolate complex residual seasonality.' },
-                { bold: 'Security Risk Mitigation:', text: ' Mitigated authentication friction by constructing an automated anomaly detection pipeline on AWS SageMaker; engineered a dynamic risk-based thresholding system that slashed 2FA false positives by 13% without degrading user sign-up flows.' }
+                { bold: 'Hybrid Predictive Modeling:', text: ' Improved Toyota vehicle-sales forecast accuracy 8.5% using a hybrid Prophet and LSTM model; reduced two-factor-authentication false positives 13% through an AWS SageMaker anomaly-detection pipeline.' }
             ]
         }
     ];
@@ -87,11 +83,10 @@ const ResumePage = () => {
     ];
 
     const skills = [
-        { category: 'GenAI & Agentic Systems', items: 'LangChain, RAG (Retrieval-Augmented Generation), Context Engineering, LLMs, Prompt Engineering, Autonomous Agents, SQL+RAG, dbt, Snowflake' },
+        { category: 'GenAI & Agentic Systems', items: 'LangChain, RAG (Retrieval-Augmented Generation), Context Engineering, LLMs, Autonomous Agents, dbt, Snowflake, LangGraph, DSPy, CrewAI, PydanticAI, LangSmith, Braintrust, FastAPI' },
         { category: 'Causal Inference & Experimentation', items: 'Causal Inference, CUPED, Bayesian Methods (PyMC), Propensity Score Matching, Synthetic Controls, Heterogeneous Treatment Effects (HTE), Uplift Modeling, A/B Testing, SRM Detection' },
         { category: 'Data & Infrastructure', items: 'Python, SQL, PySpark, BigQuery, Airflow, Spark, GCP (Vertex AI), AWS (S3, SageMaker), Docker, Pandas, NumPy, Scikit-learn, TensorFlow' },
-        { category: 'Visualization & Tools', items: 'Tableau, Streamlit, Git, Azure' },
-        { category: 'Certifications', items: 'Google Analytics' }
+        { category: 'Visualization & Tools', items: 'Tableau, Streamlit, Git, Azure' }
     ];
 
     return (
@@ -212,7 +207,7 @@ const ResumePage = () => {
                             lineHeight: 1.8,
                             maxWidth: '800px'
                         }}>
-                            <strong style={{ color: '#fff' }}>Data Scientist & AI Architect</strong> with 8+ years delivering $250M+ in validated business impact. Specializing in developing novel data science solutions—taking concepts from 0 to 1. Rapidly prototype using emerging tech, align cross-functional teams, and productionalize solutions at scale.
+                            <strong style={{ color: '#fff' }}>Data Scientist & AI Architect</strong> with 8+ years delivering $500M+ in validated business impact. Specializes in developing novel data science solutions—taking concepts from 0 to 1. Rapidly prototypes using emerging tech, aligns cross-functional teams, and productionizes the solution at scale.
                         </p>
                     </header>
 
@@ -467,8 +462,8 @@ const ResumePage = () => {
                 {/* Download Button */}
                 <div style={{ marginTop: '32px', textAlign: 'center' }}>
                     <a
-                        href="/Resume_Suyash_DataScience2026.pdf"
-                        download="Suyash_Resume.pdf"
+                        href="/SuyashResume_2026.pdf"
+                        download="SuyashResume_2026.pdf"
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',

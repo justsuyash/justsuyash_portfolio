@@ -59,7 +59,7 @@ const ExperimentationArchitecturePage = () => {
                             fontSize: '1.25rem', color: 'rgba(255,255,255,0.6)',
                             lineHeight: 1.7, fontFamily: 'Georgia, serif'
                         }}>
-                            A technical retrospective on re-architecting a data pipeline to reduce runtime by 75% and unlock $150M+ in revenue attribution through variance reduction.
+                            A technical retrospective on re-architecting a data pipeline to reduce runtime by 75% and unlock $200M+ in revenue attribution through variance reduction.
                             <br />
                             <Link href="/articles/sandbox-strategy" style={{ color: '#bd00ff', fontSize: '1rem', marginTop: '16px', display: 'inline-block' }}>
                                 Read the strategy behind this architecture →
@@ -71,7 +71,7 @@ const ExperimentationArchitecturePage = () => {
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Context</h3>
                         <p style={{ marginBottom: '32px' }}>
-                            Fortune 100 retailer, tens of millions of shoppers, dozens of concurrent experiments. The challenge was to scale from 3 to 8+ tests/week while maintaining statistical rigor.
+                            Fortune 100 retailer, tens of millions of shoppers, dozens of concurrent experiments. The challenge was to scale from 3 to 10+ tests/week while maintaining statistical rigor.
                         </p>
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Problem</h3>
@@ -179,13 +179,13 @@ Runtime: ~4 mins / experiment
                                 <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Inference Time:</strong> Reduced from 15 min to 4 min.</span>
                             </li>
                             <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
-                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Velocity:</strong> Scaled from 3 to 8+ tests/week.</span>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Velocity:</strong> Scaled from 3 to 10+ tests/week.</span>
                             </li>
                             <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
                                 <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Sensitivity:</strong> Can detect 0.5% lifts (vs 1.5% before).</span>
                             </li>
                             <li style={{ marginBottom: '12px', display: 'flex', gap: '12px' }}>
-                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Impact:</strong> $150M+ in attributed revenue enabled by velocity + sensitivity.</span>
+                                <span style={{ color: '#22c55e' }}>➜</span> <span><strong>Impact:</strong> $200M+ in attributed revenue enabled by velocity + sensitivity.</span>
                             </li>
                         </ul>
 

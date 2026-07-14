@@ -38,7 +38,7 @@ export const articles = [
     },
     {
         title: "From Sequential To Parallel: Scaling Experimentation Inference",
-        description: "A technical retrospective on re-architecting a data pipeline to reduce runtime by 75% and unlock $150M+ in revenue attribution.",
+        description: "A technical retrospective on re-architecting a data pipeline to reduce runtime by 75% and unlock $200M+ in revenue attribution.",
         publication: "Architecture",
         date: "Jan 2024",
         link: "/articles/experimentation-architecture",
