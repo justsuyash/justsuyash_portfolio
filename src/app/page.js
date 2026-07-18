@@ -309,7 +309,7 @@ const HomePage = () => {
                                 marginBottom: '24px',
                                 maxWidth: '650px'
                             }}>
-                                I specialize in developing novel data science solutions—taking concepts from 0 to 1. I rapidly prototype using emerging tech, align cross-functional teams, and productionize the solution at scale. Currently Architecting the AI Experimentation Platform @ Albertsons | $500M+ Business Impact.
+                                I specialize in developing novel data science solutions—taking concepts from 0 to 1. I rapidly prototype using emerging tech, align cross-functional teams, and productionize the solution at scale. Currently Architecting the AI Experimentation Platform @ Albertsons | $500M+ Validated Business Impact.
                             </p>
 
                             <div style={{ marginBottom: '32px' }}>
@@ -417,7 +417,7 @@ const HomePage = () => {
                         }}>
                             {[
                                 { metric: '3→10+', label: 'experiments/week via Experimentation Engine', color: '#00f3ff' },
-                                { metric: '$200M+', label: 'measurable business impact', color: '#bd00ff' },
+                                { metric: 'Bayesian MMM', label: 'causal inference layer', color: '#bd00ff' },
                                 { metric: '$500M+', label: 'validated business impact', color: '#22c55e' },
                                 { metric: 'End-to-End', label: 'full-stack product engineering', color: '#f59e0b' }
                             ].map((item, idx) => (
