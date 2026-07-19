@@ -58,7 +58,12 @@ const SandboxStrategyPage = () => {
 
                     </header>
 
+                    <div style={{ margin: '0 0 48px 0', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
+                        <img src="/images/article-graphics/sandbox-strategy.png" alt="The Sandbox Strategy — sketch illustration" style={{ width: '100%', display: 'block' }} />
+                    </div>
+
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
+
 
                         <p style={{ marginBottom: '32px' }}>
                             We often talk about "Enterprise Architecture" as the end goal—slick UIs, microservices, and dedicated engineering teams. But in the messy middle, when the business demands velocity <em>now</em> but the platform isn't ready, you have to get creative.

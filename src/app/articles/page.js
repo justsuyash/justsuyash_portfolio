@@ -9,24 +9,28 @@ import { articles } from '../../data/articles';
 const ArticlesPage = () => {
     // Logic to select a featured article based on manual flag or current week
     const { featuredArticle, otherArticles } = useMemo(() => {
+        // Articles with noFeature: true are never eligible for the featured slot
+        const featurableArticles = articles.filter(a => !a.noFeature);
+
         // 1. Check if any article is manually pinned
-        const manualFeaturedIndex = articles.findIndex(a => a.featured === true);
-        
-        if (manualFeaturedIndex !== -1) {
+        const manualFeatured = featurableArticles.find(a => a.featured === true);
+
+        if (manualFeatured) {
             return {
-                featuredArticle: articles[manualFeaturedIndex],
-                otherArticles: articles.filter((_, idx) => idx !== manualFeaturedIndex)
+                featuredArticle: manualFeatured,
+                otherArticles: articles.filter(a => a !== manualFeatured)
             };
         }
 
         // 2. Fallback: Calculate current week number (epoch days / 7)
         const currentWeek = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 7));
-        // Use modulo to rotate through articles
-        const featuredIndex = currentWeek % articles.length;
+        // Use modulo to rotate through only featurable articles
+        const featuredIndex = currentWeek % featurableArticles.length;
+        const featuredArticle = featurableArticles[featuredIndex];
 
         return {
-            featuredArticle: articles[featuredIndex],
-            otherArticles: articles.filter((_, idx) => idx !== featuredIndex)
+            featuredArticle,
+            otherArticles: articles.filter(a => a !== featuredArticle)
         };
     }, []);
 

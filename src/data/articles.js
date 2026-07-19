@@ -1,5 +1,15 @@
 export const articles = [
     {
+        title: "Ten Years of Ideas and Relentless Execution",
+        description: "How a 2015 final-year project on smart surveillance — built on a Raspberry Pi, PIR sensors, and computer vision — became the prototype for how I still decide what's worth building.",
+        publication: "Origin Story",
+        date: "Jul 2026",
+        link: "/articles/ten-years-ideas-execution",
+        tag: "Origin Story",
+        readTime: "7 min",
+        noFeature: true
+    },
+    {
         title: "How I Cut ClinicOS Page Load Times by 14× — A Solo Dev's Performance Deep Dive",
         description: "A real-world walkthrough of diagnosing and fixing 5–9 second page loads in a Next.js + Neon PostgreSQL healthcare SaaS — from TCP handshakes to optimistic UI.",
         publication: "Deep Dive",

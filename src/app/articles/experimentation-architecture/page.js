@@ -67,7 +67,12 @@ const ExperimentationArchitecturePage = () => {
                         </p>
                     </header>
 
+                    <div style={{ margin: '0 0 48px 0', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
+                        <img src="/images/article-graphics/experimentation-architecture.png" alt="From Sequential To Parallel: Scaling Experimentation Inference — sketch illustration" style={{ width: '100%', display: 'block' }} />
+                    </div>
+
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
+
 
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>Context</h3>
                         <p style={{ marginBottom: '32px' }}>
