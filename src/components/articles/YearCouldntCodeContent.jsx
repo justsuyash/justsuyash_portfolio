@@ -63,7 +63,7 @@ const YearCouldntCodeContent = () => {
                     </header>
 
                     <div style={{ margin: '0 0 48px 0', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
-                        <img src="/images/article-graphics/year-couldnt-code.png" alt="The Year I Couldn't Code and Shipped Anyway — sketch illustration" style={{ width: '100%', display: 'block' }} />
+                        <img src="/images/article-graphics/year-couldnt-code.jpg" alt="From Toy Puzzles to a Shipped Product — sketch illustration" style={{ width: '100%', display: 'block' }} />
                     </div>
 
                     <div className="article-content" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8, fontFamily: 'Georgia, serif' }}>
@@ -89,11 +89,11 @@ const YearCouldntCodeContent = () => {
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Part I Don&apos;t Usually Lead With</h3>
 
                         <p style={{ marginBottom: '32px' }}>
-                            Here&apos;s the part I don&apos;t usually lead with: I couldn&apos;t really build anything. Sure, I could solve small coding puzzles — write a for loop, work through a textbook problem — but I had never written an actual script, let alone built a real app. Puzzles and products are two different worlds, and I was standing firmly on the wrong side of that line. I had the idea and the conviction and almost none of the ability to ship it. On paper, that should have been a reason to pick something easier. Instead, it became the whole point.
+                            Because here&apos;s the part I don&apos;t usually lead with: <strong>I couldn&apos;t really build anything.</strong> Sure, I could solve small coding puzzles — write a for loop, work through a textbook problem — but I had never written an actual script, let alone built a real app. Puzzles and products are two different worlds, and I was standing firmly on the wrong side of that line. I had the idea and the conviction and almost none of the ability to ship it. On paper, that should have been a reason to pick something easier. Instead, it became the whole point.
                         </p>
 
                         <p style={{ marginBottom: '32px' }}>
-                            So I did two things. First, I pulled in friends who could code to help me build it — which taught me early that <strong>a good idea is a magnet; people will lend you their skills if the thing is worth building.</strong> Second, and more importantly, I refused to just be the &ldquo;idea guy&rdquo; while everyone else typed. I started actually learning. Line by line, bug by bug, borrowed function by borrowed function.
+                            So I did two things. First, I pulled in friends who could code to help me build it — which taught me early that a good idea is a magnet; people will lend you their skills if the thing is worth building. Second, and more importantly, I refused to just be the &ldquo;idea guy&rdquo; while everyone else typed. I started actually learning. Line by line, bug by bug, borrowed function by borrowed function.
                         </p>
 
                         <hr style={{ borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: 'none', margin: '48px 0' }} />
@@ -113,7 +113,7 @@ const YearCouldntCodeContent = () => {
                             borderRadius: '8px', borderLeft: '4px solid #bfff00', marginBottom: '40px'
                         }}>
                             <p style={{ margin: 0, fontFamily: 'system-ui, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
-                                The project landed: <strong style={{ color: '#fff' }}>full marks.</strong>
+                                And the project itself landed: <strong style={{ color: '#fff' }}>full marks.</strong>
                             </p>
                         </div>
 
@@ -122,7 +122,7 @@ const YearCouldntCodeContent = () => {
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: '16px', fontFamily: 'system-ui, sans-serif' }}>The Idea Pulled the Skill Out of Me</h3>
 
                         <p style={{ marginBottom: '32px' }}>
-                            Looking back, that&apos;s the lesson I actually want to keep from this one. The idea didn&apos;t just get executed — it pulled the skill out of me. I didn&apos;t learn to code and then build the app. I committed to the app, and it dragged the coding ability into existence because I had no choice. <strong>The right project doesn&apos;t wait for you to be ready. It makes you ready.</strong>
+                            Looking back, that&apos;s the lesson I actually want to keep from this one. The idea didn&apos;t just get executed — it <em>pulled the skill out of me.</em> I didn&apos;t learn to code and then build the app. I committed to the app, and it dragged the coding ability into existence because I had no choice. <strong>The right project doesn&apos;t wait for you to be ready. It makes you ready.</strong>
                         </p>
 
                         <p style={{ marginBottom: '32px' }}>
