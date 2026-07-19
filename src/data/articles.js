@@ -1,12 +1,22 @@
 export const articles = [
     {
         title: "Ten Years of Ideas and Relentless Execution",
-        description: "How a 2015 final-year project on smart surveillance — built on a Raspberry Pi, PIR sensors, and computer vision — became the prototype for how I still decide what's worth building.",
+        description: "How a 2015 final-year project on smart surveillance \u2014 built on a Raspberry Pi, PIR sensors, and computer vision \u2014 became the prototype for how I still decide what's worth building.",
         publication: "Origin Story",
         date: "Jul 2026",
         link: "/articles/ten-years-ideas-execution",
         tag: "Origin Story",
         readTime: "7 min",
+        noFeature: true
+    },
+    {
+        title: "The Year I Couldn't Code — and Shipped Anyway",
+        description: "Before the surveillance project. A second-year book-lending app, zero coding ability, and the lesson that the right project doesn't wait for you to be ready — it makes you ready.",
+        publication: "Origin Story",
+        date: "Jul 2026",
+        link: "/articles/year-couldnt-code",
+        tag: "Origin Story",
+        readTime: "6 min",
         noFeature: true
     },
     {
